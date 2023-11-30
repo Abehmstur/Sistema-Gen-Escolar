@@ -1,2 +1,2 @@
-# Sistema-de-Biblioteca
-Sistema de gerenciamento de biblioteca com usuario servidor e estudante.
+# SIGEscolar
+ Sistema de gerenciamento de funcionarios professor e tecnicos com turma. 
