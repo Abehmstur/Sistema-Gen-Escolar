@@ -1,0 +1,19 @@
+Tipo: Professor
+Matricula: 194500
+Nome: Professor 1 Exemplo
+CPF: 700123456789
+Data de Nascimento: 11-02-1971
+Endereco:
+Rua: Getulio Vargas
+Numero: 1945
+Bairro: Brasil
+Cidade: Distrito Federal
+CEP: 5900000
+Salario: 4500
+Departamento: Politicas Publicas
+Carga Horaria: 40
+Data de Ingresso: 11-02-2004
+Disciplina: Governamentalismo
+Nivel: VIII
+Formacao: DOUTORADO
+
