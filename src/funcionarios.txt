@@ -71,3 +71,21 @@ Data de Ingresso: 15-12-2005
 Adicional de Produtividade: 0.25
 Funcao Desempenhada: Professor
 
+Tipo: Tecnico
+Matricula: 14
+Nome: TESTE TECN
+CPF: 70000
+Data de Nascimento: 25-12-2002
+Endereco:
+Rua: Rua Teste Tec
+Numero: 11
+Bairro: Cidade Nova
+Cidade: Natal
+CEP: 5907000
+Salario: 1414
+Departamento: ASG
+Carga Horaria: 40
+Data de Ingresso: 
+Adicional de Produtividade: 0.25
+Funcao Desempenhada: ASG2
+

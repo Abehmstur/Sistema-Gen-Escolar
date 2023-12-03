@@ -1,0 +1,19 @@
+Tipo: Professor
+Matricula: ò
+Nome: Professor Exemplo TC
+CPF: 700013456456
+Data de Nascimento: 25-11-2004
+Endereco:
+Rua: Monte Dalva
+Numero: 561
+Bairro: City
+Cidade: Natal
+CEP: 59072700
+Salario: 1985
+Departamento: Meteorologia
+Carga Horaria: 45
+Data de Ingresso: 12-12-2012
+Disciplina: Alongamento
+Nivel: VI
+Formacao: ESPECIALIZACAO
+

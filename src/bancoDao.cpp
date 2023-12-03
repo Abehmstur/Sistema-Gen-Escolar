@@ -3,47 +3,69 @@
 #include <vector>
 #include <string>
 #include "bancoDao.hpp"
+#include "./excecoes/bancoDaoExcecoes.hpp"
 
 using namespace std;
 
+//Lê o número informado pelo usuário e retorna uma exceção caso não seja um valor válido.
+int lerNumero() {
+    int numero;
+
+    while (true) {
+        try {
+            if (!(cin >> numero)) {
+                cin.clear();
+                cin.ignore();
+                throw bancoDaoExcecoes("Entrada invalida! Digite um numero inteiro.");
+            }
+            cin.ignore();
+            return numero; // Retorna o número se a entrada for válida
+        } catch (const bancoDaoExcecoes& erro) {
+            cout << "================================================================================================================" << endl;
+            cout << "| ERROR: " << erro.what() << endl;
+            cout << "================================================================================================================" << endl;
+        }
+    }
+}
 
 //excecoes temporarias
 void BancoDao::operacaoSucesso(){
-    std::cout << "Operacao realizada com sucesso!" << std::endl;
+    cout << "Operacao realizada com sucesso!" << endl;
 }
 
 void BancoDao::operacaoFalha(){
-    std::cout << "Não foi possivel completar a operacao!" << std::endl;
+    cout << "Não foi possivel completar a operacao!" << endl;
 }
 //funcoes professores
-void BancoDao::cadastrarProfessor(std::vector<Professor>& professores){
+void BancoDao::cadastrarProfessor(vector<Professor>& professores){
     //dados Pessoa
-    std::string nome;
-    std::string cpf;
-    std::string dataNascimento;
+    string nome;
+    string cpf;
+    string dataNascimento;
     
     //Novo endereço + atributos endereço
     Endereco novoEndereco;
-    std::string rua;
+    string rua;
     int numero;
-    std::string bairro;
-    std::string cidade;
-    std::string cep;
+    string bairro;
+    string cidade;
+    string cep;
     
     //dados Funcionario
-    std::string matricula;
+    string matricula;
     float salario;
-    std::string departamento;
+    string departamento;
     int cargaHoraria;
-    std::string dataIngresso;
+    string dataIngresso;
 
     //dados Professor
-    std::string disciplina;
+    string disciplina;
     int nivelProfessor;
     int formacaoProfessor;
 
     //solicitando entradas do usuário
     //entrada dados pessoa
+    cout << "<< Informe os Dados Pessoais do professor a seguir >> " << endl;
     cout << "Informe o nome do professor: " << endl;
     getline(cin, nome);
     
@@ -54,14 +76,13 @@ void BancoDao::cadastrarProfessor(std::vector<Professor>& professores){
     getline(cin, dataNascimento);
     
     //entrada dados endereco
-    cout << "Informe o Endereco do professor a seguir: " << endl;
+    cout << "<< Informe o Endereco do professor a seguir >> " << endl;
     cout << "Rua: " << endl;
     getline(cin, rua);
     novoEndereco.setRua(rua);
     
-    cout << "Numero: " << endl;
-    cin >> numero;
-    cin.ignore();
+    cout << "Numero da Casa: " << endl;
+    numero = lerNumero();
     novoEndereco.setNumero(numero);
     
     cout << "Bairro: " << endl;
@@ -78,9 +99,9 @@ void BancoDao::cadastrarProfessor(std::vector<Professor>& professores){
     novoEndereco.setCEP(cep);
 
     // entrada dados funcionario
+    cout << "<< Informe os Dados de Funcionario a seguir >> " << endl;
     cout << "Informe a Matricula do professor a seguir: " << endl;
-    cin >> matricula;
-    cin.ignore();
+    matricula = lerNumero();
     
     cout << "Informe o Salario do professor a seguir: " << endl;
     cin >> salario;
@@ -90,8 +111,7 @@ void BancoDao::cadastrarProfessor(std::vector<Professor>& professores){
     getline(cin, departamento);
     
     cout << "Informe a Carga Horaria do professor a seguir: " << endl;
-    cin >> cargaHoraria;
-    cin.ignore();
+    cargaHoraria = lerNumero();
     
     cout << "Informe a Data de Ingresso do professor a seguir: " << endl;
     getline(cin, dataIngresso);
@@ -103,8 +123,7 @@ void BancoDao::cadastrarProfessor(std::vector<Professor>& professores){
     do
     {
         cout << "Informe a Nivel do professor a seguir {0 a 6 = I a VIII}: " << endl;
-        cin >> nivelProfessor;
-        cin.ignore();
+        nivelProfessor = lerNumero();
         
         if(!(nivelProfessor >= 0 && nivelProfessor <= 6)){
             cout << "INCORRETO: Informe um valor entre 0 e 6. " << endl;
@@ -115,8 +134,7 @@ void BancoDao::cadastrarProfessor(std::vector<Professor>& professores){
     do
     {
         cout << "Informe a Formacao do professor a seguir {0 = ESPECIALIZACAO, 1 = MESTRADO, 2 = DOUTORADO}: " << endl;
-        cin >> formacaoProfessor;
-        cin.ignore();
+        formacaoProfessor = lerNumero();
 
         if(!(formacaoProfessor >= 0 && formacaoProfessor <= 2)){
             cout << "INCORRETO: Informe um valor entre 0 e 2. " << endl;
@@ -132,36 +150,46 @@ void BancoDao::cadastrarProfessor(std::vector<Professor>& professores){
         Professor novoProfessor(nome, cpf, dataNascimento, novoEndereco, matricula, salario, departamento, cargaHoraria, dataIngresso, nivel, formacao, disciplina);
 
         //comeca a salvar em arquivo aqui abrindo o arquivo.
-        fstream arquivo("funcionarios.txt", std::ios::app);
+        fstream arquivo("funcionarios.txt", ios::app);
 
         string nomeDoNivel = Professor::obterNomeDoNivel(novoProfessor.getNivelProfessor());
         string nomeDaFormacao = Professor::obterNomeDaFormacao(novoProfessor.getFormacaoProfessor());
 
-        if (arquivo.is_open()) {
-            arquivo << "Tipo: Professor\n"; 
-            arquivo << "Matricula: " << novoProfessor.getMatricula() << "\n";
-            arquivo << "Nome: " << novoProfessor.getNome() << "\n";
-            arquivo << "CPF: " << novoProfessor.getCPF() << "\n";
-            arquivo << "Data de Nascimento: " << novoProfessor.getDataNascimento() << "\n";
-            arquivo << "Endereco:\n";
-            arquivo << "Rua: " << novoProfessor.getEndereco().getRua() << "\n";
-            arquivo << "Numero: " << novoProfessor.getEndereco().getNumero() << "\n";
-            arquivo << "Bairro: " << novoProfessor.getEndereco().getBairro() << "\n";
-            arquivo << "Cidade: " << novoProfessor.getEndereco().getCidade() << "\n";
-            arquivo << "CEP: " << novoProfessor.getEndereco().getCEP() << "\n";
-            arquivo << "Salario: " << novoProfessor.getSalario() << "\n";
-            arquivo << "Departamento: " << novoProfessor.getDepartamento() << "\n";
-            arquivo << "Carga Horaria: " << novoProfessor.getCargaHoraria() << "\n";
-            arquivo << "Data de Ingresso: " << novoProfessor.getDataIngresso() << "\n";
-            arquivo << "Disciplina: " << novoProfessor.getDisciplina() << "\n";
-            arquivo << "Nivel: " << nomeDoNivel << "\n";
-            arquivo << "Formacao: " << nomeDaFormacao << "\n\n";
-        
-        }else {
-            cout << "Não foi possível abrir o arquivo." << std::endl;
-        }
+        try
+        {
+            if(!arquivo.is_open()){
+                throw bancoDaoExcecoes("Nao foi possivel abrir o arquivo.");
+            }
 
-        arquivo.close();
+            //Salvar informações do professor no arquivo txt.
+            if (arquivo.is_open()) {
+                arquivo << "Tipo: Professor\n"; 
+                arquivo << "Matricula: " << novoProfessor.getMatricula() << "\n";
+                arquivo << "Nome: " << novoProfessor.getNome() << "\n";
+                arquivo << "CPF: " << novoProfessor.getCPF() << "\n";
+                arquivo << "Data de Nascimento: " << novoProfessor.getDataNascimento() << "\n";
+                arquivo << "Endereco:\n";
+                arquivo << "Rua: " << novoProfessor.getEndereco().getRua() << "\n";
+                arquivo << "Numero: " << novoProfessor.getEndereco().getNumero() << "\n";
+                arquivo << "Bairro: " << novoProfessor.getEndereco().getBairro() << "\n";
+                arquivo << "Cidade: " << novoProfessor.getEndereco().getCidade() << "\n";
+                arquivo << "CEP: " << novoProfessor.getEndereco().getCEP() << "\n";
+                arquivo << "Salario: " << novoProfessor.getSalario() << "\n";
+                arquivo << "Departamento: " << novoProfessor.getDepartamento() << "\n";
+                arquivo << "Carga Horaria: " << novoProfessor.getCargaHoraria() << "\n";
+                arquivo << "Data de Ingresso: " << novoProfessor.getDataIngresso() << "\n";
+                arquivo << "Disciplina: " << novoProfessor.getDisciplina() << "\n";
+                arquivo << "Nivel: " << nomeDoNivel << "\n";
+                arquivo << "Formacao: " << nomeDaFormacao << "\n\n";
+            }
+
+            arquivo.close();
+
+        }catch (const bancoDaoExcecoes& erro) {
+            cout << "================================================================================================================" << endl;
+            cout << "| ERROR: " << erro.what() << endl;
+            cout << "================================================================================================================" << endl;
+        }
 
         //Exibe um resumo dos dados do professor cadastrado
         cout << "========DADOS DO PROFESSOR CADASTRADO========" << endl;
@@ -291,34 +319,34 @@ void BancoDao::buscarProfessor(int matricula){
     }
 }
 //funcoes para tecnicos adm
-void BancoDao::cadastrarTecnicoADM(std::vector<TecnicoADM>& tecnicosADM){
+void BancoDao::cadastrarTecnicoADM(vector<TecnicoADM>& tecnicosADM){
     //dados Pessoa
-    std::string nome;
-    std::string cpf;
-    std::string dataNascimento;
+    string nome;
+    string cpf;
+    string dataNascimento;
     
     //Novo endereço + atributos endereço
     Endereco novoEndereco;
-    std::string rua;
+    string rua;
     int numero;
-    std::string bairro;
-    std::string cidade;
-    std::string cep;
+    string bairro;
+    string cidade;
+    string cep;
     
     //dados Funcionario
-    std::string matricula;
+    string matricula;
     float salario;
-    std::string departamento;
+    string departamento;
     int cargaHoraria;
-    std::string dataIngresso;
+    string dataIngresso;
 
     //dados tecnico adm
     float adicionalProdutividade = 0.25;
-    std::string funcaoDesempenhada;
+    string funcaoDesempenhada;
 
     //solicitando entradas do usuário
     //entrada dados pessoa
-    cin.ignore();
+    cout << "<< Informe os Dados Pessoais do Tecnico ADM a seguir >> " << endl;
     cout << "Informe o nome do tecnico adm: " << endl;
     getline(cin, nome);
     
@@ -329,14 +357,13 @@ void BancoDao::cadastrarTecnicoADM(std::vector<TecnicoADM>& tecnicosADM){
     getline(cin, dataNascimento);
     
     //entrada dados endereco
-    cout << "Informe o Endereco do tecnico adm a seguir: " << endl;
+    cout << "<< Informe o Endereco do tecnico adm a seguir: >>" << endl;
     cout << "Rua: " << endl;
     getline(cin, rua);
     novoEndereco.setRua(rua);
     
     cout << "Numero: " << endl;
-    cin >> numero;
-    cin.ignore();
+    numero = lerNumero();
     novoEndereco.setNumero(numero);
     
     cout << "Bairro: " << endl;
@@ -353,9 +380,9 @@ void BancoDao::cadastrarTecnicoADM(std::vector<TecnicoADM>& tecnicosADM){
     novoEndereco.setCEP(cep);
 
     // entrada dados funcionario
+    cout << "<< Informe os Dados de Funcionario a seguir >> " << endl;
     cout << "Informe a Matricula do tecnico adm a seguir: " << endl;
-    cin >> matricula;
-    cin.ignore();
+    matricula = lerNumero();
     
     cout << "Informe o Salario do tecnico adm a seguir: " << endl;
     cin >> salario;
@@ -365,13 +392,13 @@ void BancoDao::cadastrarTecnicoADM(std::vector<TecnicoADM>& tecnicosADM){
     getline(cin, departamento);
     
     cout << "Informe a Carga Horaria do tecnico adm a seguir: " << endl;
-    cin >> cargaHoraria;
-    cin.ignore();
+    cargaHoraria = lerNumero();
     
     cout << "Informe a Data de Ingresso do tecnico adm a seguir: " << endl;
     getline(cin, dataIngresso);
 
     // entrada de dados do tecnico adm a seguir
+    cout << "<< Informe os Dados de Funcionario a seguir >> " << endl;
     cout << "Informe funcao desempenhada pelo tecnico adm a seguir: " << endl;
     cin >> funcaoDesempenhada;
     cin.ignore();
@@ -379,33 +406,50 @@ void BancoDao::cadastrarTecnicoADM(std::vector<TecnicoADM>& tecnicosADM){
     TecnicoADM novoTecnicoAdm(nome, cpf, dataNascimento, novoEndereco, matricula, salario, departamento, cargaHoraria, dataIngresso, adicionalProdutividade, funcaoDesempenhada);
 
     //comeca a salvar em arquivo aqui abrindo o arquivo.
-    fstream arquivo("funcionarios.txt", std::ios::app);
+    fstream arquivo("funcionarios.txt", ios::app);
 
-    if (arquivo.is_open()) {
-            arquivo << "Tipo: Tecnico\n"; 
-            arquivo << "Matricula: " << novoTecnicoAdm.getMatricula() << "\n";
-            arquivo << "Nome: " << novoTecnicoAdm.getNome() << "\n";
-            arquivo << "CPF: " << novoTecnicoAdm.getCPF() << "\n";
-            arquivo << "Data de Nascimento: " << novoTecnicoAdm.getDataNascimento() << "\n";
-            arquivo << "Endereco:\n";
-            arquivo << "Rua: " << novoTecnicoAdm.getEndereco().getRua() << "\n";
-            arquivo << "Numero: " << novoTecnicoAdm.getEndereco().getNumero() << "\n";
-            arquivo << "Bairro: " << novoTecnicoAdm.getEndereco().getBairro() << "\n";
-            arquivo << "Cidade: " << novoTecnicoAdm.getEndereco().getCidade() << "\n";
-            arquivo << "CEP: " << novoTecnicoAdm.getEndereco().getCEP() << "\n";
-            arquivo << "Salario: " << novoTecnicoAdm.getSalario() << "\n";
-            arquivo << "Departamento: " << novoTecnicoAdm.getDepartamento() << "\n";
-            arquivo << "Carga Horaria: " << novoTecnicoAdm.getCargaHoraria() << "\n";
-            arquivo << "Data de Ingresso: " << novoTecnicoAdm.getDataIngresso() << "\n";
-            arquivo << "Adicional de Produtividade: " << novoTecnicoAdm.getAdicionalProdutividade() << "\n";
-            arquivo << "Funcao Desempenhada: " << novoTecnicoAdm.getFuncaoDesempenhada() << "\n\n";
-        
-        }else {
-            cout << "Não foi possível abrir o arquivo." << endl;
+    //tratamento de abertura de arquivo
+    try
+    {
+        if(!arquivo.is_open()){
+                throw bancoDaoExcecoes("Nao foi possivel abrir o arquivo.");
         }
 
+        //Salvar informações do tecnico no arquivo txt.
+        if (arquivo.is_open()) {
+                arquivo << "Tipo: Tecnico\n"; 
+                arquivo << "Matricula: " << novoTecnicoAdm.getMatricula() << "\n";
+                arquivo << "Nome: " << novoTecnicoAdm.getNome() << "\n";
+                arquivo << "CPF: " << novoTecnicoAdm.getCPF() << "\n";
+                arquivo << "Data de Nascimento: " << novoTecnicoAdm.getDataNascimento() << "\n";
+                arquivo << "Endereco:\n";
+                arquivo << "Rua: " << novoTecnicoAdm.getEndereco().getRua() << "\n";
+                arquivo << "Numero: " << novoTecnicoAdm.getEndereco().getNumero() << "\n";
+                arquivo << "Bairro: " << novoTecnicoAdm.getEndereco().getBairro() << "\n";
+                arquivo << "Cidade: " << novoTecnicoAdm.getEndereco().getCidade() << "\n";
+                arquivo << "CEP: " << novoTecnicoAdm.getEndereco().getCEP() << "\n";
+                arquivo << "Salario: " << novoTecnicoAdm.getSalario() << "\n";
+                arquivo << "Departamento: " << novoTecnicoAdm.getDepartamento() << "\n";
+                arquivo << "Carga Horaria: " << novoTecnicoAdm.getCargaHoraria() << "\n";
+                arquivo << "Data de Ingresso: " << novoTecnicoAdm.getDataIngresso() << "\n";
+                arquivo << "Adicional de Produtividade: " << novoTecnicoAdm.getAdicionalProdutividade() << "\n";
+                arquivo << "Funcao Desempenhada: " << novoTecnicoAdm.getFuncaoDesempenhada() << "\n\n";
+        }
         arquivo.close();
-
+    }catch (const bancoDaoExcecoes& erro) {
+        cout << "================================================================================================================" << endl;
+        cout << "| ERROR: " << erro.what() << endl;
+        cout << "================================================================================================================" << endl;
+    }
+    
+    //Exibe um resumo dos dados do tecnico cadastrado
+        cout << "========DADOS DO TECNICO CADASTRADO========" << endl;
+        cout << "Nome: " << novoTecnicoAdm.getNome() << "\nCPF:" << novoTecnicoAdm.getCPF() << "\nData de Nascimento: " << novoTecnicoAdm.getDataNascimento() << endl;
+        cout << "Rua: " << novoEndereco.getRua() << "\nBairro: " << novoEndereco.getBairro() << "\nCEP: " << novoEndereco.getCEP() << "\nCidade: " << novoEndereco.getCidade() << "\nNumero: " << novoEndereco.getNumero() << endl;
+        cout << "Matricula: " << novoTecnicoAdm.getMatricula() << "\nSalario: " << novoTecnicoAdm.getSalario() << "\nDepartamento: " << novoTecnicoAdm.getDepartamento() << endl;
+        cout << "Carga Horaria: " << novoTecnicoAdm.getCargaHoraria() << "\nData de Ingresso: " << novoTecnicoAdm.getDataIngresso() << endl;
+        
+        cout << "========XXXXXXXXXXXXXXXXXXXXXXXXXXXXX========" << endl;
         operacaoSucesso();
 
 };
@@ -434,6 +478,7 @@ void BancoDao::listarTecnicosADM(){
                 listaTecnicos.push_back(novoTecnico); 
             }
         }
+
         arquivo.close();
 
         cout << "TECNICOS: \n";
@@ -521,7 +566,7 @@ void BancoDao::buscarTecnicoADM(int matricula){
             if (encontradoFlag) {
                 cout << "Nome: " << encontrado.getNome() << " | Funcao Desempenhda: " << encontrado.getFuncaoDesempenhada() << endl;
             } else {
-                cout << "Professor com a matricula " << matricula << " nao encontrado." << endl;
+                cout << "Tecnico com a matricula " << matricula << " nao encontrado." << endl;
             }
     }
 }; 
