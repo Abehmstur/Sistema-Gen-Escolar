@@ -3,16 +3,20 @@
 #include <vector>
 #include <string>
 #include "bancoDao.hpp"
-#include "./exceptions.cpp"
 
 using namespace std;
 
-std::vector<Professor> professores;
-std::vector<TecnicoADM> tecnicosADM;
 
+//excecoes temporarias
+void BancoDao::operacaoSucesso(){
+    std::cout << "Operacao realizada com sucesso!" << std::endl;
+}
 
+void BancoDao::operacaoFalha(){
+    std::cout << "Não foi possivel completar a operacao!" << std::endl;
+}
 //funcoes professores
-void cadastrarProfessor(std::vector<Professor>& professores){
+void BancoDao::cadastrarProfessor(std::vector<Professor>& professores){
     //dados Pessoa
     std::string nome;
     std::string cpf;
@@ -173,7 +177,7 @@ void cadastrarProfessor(std::vector<Professor>& professores){
 };
 
 //listar professor
-void listarProfessores(){
+void BancoDao::listarProfessores(){
     fstream arquivo("funcionarios.txt");
     vector<Professor> listaProfessores;
 
@@ -208,7 +212,7 @@ void listarProfessores(){
 }
 
 //deletar professor
-void deletarProfessor(int matricula) {
+void BancoDao::deletarProfessor(int matricula) {
     ifstream arquivoOriginal("funcionarios.txt");
     ofstream arquivoTemporario("temp.txt");
 
@@ -253,7 +257,7 @@ void deletarProfessor(int matricula) {
     }
 }
 
-void buscarProfessor(int matricula){
+void BancoDao::buscarProfessor(int matricula){
     fstream arquivo("funcionarios.txt");
     vector<Professor> listaProfessores;
 
@@ -287,7 +291,7 @@ void buscarProfessor(int matricula){
     }
 }
 //funcoes para tecnicos adm
-void cadastrarTecnicoADM(std::vector<TecnicoADM>& tecnicosADM){
+void BancoDao::cadastrarTecnicoADM(std::vector<TecnicoADM>& tecnicosADM){
     //dados Pessoa
     std::string nome;
     std::string cpf;
@@ -314,6 +318,7 @@ void cadastrarTecnicoADM(std::vector<TecnicoADM>& tecnicosADM){
 
     //solicitando entradas do usuário
     //entrada dados pessoa
+    cin.ignore();
     cout << "Informe o nome do tecnico adm: " << endl;
     getline(cin, nome);
     
@@ -406,7 +411,7 @@ void cadastrarTecnicoADM(std::vector<TecnicoADM>& tecnicosADM){
 };
 
 //listar Tecnicos ADM
-void listarTecnicosADM(){
+void BancoDao::listarTecnicosADM(){
     fstream arquivo("funcionarios.txt");
     vector<TecnicoADM> listaTecnicos;
 
@@ -441,7 +446,7 @@ void listarTecnicosADM(){
 };
 
 //replica do deletar professor
-void deletarTecnicoADM(int matricula){
+void BancoDao::deletarTecnicoADM(int matricula){
     ifstream arquivoOriginal("funcionarios.txt");
     ofstream arquivoTemporario("temp.txt");
 
@@ -487,7 +492,7 @@ void deletarTecnicoADM(int matricula){
 };
 
 //busca tec
-void buscarTecnicoADM(int matricula){
+void BancoDao::buscarTecnicoADM(int matricula){
     fstream arquivo("funcionarios.txt");
     vector<TecnicoADM> listaTecnicos;
 

@@ -21,7 +21,7 @@ public:
     //Getters
     std::string getNomeDaTurma() const;
     int getCapacidadeAlunos() const;
-    Professor getProfessorDaTurma() const;
+    void getProfessorDaTurma() const;
 
     //Setters
     void setNomeDaTurma(const std::string& novaTurma);

@@ -1,12 +1,11 @@
+#include "bancoDao.hpp"
 #include <iostream>
 #include <string>
-#include <map>
-#include "./endereco.cpp"
-#include "./pessoa.cpp"
-#include "./bancoDao.cpp"
-#include "./professor.cpp"
-#include "./funcionario.cpp"
-#include "./tecnico_adm.cpp"
+#include "pessoa.hpp"
+#include "endereco.hpp"
+#include "professor.hpp"
+#include "funcionario.hpp"
+#include "tecnico_adm.hpp"
 
 using namespace std;
 
@@ -29,48 +28,48 @@ void mostrarMenu() {
 int main()
 {
     int escolha;
+    BancoDao banco;
 
     do {
         mostrarMenu();
         cin >> escolha;
-        cin.ignore(); // Limpa o buffer de entrada
 
         switch (escolha) {
             case 1:
-                cadastrarProfessor(professores);
+                banco.cadastrarProfessor(banco.professores);
                 break;
             case 2:
-                listarProfessores();
+                banco.listarProfessores();
                 break;
              case 3:
                 int matriculaParaDeletar;
                 cout << "Digite a matricula do professor para deletar: ";
                 cin >> matriculaParaDeletar;
-                deletarProfessor(matriculaParaDeletar);
+                banco.deletarProfessor(matriculaParaDeletar);
                 break;
             case 4:
                 int matriculaParaBuscar;
                 cout << "Digite a matricula do professor para buscar: ";
                 cin >> matriculaParaBuscar;
-                buscarProfessor(matriculaParaBuscar);
+                banco.buscarProfessor(matriculaParaBuscar);
                 break;
             case 5:
-                cadastrarTecnicoADM(tecnicosADM);
+                banco.cadastrarTecnicoADM(banco.tecnicosADM);
                 break;
             case 6:
-                listarTecnicosADM();
+                banco.listarTecnicosADM();
                 break;
             case 7:
                 int matriculaParaDeletarTecnico;
                 cout << "Digite a matricula do tecnico ADM para deletar: ";
                 cin >> matriculaParaDeletarTecnico;
-                deletarTecnicoADM(matriculaParaDeletarTecnico);
+                banco.deletarTecnicoADM(matriculaParaDeletarTecnico);
                 break;
             case 8:
                 int matriculaParaBuscarTecnico;
                 cout << "Digite a matricula do tccnico ADM para buscar: ";
                 cin >> matriculaParaBuscarTecnico;
-                buscarTecnicoADM(matriculaParaBuscarTecnico);
+                banco.buscarTecnicoADM(matriculaParaBuscarTecnico);
                 break;
             case 9:
                 cout << "Saindo do programa...\n\n" << endl;

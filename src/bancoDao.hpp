@@ -4,6 +4,7 @@
 #include <string>
 #include "professor.hpp"
 #include "tecnico_adm.hpp"
+#include <iostream>
 #include <vector>
 
 class BancoDao : public Professor, TecnicoADM{
@@ -25,6 +26,10 @@ class BancoDao : public Professor, TecnicoADM{
         void listarTecnicosADM();
         void deletarTecnicoADM(int matricula);
         void buscarTecnicoADM(int matricula);
+
+        // Exceptions temporarias
+        void operacaoSucesso();
+        void operacaoFalha();
 
 };
 #endif

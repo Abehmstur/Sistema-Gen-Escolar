@@ -17,7 +17,7 @@ int Turma::getCapacidadeAlunos() const {
     return capacidadeAlunos;
 }
 
-Professor Turma::getProfessorDaTurma() const {
+void Turma::getProfessorDaTurma() const {
     std::cout << "Professor da Turma: " << professorDaTurma.getNome() << std::endl;
 }
 

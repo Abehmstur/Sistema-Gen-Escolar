@@ -1,0 +1,73 @@
+Tipo: Professor
+Matricula: 100000
+Nome: Teste Matheus
+CPF: 7000000
+Data de Nascimento: 27-04-1999
+Endereco:
+Rua: Monte Calvo
+Numero: 561
+Bairro: Cidade Nova
+Cidade: Natal
+CEP: 59072780
+Salario: 4500
+Departamento: FISICA
+Carga Horaria: 40
+Data de Ingresso: 27-04-2007
+Disciplina: Fisica Para Leigos
+Nivel: VI
+Formacao: MESTRADO
+
+Tipo: Tecnico
+Matricula: 1515
+Nome: Teste Tecnico Adm
+CPF: 20210090690
+Data de Nascimento: 27-11-2000
+Endereco:
+Rua: Rua Teste Tecnico
+Numero: 123456
+Bairro: Bairro Teste
+Cidade: Cidade Teste
+CEP: 123459679
+Salario: 1500
+Departamento: Diretoria
+Carga Horaria: 40
+Data de Ingresso: 25-08-2008
+Adicional de Produtividade: 0.25
+Funcao Desempenhada: Assistente
+
+Tipo: Tecnico
+Matricula: 1616
+Nome: Teste 2
+CPF: 7512345
+Data de Nascimento: 11-02-1971
+Endereco:
+Rua: Das Delicias
+Numero: 500
+Bairro: Delicato
+Cidade: Cidade Teste
+CEP: 12345678
+Salario: 1500
+Departamento: Biologia
+Carga Horaria: 40
+Data de Ingresso: 25-08-2008
+Adicional de Produtividade: 0.25
+Funcao Desempenhada: Assistente
+
+Tipo: Tecnico
+Matricula: 68636
+Nome: ecnico Adm Teste 3
+CPF: 2345678910
+Data de Nascimento: 1-02-1961
+Endereco:
+Rua: as Amoras
+Numero: 5000
+Bairro: moedo
+Cidade: angamandapio
+CEP: 1111111
+Salario: 5500
+Departamento: Geologia
+Carga Horaria: 30
+Data de Ingresso: 15-12-2005
+Adicional de Produtividade: 0.25
+Funcao Desempenhada: Professor
+
