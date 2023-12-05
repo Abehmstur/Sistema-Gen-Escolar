@@ -1,4 +1,4 @@
-#include "Turma.hpp"
+#include "turma.hpp"
 #include <iostream>
 
 // Construtor padrão

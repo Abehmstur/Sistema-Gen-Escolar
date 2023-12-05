@@ -163,8 +163,7 @@ void BancoDao::cadastrarProfessor(vector<Professor>& professores){
 
             //Salvar informações do professor no arquivo txt.
             if (arquivo.is_open()) {
-                arquivo << "Tipo: Professor\n"; 
-                arquivo << "Matricula: " << novoProfessor.getMatricula() << "\n";
+                arquivo << "Matricula: " << "T1-" << novoProfessor.getMatricula() << "\n";
                 arquivo << "Nome: " << novoProfessor.getNome() << "\n";
                 arquivo << "CPF: " << novoProfessor.getCPF() << "\n";
                 arquivo << "Data de Nascimento: " << novoProfessor.getDataNascimento() << "\n";
@@ -219,7 +218,7 @@ void BancoDao::listarProfessores(){
 
 
         while(getline(arquivo, linha)){
-            if (linha.find("Tipo: Professor") != string::npos) {
+            if (linha.find("Matricula: T1-") != string::npos) {
                 novoProfessor = Professor(); 
             } else if (linha.find("Nome: ") == 0) {
                 novoProfessor.setNome(linha.substr(6));
@@ -255,7 +254,7 @@ void BancoDao::deletarProfessor(int matricula) {
 
     while (getline(arquivoOriginal, linha)) {
         // Verifica se encontrou a matrícula do professor
-        if (linha.find("Matricula: " + to_string(matricula)) != string::npos) {
+        if (linha.find("Matricula: T1-" + to_string(matricula)) != string::npos) {
             professorEncontrado = true;
             bloqueio = true; // Bloqueia a escrita a partir deste ponto
         }
@@ -299,7 +298,7 @@ void BancoDao::buscarProfessor(int matricula){
         bool encontradoFlag = false;
 
         while (getline(arquivo, linha)) {
-            if (linha.find("Matricula: " + to_string(matricula)) != string::npos) {
+            if (linha.find("Matricula: T1-" + to_string(matricula)) != string::npos) {
                 encontrado = Professor();
                 encontradoFlag = true;
             } else if (linha.find("Nome: ") == 0 && encontradoFlag) {
@@ -416,9 +415,8 @@ void BancoDao::cadastrarTecnicoADM(vector<TecnicoADM>& tecnicosADM){
         }
 
         //Salvar informações do tecnico no arquivo txt.
-        if (arquivo.is_open()) {
-                arquivo << "Tipo: Tecnico\n"; 
-                arquivo << "Matricula: " << novoTecnicoAdm.getMatricula() << "\n";
+        if (arquivo.is_open()) { 
+                arquivo << "Matricula: " << "T2-" << novoTecnicoAdm.getMatricula() << "\n";
                 arquivo << "Nome: " << novoTecnicoAdm.getNome() << "\n";
                 arquivo << "CPF: " << novoTecnicoAdm.getCPF() << "\n";
                 arquivo << "Data de Nascimento: " << novoTecnicoAdm.getDataNascimento() << "\n";
@@ -469,7 +467,7 @@ void BancoDao::listarTecnicosADM(){
 
 
         while(getline(arquivo, linha)){
-            if (linha.find("Tipo: Tecnico") != string::npos) {
+            if (linha.find("Matricula: T2-") != string::npos) {
                 novoTecnico = TecnicoADM(); 
             } else if (linha.find("Nome: ") == 0) {
                 novoTecnico.setNome(linha.substr(6));
@@ -506,7 +504,7 @@ void BancoDao::deletarTecnicoADM(int matricula){
 
     while (getline(arquivoOriginal, linha)) {
         // Verifica se encontrou a matrícula do professor
-        if (linha.find("Matricula: " + to_string(matricula)) != string::npos) {
+        if (linha.find("Matricula: T2-" + to_string(matricula)) != string::npos) {
             tecnicoEncontrado = true;
             bloqueio = true; // Bloqueia a escrita a partir deste ponto
         }
@@ -551,7 +549,7 @@ void BancoDao::buscarTecnicoADM(int matricula){
         bool encontradoFlag = false;
 
         while (getline(arquivo, linha)) {
-            if (linha.find("Matricula: " + to_string(matricula)) != string::npos) {
+            if (linha.find("Matricula: T2-" + to_string(matricula)) != string::npos) {
                 encontrado = TecnicoADM();
                 encontradoFlag = true;
             } else if (linha.find("Nome: ") == 0 && encontradoFlag) {

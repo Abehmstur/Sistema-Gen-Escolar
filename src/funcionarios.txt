@@ -1,5 +1,4 @@
-Tipo: Professor
-Matricula: 100000
+Matricula: T1-100000
 Nome: Teste Matheus
 CPF: 7000000
 Data de Nascimento: 27-04-1999
@@ -17,8 +16,7 @@ Disciplina: Fisica Para Leigos
 Nivel: VI
 Formacao: MESTRADO
 
-Tipo: Tecnico
-Matricula: 1515
+Matricula: T2-1515
 Nome: Teste Tecnico Adm
 CPF: 20210090690
 Data de Nascimento: 27-11-2000
@@ -35,26 +33,8 @@ Data de Ingresso: 25-08-2008
 Adicional de Produtividade: 0.25
 Funcao Desempenhada: Assistente
 
-Tipo: Tecnico
-Matricula: 1616
-Nome: Teste 2
-CPF: 7512345
-Data de Nascimento: 11-02-1971
-Endereco:
-Rua: Das Delicias
-Numero: 500
-Bairro: Delicato
-Cidade: Cidade Teste
-CEP: 12345678
-Salario: 1500
-Departamento: Biologia
-Carga Horaria: 40
-Data de Ingresso: 25-08-2008
-Adicional de Produtividade: 0.25
-Funcao Desempenhada: Assistente
 
-Tipo: Tecnico
-Matricula: 68636
+Matricula: T2-68636
 Nome: ecnico Adm Teste 3
 CPF: 2345678910
 Data de Nascimento: 1-02-1961
@@ -71,21 +51,4 @@ Data de Ingresso: 15-12-2005
 Adicional de Produtividade: 0.25
 Funcao Desempenhada: Professor
 
-Tipo: Tecnico
-Matricula: 14
-Nome: TESTE TECN
-CPF: 70000
-Data de Nascimento: 25-12-2002
-Endereco:
-Rua: Rua Teste Tec
-Numero: 11
-Bairro: Cidade Nova
-Cidade: Natal
-CEP: 5907000
-Salario: 1414
-Departamento: ASG
-Carga Horaria: 40
-Data de Ingresso: 
-Adicional de Produtividade: 0.25
-Funcao Desempenhada: ASG2
 
