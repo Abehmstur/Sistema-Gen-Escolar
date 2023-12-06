@@ -8,7 +8,7 @@ CC = g++
 CFLAGS = -std=c++11 -Wall
 
 # Lista de todos os arquivos .cpp
-SRCS = main.cpp bancoDao.cpp endereco.cpp funcionario.cpp pessoa.cpp professor.cpp tecnico_adm.cpp turma.cpp
+SRCS = main.cpp bancoDao.cpp endereco.cpp funcionario.cpp pessoa.cpp professor.cpp tecnico_adm.cpp
 
 # Comando para compilar o programa
 $(PROGRAMA): $(SRCS)

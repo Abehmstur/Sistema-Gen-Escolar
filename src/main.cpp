@@ -21,7 +21,9 @@ void mostrarMenu() {
     cout << "6. Listar Tecnicos ADM" << endl;
     cout << "7. Deletar Tecnico ADM" << endl;
     cout << "8. Buscar Tecnico ADM" << endl;
-    cout << "9. Sair" << endl;
+    cout << "9. Imprimir Salario Professor" << endl;
+    cout << "10. Imprimir Salario Tecnico" << endl;
+    cout << "0. Sair" << endl;
     cout << "====================================" << endl;
     cout << "Escolha uma opcao: \n\n";
 }
@@ -29,16 +31,19 @@ void mostrarMenu() {
 int main()
 {
     int escolha;
+    int matriculaParaBuscar;
     BancoDao banco;
-
+    Professor prof;
+    TecnicoADM tecn;
+    
     do {
         try{
             mostrarMenu();
             cin >> escolha;
             cin.ignore();
             //Tratamento de erro com o Throw
-            if(escolha > 9 || escolha < 1){
-                throw mainExcecoes("O valor informado nao esta entre as opcoes disponiveis, por favor informe um valor entre 1 e 9.");
+            if(escolha > 10 || escolha < 0){
+                throw mainExcecoes("O valor informado nao esta entre as opcoes disponiveis, por favor informe um valor entre 1 e 10.");
             }
 
             switch (escolha) {
@@ -49,15 +54,13 @@ int main()
                     banco.listarProfessores();
                     break;
                 case 3:
-                    int matriculaParaDeletar;
                     cout << "Digite a matricula do professor para deletar: ";
-                    cin >> matriculaParaDeletar;
-                    banco.deletarProfessor(matriculaParaDeletar);
+                    matriculaParaBuscar = banco.lerNumero();
+                    banco.deletarProfessor(matriculaParaBuscar);
                     break;
                 case 4:
-                    int matriculaParaBuscar;
                     cout << "Digite a matricula do professor para buscar: ";
-                    cin >> matriculaParaBuscar;
+                    matriculaParaBuscar = banco.lerNumero();
                     banco.buscarProfessor(matriculaParaBuscar);
                     break;
                 case 5:
@@ -67,18 +70,26 @@ int main()
                     banco.listarTecnicosADM();
                     break;
                 case 7:
-                    int matriculaParaDeletarTecnico;
                     cout << "Digite a matricula do tecnico ADM para deletar: ";
-                    cin >> matriculaParaDeletarTecnico;
-                    banco.deletarTecnicoADM(matriculaParaDeletarTecnico);
+                    matriculaParaBuscar = banco.lerNumero();
+                    banco.deletarTecnicoADM(matriculaParaBuscar);
                     break;
                 case 8:
-                    int matriculaParaBuscarTecnico;
                     cout << "Digite a matricula do tccnico ADM para buscar: ";
-                    cin >> matriculaParaBuscarTecnico;
-                    banco.buscarTecnicoADM(matriculaParaBuscarTecnico);
+                    matriculaParaBuscar = banco.lerNumero();
+                    banco.buscarTecnicoADM(matriculaParaBuscar);
                     break;
                 case 9:
+                    cout << "Digite a matricula do PROFESSOR para visualizar o Salario: ";
+                    matriculaParaBuscar = banco.lerNumero();
+                    prof.imprimirSalarioDoFuncionarioByMatricula(matriculaParaBuscar);
+                    break;
+                case 10:
+                    cout << "Digite a matricula do tccnico ADM para visualizar o Salario: ";
+                    matriculaParaBuscar = banco.lerNumero();
+                    tecn.imprimirSalarioDoFuncionarioByMatricula(matriculaParaBuscar);
+                    break;
+                case 0:
                     cout << "Saindo do programa...\n\n" << endl;
                     break; 
                 default:
@@ -91,7 +102,7 @@ int main()
             cout << "================================================================================================================" << endl;
         }
         
-    } while (escolha != 9);
+    } while (escolha != 0);
 
 
     return 0;

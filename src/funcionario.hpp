@@ -20,6 +20,9 @@ public:
     const std::string& _departamento, int _cargaHoraria, const std::string& _dataIngresso) : Pessoa(_nome, _cpf, _dataNascimento, _endereco), matricula(_matricula), salario(_salario), departamento(_departamento), cargaHoraria(_cargaHoraria), dataIngresso(_dataIngresso){
     };
 
+    // Funcoes puras para abstracao puros
+    virtual void imprimirSalarioDoFuncionarioByMatricula(int _matricula) = 0;
+
     //Getters
     std::string getMatricula() const;
     float getSalario() const;

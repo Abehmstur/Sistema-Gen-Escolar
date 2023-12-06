@@ -8,7 +8,7 @@
 using namespace std;
 
 //Lê o número informado pelo usuário e retorna uma exceção caso não seja um valor válido.
-int lerNumero() {
+int BancoDao::lerNumero() {
     int numero;
 
     while (true) {
@@ -18,7 +18,6 @@ int lerNumero() {
                 cin.ignore();
                 throw bancoDaoExcecoes("Entrada invalida! Digite um numero inteiro.");
             }
-            cin.ignore();
             return numero; // Retorna o número se a entrada for válida
         } catch (const bancoDaoExcecoes& erro) {
             cout << "================================================================================================================" << endl;
@@ -83,6 +82,7 @@ void BancoDao::cadastrarProfessor(vector<Professor>& professores){
     
     cout << "Numero da Casa: " << endl;
     numero = lerNumero();
+    cin.ignore();
     novoEndereco.setNumero(numero);
     
     cout << "Bairro: " << endl;
@@ -101,7 +101,8 @@ void BancoDao::cadastrarProfessor(vector<Professor>& professores){
     // entrada dados funcionario
     cout << "<< Informe os Dados de Funcionario a seguir >> " << endl;
     cout << "Informe a Matricula do professor a seguir: " << endl;
-    matricula = lerNumero();
+    int matriTemp = lerNumero();
+    matricula = to_string(matriTemp);
     
     cout << "Informe o Salario do professor a seguir: " << endl;
     cin >> salario;
@@ -112,6 +113,7 @@ void BancoDao::cadastrarProfessor(vector<Professor>& professores){
     
     cout << "Informe a Carga Horaria do professor a seguir: " << endl;
     cargaHoraria = lerNumero();
+    cin.ignore();
     
     cout << "Informe a Data de Ingresso do professor a seguir: " << endl;
     getline(cin, dataIngresso);
@@ -381,7 +383,8 @@ void BancoDao::cadastrarTecnicoADM(vector<TecnicoADM>& tecnicosADM){
     // entrada dados funcionario
     cout << "<< Informe os Dados de Funcionario a seguir >> " << endl;
     cout << "Informe a Matricula do tecnico adm a seguir: " << endl;
-    matricula = lerNumero();
+    int matriTemp = lerNumero();
+    matricula = to_string(matriTemp);
     
     cout << "Informe o Salario do tecnico adm a seguir: " << endl;
     cin >> salario;
@@ -399,8 +402,7 @@ void BancoDao::cadastrarTecnicoADM(vector<TecnicoADM>& tecnicosADM){
     // entrada de dados do tecnico adm a seguir
     cout << "<< Informe os Dados de Funcionario a seguir >> " << endl;
     cout << "Informe funcao desempenhada pelo tecnico adm a seguir: " << endl;
-    cin >> funcaoDesempenhada;
-    cin.ignore();
+    getline(cin, funcaoDesempenhada);
 
     TecnicoADM novoTecnicoAdm(nome, cpf, dataNascimento, novoEndereco, matricula, salario, departamento, cargaHoraria, dataIngresso, adicionalProdutividade, funcaoDesempenhada);
 

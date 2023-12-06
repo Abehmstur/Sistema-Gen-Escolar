@@ -7,7 +7,7 @@
 #include <iostream>
 #include <vector>
 
-class BancoDao : public Professor, TecnicoADM{
+class BancoDao{
     private:
 
     public:
@@ -30,6 +30,9 @@ class BancoDao : public Professor, TecnicoADM{
         // Exceptions temporarias
         void operacaoSucesso();
         void operacaoFalha();
+
+        //ler valor numero e far o tratamento de entrada.
+        int lerNumero();
 
 };
 #endif

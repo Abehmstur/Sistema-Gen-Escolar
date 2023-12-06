@@ -25,6 +25,9 @@ public:
     //Construtor parametrizado com as classes mães etc
     Professor(const std::string& _nome, const std::string& _cpf, const std::string& _dataNascimento, const Endereco& _endereco, const std::string& _matricula, float _salario, const std::string& _departamento, int _cargaHoraria, const std::string& _dataIngresso, const Nivel& _nivel, const Formacao& _formacao, const std::string& _disciplina) : Funcionario(_nome, _cpf, _dataNascimento, _endereco, _matricula, _salario, _departamento, _cargaHoraria, _dataIngresso), nivelProfessor(_nivel), formacaoProfessor(_formacao), disciplina(_disciplina) {};
 
+    //Metodo abstrato criado na classe filha
+    void imprimirSalarioDoFuncionarioByMatricula(int _matricula);
+
     //Getters
     Nivel getNivelProfessor() const;
     Formacao getFormacaoProfessor() const;
