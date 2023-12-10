@@ -1,3 +1,7 @@
+/**
+ * @file bancoDao.cpp
+ * @brief Implementação da classe BancoDao para gerenciamento de professores e pessoal técnico em uma universidade.
+ */
 #include <iostream>
 #include <fstream>
 #include <vector>
