@@ -10,7 +10,16 @@
 
 using namespace std;
 
-//menuzinho
+/**
+* @file: main.cpp
+* @brief Programa principal para interação com o sistema de cadastro de professores e técnicos ADM.
+* @authores: Matheus Barros Medeiros, William de Abreu Martins Oliveira, Flavio Germano Pinheiro.
+* @Date Data de criação (10 de dezembro de 2023)
+*/
+
+/**
+ * @brief Exibe o menu principal do programa.
+ */
 void mostrarMenu() {
     cout << "========== MENU PRINCIPAL ==========" << endl;
     cout << "1. Cadastrar Professor" << endl;
@@ -28,6 +37,10 @@ void mostrarMenu() {
     cout << "Escolha uma opcao: \n\n";
 }
 
+/**
+ * @brief Função principal do programa.
+ * @return 0 se o programa for concluído com sucesso.
+ */
 int main()
 {
     int escolha;
@@ -35,13 +48,14 @@ int main()
     BancoDao banco;
     Professor prof;
     TecnicoADM tecn;
-    
+
     do {
         try{
             mostrarMenu();
             cin >> escolha;
             cin.ignore();
-            //Tratamento de erro com o Throw
+
+            // Tratamento de erro com o Throw
             if(escolha > 10 || escolha < 0){
                 throw mainExcecoes("O valor informado nao esta entre as opcoes disponiveis, por favor informe um valor entre 1 e 10.");
             }
@@ -101,9 +115,8 @@ int main()
             cout << "| ERROR: " << erro.what() << endl;
             cout << "================================================================================================================" << endl;
         }
-        
-    } while (escolha != 0);
 
+    } while (escolha != 0);
 
     return 0;
 }
