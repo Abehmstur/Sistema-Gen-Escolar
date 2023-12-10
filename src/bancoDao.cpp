@@ -11,7 +11,11 @@
 
 using namespace std;
 
-//Lê o número informado pelo usuário e retorna uma exceção caso não seja um valor válido.
+/**
+ * @brief Função que lê um número inteiro inserido pelo usuário e trata entradas inválidas.
+ * @return Um número inteiro inserido pelo usuário.
+ * @throws bancoDaoExcecoes se a entrada não for um número inteiro válido.
+ */
 int BancoDao::lerNumero() {
     int numero;
 
@@ -22,7 +26,7 @@ int BancoDao::lerNumero() {
                 cin.ignore();
                 throw bancoDaoExcecoes("Entrada invalida! Digite um numero inteiro.");
             }
-            return numero; // Retorna o número se a entrada for válida
+            return numero;
         } catch (const bancoDaoExcecoes& erro) {
             cout << "================================================================================================================" << endl;
             cout << "| ERROR: " << erro.what() << endl;
@@ -31,68 +35,76 @@ int BancoDao::lerNumero() {
     }
 }
 
-//excecoes temporarias
+/**
+ * @brief Exibe uma mensagem de sucesso para operações.
+ */
 void BancoDao::operacaoSucesso(){
     cout << "Operacao realizada com sucesso!" << endl;
 }
 
+/**
+ * @brief Exibe uma mensagem de falha para operações.
+ */
 void BancoDao::operacaoFalha(){
     cout << "Não foi possivel completar a operacao!" << endl;
 }
-//funcoes professores
+
+/**
+ * @brief Solicita ao usuário informações para um novo professor e salva essas informações em um arquivo.
+ * @param professores Vetor de objetos da classe Professor para armazenar o novo professor.
+ */
 void BancoDao::cadastrarProfessor(vector<Professor>& professores){
-    //dados Pessoa
+    
     string nome;
     string cpf;
     string dataNascimento;
+
     
-    //Novo endereço + atributos endereço
     Endereco novoEndereco;
     string rua;
     int numero;
     string bairro;
     string cidade;
     string cep;
+
     
-    //dados Funcionario
     string matricula;
     float salario;
     string departamento;
     int cargaHoraria;
     string dataIngresso;
 
-    //dados Professor
+    
     string disciplina;
     int nivelProfessor;
     int formacaoProfessor;
 
-    //solicitando entradas do usuário
-    //entrada dados pessoa
+    
     cout << "<< Informe os Dados Pessoais do professor a seguir >> " << endl;
     cout << "Informe o nome do professor: " << endl;
     getline(cin, nome);
-    
+
     cout << "Informe o CPF do professor: " << endl;
     getline(cin, cpf);
 
     cout << "Informe a Data de Nascimento do professor: " << endl;
     getline(cin, dataNascimento);
+
     
-    //entrada dados endereco
     cout << "<< Informe o Endereco do professor a seguir >> " << endl;
     cout << "Rua: " << endl;
     getline(cin, rua);
     novoEndereco.setRua(rua);
-    
+
     cout << "Numero da Casa: " << endl;
     numero = lerNumero();
     cin.ignore();
     novoEndereco.setNumero(numero);
-    
+
     cout << "Bairro: " << endl;
     getline(cin, bairro);
     novoEndereco.setBairro(bairro);
-    
+
     cout << "Cidade: " << endl;
     getline(cin, cidade);
     novoEndereco.setCidade(cidade);
@@ -102,41 +114,41 @@ void BancoDao::cadastrarProfessor(vector<Professor>& professores){
     cin.ignore();
     novoEndereco.setCEP(cep);
 
-    // entrada dados funcionario
+    
     cout << "<< Informe os Dados de Funcionario a seguir >> " << endl;
     cout << "Informe a Matricula do professor a seguir: " << endl;
     int matriTemp = lerNumero();
     matricula = to_string(matriTemp);
-    
+
     cout << "Informe o Salario do professor a seguir: " << endl;
     cin >> salario;
     cin.ignore();
-    
+
     cout << "Informe o Departamento do professor a seguir: " << endl;
     getline(cin, departamento);
-    
+
     cout << "Informe a Carga Horaria do professor a seguir: " << endl;
     cargaHoraria = lerNumero();
     cin.ignore();
-    
+
     cout << "Informe a Data de Ingresso do professor a seguir: " << endl;
     getline(cin, dataIngresso);
-    
-    //entrada dados professor
+
+   
     cout << "Informe a Disciplina do professor a seguir: " << endl;
     getline(cin, disciplina);
-    
+
     do
     {
         cout << "Informe a Nivel do professor a seguir {0 a 6 = I a VIII}: " << endl;
         nivelProfessor = lerNumero();
-        
+
         if(!(nivelProfessor >= 0 && nivelProfessor <= 6)){
             cout << "INCORRETO: Informe um valor entre 0 e 6. " << endl;
         }
-        
+
     } while (!(nivelProfessor >= 0 && nivelProfessor <= 6));
-    
+
     do
     {
         cout << "Informe a Formacao do professor a seguir {0 = ESPECIALIZACAO, 1 = MESTRADO, 2 = DOUTORADO}: " << endl;
@@ -147,15 +159,15 @@ void BancoDao::cadastrarProfessor(vector<Professor>& professores){
         }
 
     } while (!(formacaoProfessor >= 0 && formacaoProfessor <= 2));
-    
-        //aqui converte os numeros recebidos pelo usuario nos seus devidos ENUM de nivel e formacao
+
+       
         Professor::Nivel nivel = Professor::obterNivelPeloNumero(nivelProfessor);
         Professor::Formacao formacao = Professor::obterFormacaoPeloNumero(formacaoProfessor);
 
-        //Constroi um novo professor com os dados fornecidos pelo usuario
+        
         Professor novoProfessor(nome, cpf, dataNascimento, novoEndereco, matricula, salario, departamento, cargaHoraria, dataIngresso, nivel, formacao, disciplina);
 
-        //comeca a salvar em arquivo aqui abrindo o arquivo.
+       
         fstream arquivo("funcionarios.txt", ios::app);
 
         string nomeDoNivel = Professor::obterNomeDoNivel(novoProfessor.getNivelProfessor());
@@ -167,7 +179,7 @@ void BancoDao::cadastrarProfessor(vector<Professor>& professores){
                 throw bancoDaoExcecoes("Nao foi possivel abrir o arquivo.");
             }
 
-            //Salvar informações do professor no arquivo txt.
+            
             if (arquivo.is_open()) {
                 arquivo << "Matricula: " << "T1-" << novoProfessor.getMatricula() << "\n";
                 arquivo << "Nome: " << novoProfessor.getNome() << "\n";
@@ -196,25 +208,26 @@ void BancoDao::cadastrarProfessor(vector<Professor>& professores){
             cout << "================================================================================================================" << endl;
         }
 
-        //Exibe um resumo dos dados do professor cadastrado
         cout << "========DADOS DO PROFESSOR CADASTRADO========" << endl;
         cout << "Nome: " << novoProfessor.getNome() << "\nCPF:" << novoProfessor.getCPF() << "\nData de Nascimento: " << novoProfessor.getDataNascimento() << endl;
         cout << "Rua: " << novoEndereco.getRua() << "\nBairro: " << novoEndereco.getBairro() << "\nCEP: " << novoEndereco.getCEP() << "\nCidade: " << novoEndereco.getCidade() << "\nNumero: " << novoEndereco.getNumero() << endl;
         cout << "Matricula: " << novoProfessor.getMatricula() << "\nSalario: " << novoProfessor.getSalario() << "\nDepartamento: " << novoProfessor.getDepartamento() << endl;
         cout << "Carga Horaria: " << novoProfessor.getCargaHoraria() << "\nData de Ingresso: " << novoProfessor.getDataIngresso() << endl;
-        
+
         cout << "Nivel:" << nomeDoNivel << "\nFormacao: " << nomeDaFormacao << "\nDisciplina: " << novoProfessor.getDisciplina() << endl;
         cout << "========XXXXXXXXXXXXXXXXXXXXXXXXXXXXX========" << endl;
-        
+
         operacaoSucesso();
 };
 
-//listar professor
+/**
+ * @brief Lista todos os professores armazenados no arquivo.
+ */
 void BancoDao::listarProfessores(){
     fstream arquivo("funcionarios.txt");
     vector<Professor> listaProfessores;
 
-    //validacao caso o arquivo não abra.
+    
     if (!arquivo.is_open()) {
         cerr << "Nao foi possivel abrir o arquivo." << endl;
     } else {
@@ -237,14 +250,16 @@ void BancoDao::listarProfessores(){
 
         cout << "PROFESSORES: \n";
 
-        //lista professor no for
-        for (const auto& professor : listaProfessores) {
+              for (const auto& professor : listaProfessores) {
             cout << "Nome: " << professor.getNome() << " | Disciplina: " << professor.getDisciplina() << endl;
         }
     }
 }
 
-//deletar professor
+/**
+ * @brief Exclui um professor com uma determinada matrícula do arquivo.
+ * @param matricula Matrícula do professor a ser excluído.
+ */
 void BancoDao::deletarProfessor(int matricula) {
     ifstream arquivoOriginal("funcionarios.txt");
     ofstream arquivoTemporario("temp.txt");
@@ -256,21 +271,21 @@ void BancoDao::deletarProfessor(int matricula) {
 
     string linha;
     bool professorEncontrado = false;
-    bool bloqueio = false; // Variável para controlar se deve bloquear a escrita
+    bool bloqueio = false; 
 
     while (getline(arquivoOriginal, linha)) {
-        // Verifica se encontrou a matrícula do professor
+        
         if (linha.find("Matricula: T1-" + to_string(matricula)) != string::npos) {
             professorEncontrado = true;
-            bloqueio = true; // Bloqueia a escrita a partir deste ponto
+            bloqueio = true; 
         }
 
-        // Se encontrou, pula todas as linhas referentes ao professor
+       
         if (bloqueio && linha.empty()) {
-            bloqueio = false; // Desbloqueia a escrita
+            bloqueio = false; 
         }
 
-        // Escreve no arquivo temporário se não for uma linha do professor a ser deletado
+       
         if (!bloqueio) {
             arquivoTemporario << linha << endl;
         }
@@ -279,7 +294,7 @@ void BancoDao::deletarProfessor(int matricula) {
     arquivoOriginal.close();
     arquivoTemporario.close();
 
-    // Remove o arquivo original e renomeia o temporário para o nome do original
+    
     remove("funcionarios.txt");
     rename("temp.txt", "funcionarios.txt");
 
@@ -290,11 +305,16 @@ void BancoDao::deletarProfessor(int matricula) {
     }
 }
 
+/**
+ * @brief Procura por um professor com uma determinada matrícula e exibe suas informações.
+ * @param matricula Matrícula do professor a ser pesquisado.
+ */
+
 void BancoDao::buscarProfessor(int matricula){
     fstream arquivo("funcionarios.txt");
     vector<Professor> listaProfessores;
 
-    //validacao caso o arquivo não abra.
+    
     if (!arquivo.is_open()) {
         cerr << "Nao foi possivel abrir o arquivo." << endl;
     } else {
@@ -311,7 +331,7 @@ void BancoDao::buscarProfessor(int matricula){
                 encontrado.setNome(linha.substr(6));
             } else if (linha.find("Disciplina: ") == 0 && encontradoFlag) {
                 encontrado.setDisciplina(linha.substr(12));
-                break; // Não precisamos mais continuar após encontrar todos os dados
+                break; 
             }
         }
             arquivo.close();
@@ -323,58 +343,59 @@ void BancoDao::buscarProfessor(int matricula){
             }
     }
 }
-//funcoes para tecnicos adm
+
+/**
+ * @brief Cadastra um novo técnico ADM no sistema.
+ * @param tecnicosADM Vetor de técnicos ADM onde o novo técnico ADM será armazenado.
+ */
 void BancoDao::cadastrarTecnicoADM(vector<TecnicoADM>& tecnicosADM){
-    //dados Pessoa
+    
     string nome;
     string cpf;
     string dataNascimento;
+
     
-    //Novo endereço + atributos endereço
     Endereco novoEndereco;
     string rua;
     int numero;
     string bairro;
     string cidade;
     string cep;
+
     
-    //dados Funcionario
     string matricula;
     float salario;
     string departamento;
     int cargaHoraria;
     string dataIngresso;
 
-    //dados tecnico adm
+    
     float adicionalProdutividade = 0.25;
     string funcaoDesempenhada;
-
-    //solicitando entradas do usuário
-    //entrada dados pessoa
+    
     cout << "<< Informe os Dados Pessoais do Tecnico ADM a seguir >> " << endl;
     cout << "Informe o nome do tecnico adm: " << endl;
     getline(cin, nome);
-    
+
     cout << "Informe o CPF do tecnico adm: " << endl;
     getline(cin, cpf);
 
     cout << "Informe a Data de Nascimento do tecnico adm: " << endl;
     getline(cin, dataNascimento);
     
-    //entrada dados endereco
     cout << "<< Informe o Endereco do tecnico adm a seguir: >>" << endl;
     cout << "Rua: " << endl;
     getline(cin, rua);
     novoEndereco.setRua(rua);
-    
+
     cout << "Numero: " << endl;
     numero = lerNumero();
     novoEndereco.setNumero(numero);
-    
+
     cout << "Bairro: " << endl;
     getline(cin, bairro);
     novoEndereco.setBairro(bairro);
-    
+
     cout << "Cidade: " << endl;
     getline(cin, cidade);
     novoEndereco.setCidade(cidade);
@@ -383,44 +404,42 @@ void BancoDao::cadastrarTecnicoADM(vector<TecnicoADM>& tecnicosADM){
     cin >> cep;
     cin.ignore();
     novoEndereco.setCEP(cep);
-
-    // entrada dados funcionario
+    
     cout << "<< Informe os Dados de Funcionario a seguir >> " << endl;
     cout << "Informe a Matricula do tecnico adm a seguir: " << endl;
     int matriTemp = lerNumero();
     matricula = to_string(matriTemp);
-    
+
     cout << "Informe o Salario do tecnico adm a seguir: " << endl;
     cin >> salario;
     cin.ignore();
-    
+
     cout << "Informe o Departamento do tecnico adm a seguir: " << endl;
     getline(cin, departamento);
-    
+
     cout << "Informe a Carga Horaria do tecnico adm a seguir: " << endl;
     cargaHoraria = lerNumero();
-    
+
     cout << "Informe a Data de Ingresso do tecnico adm a seguir: " << endl;
     getline(cin, dataIngresso);
-
-    // entrada de dados do tecnico adm a seguir
+    
     cout << "<< Informe os Dados de Funcionario a seguir >> " << endl;
     cout << "Informe funcao desempenhada pelo tecnico adm a seguir: " << endl;
     getline(cin, funcaoDesempenhada);
 
     TecnicoADM novoTecnicoAdm(nome, cpf, dataNascimento, novoEndereco, matricula, salario, departamento, cargaHoraria, dataIngresso, adicionalProdutividade, funcaoDesempenhada);
 
-    //comeca a salvar em arquivo aqui abrindo o arquivo.
+    
     fstream arquivo("funcionarios.txt", ios::app);
 
-    //tratamento de abertura de arquivo
+   
     try
     {
         if(!arquivo.is_open()){
                 throw bancoDaoExcecoes("Nao foi possivel abrir o arquivo.");
         }
 
-        //Salvar informações do tecnico no arquivo txt.
+        
         if (arquivo.is_open()) { 
                 arquivo << "Matricula: " << "T2-" << novoTecnicoAdm.getMatricula() << "\n";
                 arquivo << "Nome: " << novoTecnicoAdm.getNome() << "\n";
@@ -445,25 +464,27 @@ void BancoDao::cadastrarTecnicoADM(vector<TecnicoADM>& tecnicosADM){
         cout << "| ERROR: " << erro.what() << endl;
         cout << "================================================================================================================" << endl;
     }
+
     
-    //Exibe um resumo dos dados do tecnico cadastrado
         cout << "========DADOS DO TECNICO CADASTRADO========" << endl;
         cout << "Nome: " << novoTecnicoAdm.getNome() << "\nCPF:" << novoTecnicoAdm.getCPF() << "\nData de Nascimento: " << novoTecnicoAdm.getDataNascimento() << endl;
         cout << "Rua: " << novoEndereco.getRua() << "\nBairro: " << novoEndereco.getBairro() << "\nCEP: " << novoEndereco.getCEP() << "\nCidade: " << novoEndereco.getCidade() << "\nNumero: " << novoEndereco.getNumero() << endl;
         cout << "Matricula: " << novoTecnicoAdm.getMatricula() << "\nSalario: " << novoTecnicoAdm.getSalario() << "\nDepartamento: " << novoTecnicoAdm.getDepartamento() << endl;
         cout << "Carga Horaria: " << novoTecnicoAdm.getCargaHoraria() << "\nData de Ingresso: " << novoTecnicoAdm.getDataIngresso() << endl;
-        
+
         cout << "========XXXXXXXXXXXXXXXXXXXXXXXXXXXXX========" << endl;
         operacaoSucesso();
 
 };
 
-//listar Tecnicos ADM
+/**
+ * @brief Lista todos os técnicos ADM cadastrados no sistema.
+ */
 void BancoDao::listarTecnicosADM(){
     fstream arquivo("funcionarios.txt");
     vector<TecnicoADM> listaTecnicos;
 
-    //validacao caso o arquivo não abra.
+    
     if (!arquivo.is_open()) {
         cerr << "Nao foi possivel abrir o arquivo." << endl;
     } else {
@@ -487,14 +508,17 @@ void BancoDao::listarTecnicosADM(){
 
         cout << "TECNICOS: \n";
 
-        //lista tecnico adm no for
+        
         for (const auto& tecnicos : listaTecnicos) {
             cout << "Nome: " << tecnicos.getNome() << " | Funcao Desempenhada: " << tecnicos.getFuncaoDesempenhada() << endl;
         }
     }
 };
 
-//replica do deletar professor
+/**
+ * @brief Deleta um técnico ADM do sistema com base na matrícula.
+ * @param matricula Matrícula do técnico ADM a ser deletado.
+ */
 void BancoDao::deletarTecnicoADM(int matricula){
     ifstream arquivoOriginal("funcionarios.txt");
     ofstream arquivoTemporario("temp.txt");
@@ -506,21 +530,21 @@ void BancoDao::deletarTecnicoADM(int matricula){
 
     string linha;
     bool tecnicoEncontrado = false;
-    bool bloqueio = false; // Variável para controlar se deve bloquear a escrita
+    bool bloqueio = false; 
 
     while (getline(arquivoOriginal, linha)) {
-        // Verifica se encontrou a matrícula do professor
+        
         if (linha.find("Matricula: T2-" + to_string(matricula)) != string::npos) {
             tecnicoEncontrado = true;
-            bloqueio = true; // Bloqueia a escrita a partir deste ponto
+            bloqueio = true; 
         }
 
-        // Se encontrou, pula todas as linhas referentes ao tecnico
+        
         if (bloqueio && linha.empty()) {
-            bloqueio = false; // Desbloqueia a escrita
+            bloqueio = false; 
         }
 
-        // Escreve no arquivo temporário se não for uma linha do tecnico a ser deletado
+        
         if (!bloqueio) {
             arquivoTemporario << linha << endl;
         }
@@ -529,7 +553,7 @@ void BancoDao::deletarTecnicoADM(int matricula){
     arquivoOriginal.close();
     arquivoTemporario.close();
 
-    // Remove o arquivo original e renomeia o temporário para o nome do original
+    
     remove("funcionarios.txt");
     rename("temp.txt", "funcionarios.txt");
 
@@ -540,12 +564,15 @@ void BancoDao::deletarTecnicoADM(int matricula){
     }
 };
 
-//busca tec
+/**
+ * @brief Busca e exibe os dados de um técnico ADM com base na matrícula.
+ * @param matricula Matrícula do técnico ADM a ser buscado.
+ */
 void BancoDao::buscarTecnicoADM(int matricula){
     fstream arquivo("funcionarios.txt");
     vector<TecnicoADM> listaTecnicos;
 
-    //validacao caso o arquivo não abra.
+    
     if (!arquivo.is_open()) {
         cerr << "Nao foi possivel abrir o arquivo." << endl;
     } else {
@@ -562,7 +589,7 @@ void BancoDao::buscarTecnicoADM(int matricula){
                 encontrado.setNome(linha.substr(6));
             } else if (linha.find("Funcao Desempenhada: ") == 0 && encontradoFlag) {
                 encontrado.setFuncaoDesempenhada(linha.substr(21));
-                break; // Não precisamos mais continuar após encontrar todos os dados
+                break; 
             }
         }
             arquivo.close();
