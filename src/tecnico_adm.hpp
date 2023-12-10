@@ -5,29 +5,58 @@
 #include <iostream>
 #include <string>
 
+/**
+ * @file tecnico_adm.hpp
+ * @brief Implementação da classe TecnicoADM.
+ */
+
+/**
+ * @class TecnicoADM
+ * @brief Classe que representa um técnico administrativo.
+ * @details Herda da classe Funcionario e implementa funcionalidades específicas para técnicos administrativos.
+ */
 class TecnicoADM : public Funcionario {
 private:
-    float adicionalProdutividade = 0.25;
-    std::string funcaoDesempenhada;
+    float adicionalProdutividade; ///< Adicional de produtividade do técnico administrativo.
+    std::string funcaoDesempenhada; ///< Função desempenhada pelo técnico administrativo.
 
 public:
-    TecnicoADM(){};
-    // Construtor parametrizado
+    /**
+     * @brief Construtor parametrizado da classe TecnicoADM.
+     * @param _adicionalProdutividade Adicional de produtividade do técnico administrativo.
+     * @param _funcaoDesempenhada Função desempenhada pelo técnico administrativo.
+     */
     TecnicoADM(float _adicionalProdutividade, const std::string& _funcaoDesempenhada);
 
-    // Construtor parametrizado com as classes mães etc
-    TecnicoADM(const std::string& _nome, const std::string& _cpf, const std::string& _dataNascimento, const Endereco& _endereco, const std::string& _matricula, float _salario, const std::string& _departamento, int _cargaHoraria, const std::string& _dataIngresso, float _adicionalProdutividade, const std::string& _funcaoDesempenhada) : Funcionario(_nome, _cpf, _dataNascimento, _endereco, _matricula, _salario, _departamento, _cargaHoraria, _dataIngresso), adicionalProdutividade(_adicionalProdutividade), funcaoDesempenhada(_funcaoDesempenhada) {};
-    
-    //Imprimir Salario Abstrata
-    void imprimirSalarioDoFuncionarioByMatricula(int _matricula);
-
-    // Getters
+    /**
+     * @brief Getter para obter o adicional de produtividade do técnico administrativo.
+     * @return O adicional de produtividade.
+     */
     float getAdicionalProdutividade() const;
+
+    /**
+     * @brief Getter para obter a função desempenhada pelo técnico administrativo.
+     * @return A função desempenhada.
+     */
     std::string getFuncaoDesempenhada() const;
 
-    // Setters
+    /**
+     * @brief Setter para definir o adicional de produtividade do técnico administrativo.
+     * @param novoAdicionalProdutividade Novo adicional de produtividade a ser definido.
+     */
     void setAdicionalProdutividade(float novoAdicionalProdutividade);
-    void setFuncaoDesempenhada(const std::string& novaFuncaoDesempenhada);
-};
 
+    /**
+     * @brief Setter para definir a função desempenhada pelo técnico administrativo.
+     * @param novaFuncaoDesempenhada Nova função desempenhada a ser definida.
+     */
+    void setFuncaoDesempenhada(const std::string& novaFuncaoDesempenhada);
+
+    /**
+     * @brief Método para imprimir o salário do funcionário com base na matrícula.
+     * @param _matricula Matrícula do funcionário.
+     * @details O método lê o arquivo "funcionarios.txt" em busca do funcionário com a matrícula informada e imprime seu salário.
+     */
+    void imprimirSalarioDoFuncionarioByMatricula(int _matricula);
+};
 #endif
