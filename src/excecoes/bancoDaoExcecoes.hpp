@@ -4,10 +4,27 @@
 #include <string>
 #include <stdexcept>
 
-class bancoDaoExcecoes : public std::runtime_error{
+/**
+ * @file bancoDaoExcecoes.hpp
+ * @brief Definição da classe bancoDaoExcecoes.
+ */
 
+/**
+ * @class bancoDaoExcecoes
+ * @brief Representa uma exceção relacionada ao BancoDao.
+ */
+class bancoDaoExcecoes : public std::runtime_error {
 public:
-    bancoDaoExcecoes(const std::string& msg) : std::runtime_error(msg) {}
-};
+    /**
+     * @brief Construtor parametrizado.
+     * @param msg Mensagem de erro associada à exceção.
+     */
+    bancoDaoExcecoes(const std::string& msg);
 
+    /**
+     * @brief Getter para obter a mensagem de erro.
+     * @return A mensagem de erro associada à exceção.
+     */
+    const char* what() const noexcept override;
+};
 #endif
