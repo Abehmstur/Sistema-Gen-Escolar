@@ -1,0 +1,287 @@
+\doxysection{Referência da Classe Endereco}
+\hypertarget{class_endereco}{}\label{class_endereco}\index{Endereco@{Endereco}}
+
+
+Representa um endereço com rua, número, bairro, cidade e CEP.  
+
+
+
+
+{\ttfamily \#include $<$endereco.\+hpp$>$}
+
+Diagrama de hierarquia da classe Endereco\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_endereco}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_endereco_a1bb2df2319912c102821c133485bec0a}{Endereco}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a340afa3adcd7ebb339ca8e433d6d4a91}{get\+Rua}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da rua. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_endereco_ad371ff391cc7ebfd6dd24774a287790b}{get\+Numero}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o número do endereço. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a6f64a6dbe44b0a07e0acd5715558e9a7}{get\+Bairro}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome do bairro. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a08ecbda9d910730ddc049e351cb42726}{get\+Cidade}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da cidade. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a78d6c203af45c44d157cfccd4999b243}{get\+CEP}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o CEP do endereço. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a0a42fe5445d353e738f436213f2bff8d}{set\+Rua}} (const std\+::string \&new\+Rua)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da rua. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a4fd5facf5d971527d8915b83644436ac}{set\+Numero}} (int new\+Numero)
+\begin{DoxyCompactList}\small\item\em Setter para definir o número do endereço. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a82eba609a8d13dbc194b7e3adf4ab399}{set\+Bairro}} (const std\+::string \&new\+Bairro)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome do bairro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a913d70a1a418ba52486fa497be615522}{set\+Cidade}} (const std\+::string \&new\+Cidade)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da cidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a8379da8b0248df9fe90813ba0ecce9e2}{set\+CEP}} (const std\+::string \&new\+CEP)
+\begin{DoxyCompactList}\small\item\em Setter para definir o CEP do endereço. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representa um endereço com rua, número, bairro, cidade e CEP. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_endereco_a1bb2df2319912c102821c133485bec0a}\label{class_endereco_a1bb2df2319912c102821c133485bec0a} 
+\index{Endereco@{Endereco}!Endereco@{Endereco}}
+\index{Endereco@{Endereco}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{Endereco()}{Endereco()}}
+{\footnotesize\ttfamily Endereco\+::\+Endereco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão. 
+
+Inicializa o número com 0. 
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_endereco_a6f64a6dbe44b0a07e0acd5715558e9a7}\label{class_endereco_a6f64a6dbe44b0a07e0acd5715558e9a7} 
+\index{Endereco@{Endereco}!getBairro@{getBairro}}
+\index{getBairro@{getBairro}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{getBairro()}{getBairro()}}
+{\footnotesize\ttfamily string Endereco\+::get\+Bairro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter o nome do bairro. 
+
+\begin{DoxyReturn}{Retorna}
+O nome do bairro. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{return}\ bairro;}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_endereco_a78d6c203af45c44d157cfccd4999b243}\label{class_endereco_a78d6c203af45c44d157cfccd4999b243} 
+\index{Endereco@{Endereco}!getCEP@{getCEP}}
+\index{getCEP@{getCEP}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{getCEP()}{getCEP()}}
+{\footnotesize\ttfamily string Endereco\+::get\+CEP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter o CEP do endereço. 
+
+\begin{DoxyReturn}{Retorna}
+O CEP do endereço. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ cep;}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_endereco_a08ecbda9d910730ddc049e351cb42726}\label{class_endereco_a08ecbda9d910730ddc049e351cb42726} 
+\index{Endereco@{Endereco}!getCidade@{getCidade}}
+\index{getCidade@{getCidade}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{getCidade()}{getCidade()}}
+{\footnotesize\ttfamily string Endereco\+::get\+Cidade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter o nome da cidade. 
+
+\begin{DoxyReturn}{Retorna}
+O nome da cidade. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ cidade;}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_endereco_ad371ff391cc7ebfd6dd24774a287790b}\label{class_endereco_ad371ff391cc7ebfd6dd24774a287790b} 
+\index{Endereco@{Endereco}!getNumero@{getNumero}}
+\index{getNumero@{getNumero}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{getNumero()}{getNumero()}}
+{\footnotesize\ttfamily int Endereco\+::get\+Numero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter o número do endereço. 
+
+\begin{DoxyReturn}{Retorna}
+O número do endereço. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{return}\ numero;}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_endereco_a340afa3adcd7ebb339ca8e433d6d4a91}\label{class_endereco_a340afa3adcd7ebb339ca8e433d6d4a91} 
+\index{Endereco@{Endereco}!getRua@{getRua}}
+\index{getRua@{getRua}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{getRua()}{getRua()}}
+{\footnotesize\ttfamily string Endereco\+::get\+Rua (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter o nome da rua. 
+
+\begin{DoxyReturn}{Retorna}
+O nome da rua. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{return}\ rua;}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_endereco_a82eba609a8d13dbc194b7e3adf4ab399}\label{class_endereco_a82eba609a8d13dbc194b7e3adf4ab399} 
+\index{Endereco@{Endereco}!setBairro@{setBairro}}
+\index{setBairro@{setBairro}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{setBairro()}{setBairro()}}
+{\footnotesize\ttfamily void Endereco\+::set\+Bairro (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{novo\+Bairro }\end{DoxyParamCaption})}
+
+
+
+Setter para definir o nome do bairro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em new\+Bairro} & Novo nome do bairro a ser definido.\\
+\hline
+{\em novo\+Bairro} & Novo nome do bairro a ser definido. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ bairro\ =\ novoBairro;}
+\DoxyCodeLine{00071\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_endereco_a8379da8b0248df9fe90813ba0ecce9e2}\label{class_endereco_a8379da8b0248df9fe90813ba0ecce9e2} 
+\index{Endereco@{Endereco}!setCEP@{setCEP}}
+\index{setCEP@{setCEP}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{setCEP()}{setCEP()}}
+{\footnotesize\ttfamily void Endereco\+::set\+CEP (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nova\+CEP }\end{DoxyParamCaption})}
+
+
+
+Setter para definir o CEP do endereço. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em new\+CEP} & Novo CEP a ser definido.\\
+\hline
+{\em novo\+CEP} & Novo CEP a ser definido. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ cep\ =\ novaCEP;}
+\DoxyCodeLine{00087\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_endereco_a913d70a1a418ba52486fa497be615522}\label{class_endereco_a913d70a1a418ba52486fa497be615522} 
+\index{Endereco@{Endereco}!setCidade@{setCidade}}
+\index{setCidade@{setCidade}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{setCidade()}{setCidade()}}
+{\footnotesize\ttfamily void Endereco\+::set\+Cidade (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nova\+Cidade }\end{DoxyParamCaption})}
+
+
+
+Setter para definir o nome da cidade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em new\+Cidade} & Novo nome da cidade a ser definido.\\
+\hline
+{\em nova\+Cidade} & Novo nome da cidade a ser definido. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ cidade\ =\ novaCidade;}
+\DoxyCodeLine{00079\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_endereco_a4fd5facf5d971527d8915b83644436ac}\label{class_endereco_a4fd5facf5d971527d8915b83644436ac} 
+\index{Endereco@{Endereco}!setNumero@{setNumero}}
+\index{setNumero@{setNumero}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{setNumero()}{setNumero()}}
+{\footnotesize\ttfamily void Endereco\+::set\+Numero (\begin{DoxyParamCaption}\item[{int}]{nova\+Numero }\end{DoxyParamCaption})}
+
+
+
+Setter para definir o número do endereço. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em new\+Numero} & Novo número do endereço a ser definido.\\
+\hline
+{\em nova\+Numero} & Novo número do endereço a ser definido. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ numero\ =\ novaNumero;}
+\DoxyCodeLine{00063\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_endereco_a0a42fe5445d353e738f436213f2bff8d}\label{class_endereco_a0a42fe5445d353e738f436213f2bff8d} 
+\index{Endereco@{Endereco}!setRua@{setRua}}
+\index{setRua@{setRua}!Endereco@{Endereco}}
+\doxysubsubsection{\texorpdfstring{setRua()}{setRua()}}
+{\footnotesize\ttfamily void Endereco\+::set\+Rua (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nova\+Rua }\end{DoxyParamCaption})}
+
+
+
+Setter para definir o nome da rua. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em new\+Rua} & Novo nome da rua a ser definido.\\
+\hline
+{\em nova\+Rua} & Novo nome da rua a ser definido. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ rua\ =\ novaRua;}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{endereco_8hpp}{endereco.\+hpp}}\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{endereco_8cpp}{endereco.\+cpp}}\end{DoxyCompactItemize}

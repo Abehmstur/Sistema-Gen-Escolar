@@ -1,0 +1,55 @@
+\doxysection{banco\+Dao.\+hpp}
+\hypertarget{banco_dao_8hpp_source}{}\label{banco_dao_8hpp_source}\index{LP1 PROVA 3/LP1-\/Projeto-\/3/src/bancoDao.hpp@{LP1 PROVA 3/LP1-\/Projeto-\/3/src/bancoDao.hpp}}
+\mbox{\hyperlink{banco_dao_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BANCODAO\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BANCODAO\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{professor_8hpp}{professor.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tecnico__adm_8hpp}{tecnico\_adm.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_banco_dao}{BancoDao}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Não\ há\ membros\ privados\ na\ classe.}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ std::vector<Professor>\ \mbox{\hyperlink{class_banco_dao_af4e609484a7f393a4951b8954fc0cba2}{professores}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ std::vector<TecnicoADM>\ \mbox{\hyperlink{class_banco_dao_a412eae7800d6d4e5ebb4c1298094c26d}{tecnicosADM}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Funções\ relacionadas\ a\ Professores}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banco_dao_a178a741f1bc47b706511ca783de785e2}{cadastrarProfessor}}(std::vector<Professor>\&\ \mbox{\hyperlink{class_banco_dao_af4e609484a7f393a4951b8954fc0cba2}{professores}});}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banco_dao_a514121a64a90254432984f735400a48e}{listarProfessores}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banco_dao_a2768c047fea253fc7ea6a6f965603057}{deletarProfessor}}(\textcolor{keywordtype}{int}\ matricula);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banco_dao_a3d10846ae3904deb4b893ac49c76a378}{buscarProfessor}}(\textcolor{keywordtype}{int}\ matricula);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Funções\ relacionadas\ a\ Técnicos\ ADM}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banco_dao_a05d7cf74fdff49670919612f92393410}{cadastrarTecnicoADM}}(std::vector<TecnicoADM>\&\ \mbox{\hyperlink{class_banco_dao_a412eae7800d6d4e5ebb4c1298094c26d}{tecnicosADM}});}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banco_dao_aabd64e8b5253f95ba3b60220fb3fd1d2}{listarTecnicosADM}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banco_dao_a803dbb56a79d03ea845c158b6d6964a5}{deletarTecnicoADM}}(\textcolor{keywordtype}{int}\ matricula);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banco_dao_a119ab037961d971f56bdf274454b691c}{buscarTecnicoADM}}(\textcolor{keywordtype}{int}\ matricula);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//\ Funções\ para\ manipulação\ de\ exceções\ temporárias}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banco_dao_addbfbec5e619d2acde37bc12e1d32dfc}{operacaoSucesso}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_banco_dao_a8d559229d058408ba8d4997c702a0ac6}{operacaoFalha}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

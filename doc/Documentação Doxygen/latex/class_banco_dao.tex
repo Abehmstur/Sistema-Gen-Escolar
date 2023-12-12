@@ -1,0 +1,836 @@
+\doxysection{Referência da Classe Banco\+Dao}
+\hypertarget{class_banco_dao}{}\label{class_banco_dao}\index{BancoDao@{BancoDao}}
+
+
+Classe responsável por realizar operações de cadastro, listagem e remoção de Professores e Técnicos ADM.  
+
+
+
+
+{\ttfamily \#include $<$banco\+Dao.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_banco_dao_a178a741f1bc47b706511ca783de785e2}{cadastrar\+Professor}} (std\+::vector$<$ \mbox{\hyperlink{class_professor}{Professor}} $>$ \&\mbox{\hyperlink{class_banco_dao_af4e609484a7f393a4951b8954fc0cba2}{professores}})
+\begin{DoxyCompactList}\small\item\em Cadastra um novo \doxylink{class_professor}{Professor} no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_banco_dao_a514121a64a90254432984f735400a48e}{listar\+Professores}} ()
+\begin{DoxyCompactList}\small\item\em Lista todos os Professores cadastrados no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_banco_dao_a2768c047fea253fc7ea6a6f965603057}{deletar\+Professor}} (int matricula)
+\begin{DoxyCompactList}\small\item\em Deleta um \doxylink{class_professor}{Professor} do sistema com base na matrícula. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_banco_dao_a3d10846ae3904deb4b893ac49c76a378}{buscar\+Professor}} (int matricula)
+\begin{DoxyCompactList}\small\item\em Busca e exibe os dados de um \doxylink{class_professor}{Professor} com base na matrícula. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_banco_dao_a05d7cf74fdff49670919612f92393410}{cadastrar\+Tecnico\+ADM}} (std\+::vector$<$ \mbox{\hyperlink{class_tecnico_a_d_m}{Tecnico\+ADM}} $>$ \&\mbox{\hyperlink{class_banco_dao_a412eae7800d6d4e5ebb4c1298094c26d}{tecnicos\+ADM}})
+\begin{DoxyCompactList}\small\item\em Cadastra um novo Técnico ADM no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_banco_dao_aabd64e8b5253f95ba3b60220fb3fd1d2}{listar\+Tecnicos\+ADM}} ()
+\begin{DoxyCompactList}\small\item\em Lista todos os Técnicos ADM cadastrados no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_banco_dao_a803dbb56a79d03ea845c158b6d6964a5}{deletar\+Tecnico\+ADM}} (int matricula)
+\begin{DoxyCompactList}\small\item\em Deleta um Técnico ADM do sistema com base na matrícula. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_banco_dao_a119ab037961d971f56bdf274454b691c}{buscar\+Tecnico\+ADM}} (int matricula)
+\begin{DoxyCompactList}\small\item\em Busca e exibe os dados de um Técnico ADM com base na matrícula. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_banco_dao_addbfbec5e619d2acde37bc12e1d32dfc}{operacao\+Sucesso}} ()
+\begin{DoxyCompactList}\small\item\em Exibe mensagem de sucesso após uma operação. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_banco_dao_a8d559229d058408ba8d4997c702a0ac6}{operacao\+Falha}} ()
+\begin{DoxyCompactList}\small\item\em Exibe mensagem de falha após uma operação. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{ler\+Numero}} ()
+\begin{DoxyCompactList}\small\item\em Lê o número informado pelo usuário e retorna uma exceção caso não seja um valor válido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_professor}{Professor}} $>$ \mbox{\hyperlink{class_banco_dao_af4e609484a7f393a4951b8954fc0cba2}{professores}}
+\begin{DoxyCompactList}\small\item\em Vetor que armazena objetos da classe \doxylink{class_professor}{Professor}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_tecnico_a_d_m}{Tecnico\+ADM}} $>$ \mbox{\hyperlink{class_banco_dao_a412eae7800d6d4e5ebb4c1298094c26d}{tecnicos\+ADM}}
+\begin{DoxyCompactList}\small\item\em Vetor que armazena objetos da classe \doxylink{class_tecnico_a_d_m}{Tecnico\+ADM}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe responsável por realizar operações de cadastro, listagem e remoção de Professores e Técnicos ADM. 
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_banco_dao_a3d10846ae3904deb4b893ac49c76a378}\label{class_banco_dao_a3d10846ae3904deb4b893ac49c76a378} 
+\index{BancoDao@{BancoDao}!buscarProfessor@{buscarProfessor}}
+\index{buscarProfessor@{buscarProfessor}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{buscarProfessor()}{buscarProfessor()}}
+{\footnotesize\ttfamily void Banco\+Dao\+::buscar\+Professor (\begin{DoxyParamCaption}\item[{int}]{matricula }\end{DoxyParamCaption})}
+
+
+
+Busca e exibe os dados de um \doxylink{class_professor}{Professor} com base na matrícula. 
+
+Procura por um professor com uma determinada matrícula e exibe suas informações.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em matricula} & Matrícula do \doxylink{class_professor}{Professor} a ser buscado.\\
+\hline
+{\em matricula} & Matrícula do professor a ser pesquisado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00314\ \ \ \ \ fstream\ arquivo(\textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00315\ \ \ \ \ vector<Professor>\ listaProfessores;}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \ \ \ \ }
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordflow}{if}\ (!arquivo.is\_open())\ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Nao\ foi\ possivel\ abrir\ o\ arquivo."{}}\ <<\ endl;}
+\DoxyCodeLine{00320\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ linha;}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_professor}{Professor}}\ encontrado;}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ encontradoFlag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(arquivo,\ linha))\ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Matricula:\ T1-\/"{}}\ +\ to\_string(matricula))\ !=\ string::npos)\ \{}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado\ =\ \mbox{\hyperlink{class_professor}{Professor}}();}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontradoFlag\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Nome:\ "{}})\ ==\ 0\ \&\&\ encontradoFlag)\ \{}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado.\mbox{\hyperlink{class_pessoa_a988c52d92e546f997ae8274793ab5be6}{setNome}}(linha.substr(6));}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Disciplina:\ "{}})\ ==\ 0\ \&\&\ encontradoFlag)\ \{}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado.\mbox{\hyperlink{class_professor_a6fee783f69188969c14a8e4c6b5d924b}{setDisciplina}}(linha.substr(12));}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ }
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (encontradoFlag)\ \{}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ encontrado.\mbox{\hyperlink{class_pessoa_a309bd1dada952c5c9b6aa27c163d1e53}{getNome}}()\ <<\ \textcolor{stringliteral}{"{}\ |\ Disciplina:\ "{}}\ <<\ encontrado.\mbox{\hyperlink{class_professor_a4e534579282664c4f43cf4724c41d025}{getDisciplina}}()\ <<\ endl;}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Professor\ com\ a\ matricula\ "{}}\ <<\ matricula\ <<\ \textcolor{stringliteral}{"{}\ nao\ encontrado."{}}\ <<\ endl;}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00344\ \ \ \ \ \}}
+\DoxyCodeLine{00345\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_banco_dao_a119ab037961d971f56bdf274454b691c}\label{class_banco_dao_a119ab037961d971f56bdf274454b691c} 
+\index{BancoDao@{BancoDao}!buscarTecnicoADM@{buscarTecnicoADM}}
+\index{buscarTecnicoADM@{buscarTecnicoADM}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{buscarTecnicoADM()}{buscarTecnicoADM()}}
+{\footnotesize\ttfamily void Banco\+Dao\+::buscar\+Tecnico\+ADM (\begin{DoxyParamCaption}\item[{int}]{matricula }\end{DoxyParamCaption})}
+
+
+
+Busca e exibe os dados de um Técnico ADM com base na matrícula. 
+
+Busca e exibe os dados de um técnico ADM com base na matrícula.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em matricula} & Matrícula do Técnico ADM a ser buscado.\\
+\hline
+{\em matricula} & Matrícula do técnico ADM a ser buscado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00572\ \ \ \ \ fstream\ arquivo(\textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00573\ \ \ \ \ vector<TecnicoADM>\ listaTecnicos;}
+\DoxyCodeLine{00574\ }
+\DoxyCodeLine{00575\ \ \ \ \ }
+\DoxyCodeLine{00576\ \ \ \ \ \textcolor{keywordflow}{if}\ (!arquivo.is\_open())\ \{}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Nao\ foi\ possivel\ abrir\ o\ arquivo."{}}\ <<\ endl;}
+\DoxyCodeLine{00578\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00579\ }
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ linha;}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tecnico_a_d_m}{TecnicoADM}}\ encontrado;}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ encontradoFlag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00583\ }
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(arquivo,\ linha))\ \{}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Matricula:\ T2-\/"{}}\ +\ to\_string(matricula))\ !=\ string::npos)\ \{}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado\ =\ \mbox{\hyperlink{class_tecnico_a_d_m}{TecnicoADM}}();}
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontradoFlag\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Nome:\ "{}})\ ==\ 0\ \&\&\ encontradoFlag)\ \{}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado.\mbox{\hyperlink{class_pessoa_a988c52d92e546f997ae8274793ab5be6}{setNome}}(linha.substr(6));}
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Funcao\ Desempenhada:\ "{}})\ ==\ 0\ \&\&\ encontradoFlag)\ \{}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado.\mbox{\hyperlink{class_tecnico_a_d_m_adeabfa1896d66f63500b736251ce726d}{setFuncaoDesempenhada}}(linha.substr(21));}
+\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ }
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{00596\ }
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (encontradoFlag)\ \{}
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ encontrado.\mbox{\hyperlink{class_pessoa_a309bd1dada952c5c9b6aa27c163d1e53}{getNome}}()\ <<\ \textcolor{stringliteral}{"{}\ |\ Funcao\ Desempenhda:\ "{}}\ <<\ encontrado.\mbox{\hyperlink{class_tecnico_a_d_m_a6775727ecb106ce498f2e01302ace11c}{getFuncaoDesempenhada}}()\ <<\ endl;}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Tecnico\ com\ a\ matricula\ "{}}\ <<\ matricula\ <<\ \textcolor{stringliteral}{"{}\ nao\ encontrado."{}}\ <<\ endl;}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00602\ \ \ \ \ \}}
+\DoxyCodeLine{00603\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_banco_dao_a178a741f1bc47b706511ca783de785e2}\label{class_banco_dao_a178a741f1bc47b706511ca783de785e2} 
+\index{BancoDao@{BancoDao}!cadastrarProfessor@{cadastrarProfessor}}
+\index{cadastrarProfessor@{cadastrarProfessor}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{cadastrarProfessor()}{cadastrarProfessor()}}
+{\footnotesize\ttfamily void Banco\+Dao\+::cadastrar\+Professor (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_professor}{Professor}} $>$ \&}]{professores }\end{DoxyParamCaption})}
+
+
+
+Cadastra um novo \doxylink{class_professor}{Professor} no sistema. 
+
+Solicita ao usuário informações para um novo professor e salva essas informações em um arquivo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em professores} & Vetor de professores onde o novo \doxylink{class_professor}{Professor} será armazenado.\\
+\hline
+{\em professores} & Vetor de objetos da classe \doxylink{class_professor}{Professor} para armazenar o novo professor. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{string}\ nome;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{string}\ cpf;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{string}\ dataNascimento;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_endereco}{Endereco}}\ novoEndereco;}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{string}\ rua;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ numero;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{string}\ bairro;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{string}\ cidade;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{string}\ cep;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{string}\ matricula;}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{float}\ salario;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{string}\ departamento;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ cargaHoraria;}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{string}\ dataIngresso;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{string}\ disciplina;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ nivelProfessor;}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ formacaoProfessor;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}<<\ Informe\ os\ Dados\ Pessoais\ do\ professor\ a\ seguir\ >>\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00084\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ o\ nome\ do\ professor:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00085\ \ \ \ \ getline(cin,\ nome);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ o\ CPF\ do\ professor:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00088\ \ \ \ \ getline(cin,\ cpf);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ a\ Data\ de\ Nascimento\ do\ professor:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00091\ \ \ \ \ getline(cin,\ dataNascimento);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}<<\ Informe\ o\ Endereco\ do\ professor\ a\ seguir\ >>\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00095\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Rua:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00096\ \ \ \ \ getline(cin,\ rua);}
+\DoxyCodeLine{00097\ \ \ \ \ novoEndereco.\mbox{\hyperlink{class_endereco_a0a42fe5445d353e738f436213f2bff8d}{setRua}}(rua);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Numero\ da\ Casa:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00100\ \ \ \ \ numero\ =\ \mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00101\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00102\ \ \ \ \ novoEndereco.\mbox{\hyperlink{class_endereco_a4fd5facf5d971527d8915b83644436ac}{setNumero}}(numero);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Bairro:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00105\ \ \ \ \ getline(cin,\ bairro);}
+\DoxyCodeLine{00106\ \ \ \ \ novoEndereco.\mbox{\hyperlink{class_endereco_a82eba609a8d13dbc194b7e3adf4ab399}{setBairro}}(bairro);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cidade:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00109\ \ \ \ \ getline(cin,\ cidade);}
+\DoxyCodeLine{00110\ \ \ \ \ novoEndereco.\mbox{\hyperlink{class_endereco_a913d70a1a418ba52486fa497be615522}{setCidade}}(cidade);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}CEP:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00113\ \ \ \ \ cin\ >>\ cep;}
+\DoxyCodeLine{00114\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00115\ \ \ \ \ novoEndereco.\mbox{\hyperlink{class_endereco_a8379da8b0248df9fe90813ba0ecce9e2}{setCEP}}(cep);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}<<\ Informe\ os\ Dados\ de\ Funcionario\ a\ seguir\ >>\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00119\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ a\ Matricula\ do\ professor\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ matriTemp\ =\ \mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00121\ \ \ \ \ matricula\ =\ to\_string(matriTemp);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ o\ Salario\ do\ professor\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00124\ \ \ \ \ cin\ >>\ salario;}
+\DoxyCodeLine{00125\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ o\ Departamento\ do\ professor\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00128\ \ \ \ \ getline(cin,\ departamento);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ a\ Carga\ Horaria\ do\ professor\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00131\ \ \ \ \ cargaHoraria\ =\ \mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00132\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ a\ Data\ de\ Ingresso\ do\ professor\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00135\ \ \ \ \ getline(cin,\ dataIngresso);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ a\ Disciplina\ do\ professor\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00139\ \ \ \ \ getline(cin,\ disciplina);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00142\ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ a\ Nivel\ do\ professor\ a\ seguir\ \{0\ a\ 6\ =\ I\ a\ VIII\}:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ nivelProfessor\ =\ \mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!(nivelProfessor\ >=\ 0\ \&\&\ nivelProfessor\ <=\ 6))\{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}INCORRETO:\ Informe\ um\ valor\ entre\ 0\ e\ 6.\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!(nivelProfessor\ >=\ 0\ \&\&\ nivelProfessor\ <=\ 6));}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00153\ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ a\ Formacao\ do\ professor\ a\ seguir\ \{0\ =\ ESPECIALIZACAO,\ 1\ =\ MESTRADO,\ 2\ =\ DOUTORADO\}:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ formacaoProfessor\ =\ \mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!(formacaoProfessor\ >=\ 0\ \&\&\ formacaoProfessor\ <=\ 2))\{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}INCORRETO:\ Informe\ um\ valor\ entre\ 0\ e\ 2.\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!(formacaoProfessor\ >=\ 0\ \&\&\ formacaoProfessor\ <=\ 2));}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Professor::Nivel}}\ nivel\ =\ \mbox{\hyperlink{class_professor_ae5487e89741616962c15615b6e9da5c3}{Professor::obterNivelPeloNumero}}(nivelProfessor);}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Professor::Formacao}}\ formacao\ =\ \mbox{\hyperlink{class_professor_a899407da00ae3f81f6d44f4053c0a4d0}{Professor::obterFormacaoPeloNumero}}(formacaoProfessor);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_professor}{Professor}}\ novoProfessor(nome,\ cpf,\ dataNascimento,\ novoEndereco,\ matricula,\ salario,\ departamento,\ cargaHoraria,\ dataIngresso,\ nivel,\ formacao,\ disciplina);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ fstream\ arquivo(\textcolor{stringliteral}{"{}funcionarios.txt"{}},\ ios::app);}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ nomeDoNivel\ =\ \mbox{\hyperlink{class_professor_a0ccc67325b9870fa11220158f46ae1e3}{Professor::obterNomeDoNivel}}(novoProfessor.getNivelProfessor());}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ nomeDaFormacao\ =\ \mbox{\hyperlink{class_professor_aa1233c5b04a0b3d2493dedbe33ffbb26}{Professor::obterNomeDaFormacao}}(novoProfessor.getFormacaoProfessor());}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!arquivo.is\_open())\{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classbanco_dao_excecoes}{bancoDaoExcecoes}}(\textcolor{stringliteral}{"{}Nao\ foi\ possivel\ abrir\ o\ arquivo."{}});}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arquivo.is\_open())\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Matricula:\ "{}}\ <<\ \textcolor{stringliteral}{"{}T1-\/"{}}\ <<\ novoProfessor.getMatricula()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ novoProfessor.getNome()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ novoProfessor.getCPF()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Data\ de\ Nascimento:\ "{}}\ <<\ novoProfessor.getDataNascimento()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Endereco:\(\backslash\)n"{}};}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Rua:\ "{}}\ <<\ novoProfessor.getEndereco().getRua()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Numero:\ "{}}\ <<\ novoProfessor.getEndereco().getNumero()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Bairro:\ "{}}\ <<\ novoProfessor.getEndereco().getBairro()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Cidade:\ "{}}\ <<\ novoProfessor.getEndereco().getCidade()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}CEP:\ "{}}\ <<\ novoProfessor.getEndereco().getCEP()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Salario:\ "{}}\ <<\ novoProfessor.getSalario()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Departamento:\ "{}}\ <<\ novoProfessor.getDepartamento()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Carga\ Horaria:\ "{}}\ <<\ novoProfessor.getCargaHoraria()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Data\ de\ Ingresso:\ "{}}\ <<\ novoProfessor.getDataIngresso()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Disciplina:\ "{}}\ <<\ novoProfessor.getDisciplina()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Nivel:\ "{}}\ <<\ nomeDoNivel\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Formacao:\ "{}}\ <<\ nomeDaFormacao\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{classbanco_dao_excecoes}{bancoDaoExcecoes}}\&\ erro)\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}|\ ERROR:\ "{}}\ <<\ erro.\mbox{\hyperlink{classbanco_dao_excecoes_a9795eaac1b793aceb7ae903c1df450b2}{what}}()\ <<\ endl;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}========DADOS\ DO\ PROFESSOR\ CADASTRADO========"{}}\ <<\ endl;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ novoProfessor.getNome()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCPF:"{}}\ <<\ novoProfessor.getCPF()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nData\ de\ Nascimento:\ "{}}\ <<\ novoProfessor.getDataNascimento()\ <<\ endl;}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Rua:\ "{}}\ <<\ novoEndereco.\mbox{\hyperlink{class_endereco_a340afa3adcd7ebb339ca8e433d6d4a91}{getRua}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nBairro:\ "{}}\ <<\ novoEndereco.\mbox{\hyperlink{class_endereco_a6f64a6dbe44b0a07e0acd5715558e9a7}{getBairro}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCEP:\ "{}}\ <<\ novoEndereco.\mbox{\hyperlink{class_endereco_a78d6c203af45c44d157cfccd4999b243}{getCEP}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCidade:\ "{}}\ <<\ novoEndereco.\mbox{\hyperlink{class_endereco_a08ecbda9d910730ddc049e351cb42726}{getCidade}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nNumero:\ "{}}\ <<\ novoEndereco.\mbox{\hyperlink{class_endereco_ad371ff391cc7ebfd6dd24774a287790b}{getNumero}}()\ <<\ endl;}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Matricula:\ "{}}\ <<\ novoProfessor.getMatricula()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSalario:\ "{}}\ <<\ novoProfessor.getSalario()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDepartamento:\ "{}}\ <<\ novoProfessor.getDepartamento()\ <<\ endl;}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Carga\ Horaria:\ "{}}\ <<\ novoProfessor.getCargaHoraria()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nData\ de\ Ingresso:\ "{}}\ <<\ novoProfessor.getDataIngresso()\ <<\ endl;}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nivel:"{}}\ <<\ nomeDoNivel\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nFormacao:\ "{}}\ <<\ nomeDaFormacao\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDisciplina:\ "{}}\ <<\ novoProfessor.getDisciplina()\ <<\ endl;}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}========XXXXXXXXXXXXXXXXXXXXXXXXXXXXX========"{}}\ <<\ endl;}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_banco_dao_addbfbec5e619d2acde37bc12e1d32dfc}{operacaoSucesso}}();}
+\DoxyCodeLine{00221\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_banco_dao_a05d7cf74fdff49670919612f92393410}\label{class_banco_dao_a05d7cf74fdff49670919612f92393410} 
+\index{BancoDao@{BancoDao}!cadastrarTecnicoADM@{cadastrarTecnicoADM}}
+\index{cadastrarTecnicoADM@{cadastrarTecnicoADM}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{cadastrarTecnicoADM()}{cadastrarTecnicoADM()}}
+{\footnotesize\ttfamily void Banco\+Dao\+::cadastrar\+Tecnico\+ADM (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_tecnico_a_d_m}{Tecnico\+ADM}} $>$ \&}]{tecnicos\+ADM }\end{DoxyParamCaption})}
+
+
+
+Cadastra um novo Técnico ADM no sistema. 
+
+Cadastra um novo técnico ADM no sistema.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tecnicos\+ADM} & Vetor de técnicos ADM onde o novo Técnico ADM será armazenado.\\
+\hline
+{\em tecnicos\+ADM} & Vetor de técnicos ADM onde o novo técnico ADM será armazenado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00352\ \ \ \ \ }
+\DoxyCodeLine{00353\ \ \ \ \ \textcolor{keywordtype}{string}\ nome;}
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{keywordtype}{string}\ cpf;}
+\DoxyCodeLine{00355\ \ \ \ \ \textcolor{keywordtype}{string}\ dataNascimento;}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \ \ \ \ }
+\DoxyCodeLine{00358\ \ \ \ \ \mbox{\hyperlink{class_endereco}{Endereco}}\ novoEndereco;}
+\DoxyCodeLine{00359\ \ \ \ \ \textcolor{keywordtype}{string}\ rua;}
+\DoxyCodeLine{00360\ \ \ \ \ \textcolor{keywordtype}{int}\ numero;}
+\DoxyCodeLine{00361\ \ \ \ \ \textcolor{keywordtype}{string}\ bairro;}
+\DoxyCodeLine{00362\ \ \ \ \ \textcolor{keywordtype}{string}\ cidade;}
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{keywordtype}{string}\ cep;}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \ \ \ \ }
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordtype}{string}\ matricula;}
+\DoxyCodeLine{00367\ \ \ \ \ \textcolor{keywordtype}{float}\ salario;}
+\DoxyCodeLine{00368\ \ \ \ \ \textcolor{keywordtype}{string}\ departamento;}
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordtype}{int}\ cargaHoraria;}
+\DoxyCodeLine{00370\ \ \ \ \ \textcolor{keywordtype}{string}\ dataIngresso;}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00372\ \ \ \ \ }
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keywordtype}{float}\ adicionalProdutividade\ =\ 0.25;}
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keywordtype}{string}\ funcaoDesempenhada;}
+\DoxyCodeLine{00375\ \ \ \ \ }
+\DoxyCodeLine{00376\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}<<\ Informe\ os\ Dados\ Pessoais\ do\ Tecnico\ ADM\ a\ seguir\ >>\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00377\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ o\ nome\ do\ tecnico\ adm:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00378\ \ \ \ \ getline(cin,\ nome);}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00380\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ o\ CPF\ do\ tecnico\ adm:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00381\ \ \ \ \ getline(cin,\ cpf);}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00383\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ a\ Data\ de\ Nascimento\ do\ tecnico\ adm:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00384\ \ \ \ \ getline(cin,\ dataNascimento);}
+\DoxyCodeLine{00385\ \ \ \ \ }
+\DoxyCodeLine{00386\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}<<\ Informe\ o\ Endereco\ do\ tecnico\ adm\ a\ seguir:\ >>"{}}\ <<\ endl;}
+\DoxyCodeLine{00387\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Rua:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00388\ \ \ \ \ getline(cin,\ rua);}
+\DoxyCodeLine{00389\ \ \ \ \ novoEndereco.\mbox{\hyperlink{class_endereco_a0a42fe5445d353e738f436213f2bff8d}{setRua}}(rua);}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Numero:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00392\ \ \ \ \ numero\ =\ \mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00393\ \ \ \ \ novoEndereco.\mbox{\hyperlink{class_endereco_a4fd5facf5d971527d8915b83644436ac}{setNumero}}(numero);}
+\DoxyCodeLine{00394\ }
+\DoxyCodeLine{00395\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Bairro:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00396\ \ \ \ \ getline(cin,\ bairro);}
+\DoxyCodeLine{00397\ \ \ \ \ novoEndereco.\mbox{\hyperlink{class_endereco_a82eba609a8d13dbc194b7e3adf4ab399}{setBairro}}(bairro);}
+\DoxyCodeLine{00398\ }
+\DoxyCodeLine{00399\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Cidade:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00400\ \ \ \ \ getline(cin,\ cidade);}
+\DoxyCodeLine{00401\ \ \ \ \ novoEndereco.\mbox{\hyperlink{class_endereco_a913d70a1a418ba52486fa497be615522}{setCidade}}(cidade);}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}CEP:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00404\ \ \ \ \ cin\ >>\ cep;}
+\DoxyCodeLine{00405\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00406\ \ \ \ \ novoEndereco.\mbox{\hyperlink{class_endereco_a8379da8b0248df9fe90813ba0ecce9e2}{setCEP}}(cep);}
+\DoxyCodeLine{00407\ \ \ \ \ }
+\DoxyCodeLine{00408\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}<<\ Informe\ os\ Dados\ de\ Funcionario\ a\ seguir\ >>\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00409\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ a\ Matricula\ do\ tecnico\ adm\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00410\ \ \ \ \ \textcolor{keywordtype}{int}\ matriTemp\ =\ \mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00411\ \ \ \ \ matricula\ =\ to\_string(matriTemp);}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00413\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ o\ Salario\ do\ tecnico\ adm\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00414\ \ \ \ \ cin\ >>\ salario;}
+\DoxyCodeLine{00415\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00417\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ o\ Departamento\ do\ tecnico\ adm\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00418\ \ \ \ \ getline(cin,\ departamento);}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00420\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ a\ Carga\ Horaria\ do\ tecnico\ adm\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00421\ \ \ \ \ cargaHoraria\ =\ \mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00423\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ a\ Data\ de\ Ingresso\ do\ tecnico\ adm\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00424\ \ \ \ \ getline(cin,\ dataIngresso);}
+\DoxyCodeLine{00425\ \ \ \ \ }
+\DoxyCodeLine{00426\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}<<\ Informe\ os\ Dados\ de\ Funcionario\ a\ seguir\ >>\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00427\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Informe\ funcao\ desempenhada\ pelo\ tecnico\ adm\ a\ seguir:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00428\ \ \ \ \ getline(cin,\ funcaoDesempenhada);}
+\DoxyCodeLine{00429\ }
+\DoxyCodeLine{00430\ \ \ \ \ \mbox{\hyperlink{class_tecnico_a_d_m}{TecnicoADM}}\ novoTecnicoAdm(nome,\ cpf,\ dataNascimento,\ novoEndereco,\ matricula,\ salario,\ departamento,\ cargaHoraria,\ dataIngresso,\ adicionalProdutividade,\ funcaoDesempenhada);}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \ \ \ \ }
+\DoxyCodeLine{00433\ \ \ \ \ fstream\ arquivo(\textcolor{stringliteral}{"{}funcionarios.txt"{}},\ ios::app);}
+\DoxyCodeLine{00434\ }
+\DoxyCodeLine{00435\ \ \ \ }
+\DoxyCodeLine{00436\ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00437\ \ \ \ \ \{}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!arquivo.is\_open())\{}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classbanco_dao_excecoes}{bancoDaoExcecoes}}(\textcolor{stringliteral}{"{}Nao\ foi\ possivel\ abrir\ o\ arquivo."{}});}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00441\ }
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arquivo.is\_open())\ \{\ }
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Matricula:\ "{}}\ <<\ \textcolor{stringliteral}{"{}T2-\/"{}}\ <<\ novoTecnicoAdm.getMatricula()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ novoTecnicoAdm.getNome()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}CPF:\ "{}}\ <<\ novoTecnicoAdm.getCPF()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Data\ de\ Nascimento:\ "{}}\ <<\ novoTecnicoAdm.getDataNascimento()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Endereco:\(\backslash\)n"{}};}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Rua:\ "{}}\ <<\ novoTecnicoAdm.getEndereco().getRua()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Numero:\ "{}}\ <<\ novoTecnicoAdm.getEndereco().getNumero()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Bairro:\ "{}}\ <<\ novoTecnicoAdm.getEndereco().getBairro()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Cidade:\ "{}}\ <<\ novoTecnicoAdm.getEndereco().getCidade()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}CEP:\ "{}}\ <<\ novoTecnicoAdm.getEndereco().getCEP()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Salario:\ "{}}\ <<\ novoTecnicoAdm.getSalario()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Departamento:\ "{}}\ <<\ novoTecnicoAdm.getDepartamento()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Carga\ Horaria:\ "{}}\ <<\ novoTecnicoAdm.getCargaHoraria()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Data\ de\ Ingresso:\ "{}}\ <<\ novoTecnicoAdm.getDataIngresso()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Adicional\ de\ Produtividade:\ "{}}\ <<\ novoTecnicoAdm.getAdicionalProdutividade()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ \textcolor{stringliteral}{"{}Funcao\ Desempenhada:\ "{}}\ <<\ novoTecnicoAdm.getFuncaoDesempenhada()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{00462\ \ \ \ \ \}\textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{classbanco_dao_excecoes}{bancoDaoExcecoes}}\&\ erro)\ \{}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}|\ ERROR:\ "{}}\ <<\ erro.\mbox{\hyperlink{classbanco_dao_excecoes_a9795eaac1b793aceb7ae903c1df450b2}{what}}()\ <<\ endl;}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00466\ \ \ \ \ \}}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00468\ \ \ \ \ }
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}========DADOS\ DO\ TECNICO\ CADASTRADO========"{}}\ <<\ endl;}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ novoTecnicoAdm.getNome()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCPF:"{}}\ <<\ novoTecnicoAdm.getCPF()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nData\ de\ Nascimento:\ "{}}\ <<\ novoTecnicoAdm.getDataNascimento()\ <<\ endl;}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Rua:\ "{}}\ <<\ novoEndereco.\mbox{\hyperlink{class_endereco_a340afa3adcd7ebb339ca8e433d6d4a91}{getRua}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nBairro:\ "{}}\ <<\ novoEndereco.\mbox{\hyperlink{class_endereco_a6f64a6dbe44b0a07e0acd5715558e9a7}{getBairro}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCEP:\ "{}}\ <<\ novoEndereco.\mbox{\hyperlink{class_endereco_a78d6c203af45c44d157cfccd4999b243}{getCEP}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCidade:\ "{}}\ <<\ novoEndereco.\mbox{\hyperlink{class_endereco_a08ecbda9d910730ddc049e351cb42726}{getCidade}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nNumero:\ "{}}\ <<\ novoEndereco.\mbox{\hyperlink{class_endereco_ad371ff391cc7ebfd6dd24774a287790b}{getNumero}}()\ <<\ endl;}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Matricula:\ "{}}\ <<\ novoTecnicoAdm.getMatricula()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSalario:\ "{}}\ <<\ novoTecnicoAdm.getSalario()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDepartamento:\ "{}}\ <<\ novoTecnicoAdm.getDepartamento()\ <<\ endl;}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Carga\ Horaria:\ "{}}\ <<\ novoTecnicoAdm.getCargaHoraria()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nData\ de\ Ingresso:\ "{}}\ <<\ novoTecnicoAdm.getDataIngresso()\ <<\ endl;}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}========XXXXXXXXXXXXXXXXXXXXXXXXXXXXX========"{}}\ <<\ endl;}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_banco_dao_addbfbec5e619d2acde37bc12e1d32dfc}{operacaoSucesso}}();}
+\DoxyCodeLine{00477\ }
+\DoxyCodeLine{00478\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_banco_dao_a2768c047fea253fc7ea6a6f965603057}\label{class_banco_dao_a2768c047fea253fc7ea6a6f965603057} 
+\index{BancoDao@{BancoDao}!deletarProfessor@{deletarProfessor}}
+\index{deletarProfessor@{deletarProfessor}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{deletarProfessor()}{deletarProfessor()}}
+{\footnotesize\ttfamily void Banco\+Dao\+::deletar\+Professor (\begin{DoxyParamCaption}\item[{int}]{matricula }\end{DoxyParamCaption})}
+
+
+
+Deleta um \doxylink{class_professor}{Professor} do sistema com base na matrícula. 
+
+Exclui um professor com uma determinada matrícula do arquivo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em matricula} & Matrícula do \doxylink{class_professor}{Professor} a ser deletado.\\
+\hline
+{\em matricula} & Matrícula do professor a ser excluído. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00264\ \ \ \ \ ifstream\ arquivoOriginal(\textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00265\ \ \ \ \ ofstream\ arquivoTemporario(\textcolor{stringliteral}{"{}temp.txt"{}});}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{if}\ (!arquivoOriginal.is\_open()\ ||\ !arquivoTemporario.is\_open())\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Nao\ foi\ possivel\ abrir\ o\ arquivo."{}}\ <<\ endl;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00270\ \ \ \ \ \}}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{string}\ linha;}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordtype}{bool}\ professorEncontrado\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keywordtype}{bool}\ bloqueio\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(arquivoOriginal,\ linha))\ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Matricula:\ T1-\/"{}}\ +\ to\_string(matricula))\ !=\ string::npos)\ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ professorEncontrado\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ bloqueio\ =\ \textcolor{keyword}{true};\ }
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bloqueio\ \&\&\ linha.empty())\ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ bloqueio\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!bloqueio)\ \{}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ arquivoTemporario\ <<\ linha\ <<\ endl;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00292\ \ \ \ \ \}}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ \ \ \ \ arquivoOriginal.close();}
+\DoxyCodeLine{00295\ \ \ \ \ arquivoTemporario.close();}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ \ \ \ \ }
+\DoxyCodeLine{00298\ \ \ \ \ remove(\textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00299\ \ \ \ \ rename(\textcolor{stringliteral}{"{}temp.txt"{}},\ \textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordflow}{if}\ (professorEncontrado)\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Professor\ com\ matricula\ "{}}\ <<\ matricula\ <<\ \textcolor{stringliteral}{"{}\ foi\ deletado\ com\ sucesso."{}}\ <<\ endl;}
+\DoxyCodeLine{00303\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Professor\ com\ matricula\ "{}}\ <<\ matricula\ <<\ \textcolor{stringliteral}{"{}\ nao\ encontrado."{}}\ <<\ endl;}
+\DoxyCodeLine{00305\ \ \ \ \ \}}
+\DoxyCodeLine{00306\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_banco_dao_a803dbb56a79d03ea845c158b6d6964a5}\label{class_banco_dao_a803dbb56a79d03ea845c158b6d6964a5} 
+\index{BancoDao@{BancoDao}!deletarTecnicoADM@{deletarTecnicoADM}}
+\index{deletarTecnicoADM@{deletarTecnicoADM}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{deletarTecnicoADM()}{deletarTecnicoADM()}}
+{\footnotesize\ttfamily void Banco\+Dao\+::deletar\+Tecnico\+ADM (\begin{DoxyParamCaption}\item[{int}]{matricula }\end{DoxyParamCaption})}
+
+
+
+Deleta um Técnico ADM do sistema com base na matrícula. 
+
+Deleta um técnico ADM do sistema com base na matrícula.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em matricula} & Matrícula do Técnico ADM a ser deletado.\\
+\hline
+{\em matricula} & Matrícula do técnico ADM a ser deletado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00523\ \ \ \ \ ifstream\ arquivoOriginal(\textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00524\ \ \ \ \ ofstream\ arquivoTemporario(\textcolor{stringliteral}{"{}temp.txt"{}});}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ \ \ \ \ \textcolor{keywordflow}{if}\ (!arquivoOriginal.is\_open()\ ||\ !arquivoTemporario.is\_open())\ \{}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Nao\ foi\ possivel\ abrir\ o\ arquivo."{}}\ <<\ endl;}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00529\ \ \ \ \ \}}
+\DoxyCodeLine{00530\ }
+\DoxyCodeLine{00531\ \ \ \ \ \textcolor{keywordtype}{string}\ linha;}
+\DoxyCodeLine{00532\ \ \ \ \ \textcolor{keywordtype}{bool}\ tecnicoEncontrado\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00533\ \ \ \ \ \textcolor{keywordtype}{bool}\ bloqueio\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00534\ }
+\DoxyCodeLine{00535\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(arquivoOriginal,\ linha))\ \{}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Matricula:\ T2-\/"{}}\ +\ to\_string(matricula))\ !=\ string::npos)\ \{}
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \ \ \ \ tecnicoEncontrado\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \ \ \ \ bloqueio\ =\ \textcolor{keyword}{true};\ }
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00541\ }
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bloqueio\ \&\&\ linha.empty())\ \{}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \ \ \ \ bloqueio\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00546\ }
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!bloqueio)\ \{}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \ \ \ \ arquivoTemporario\ <<\ linha\ <<\ endl;}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00551\ \ \ \ \ \}}
+\DoxyCodeLine{00552\ }
+\DoxyCodeLine{00553\ \ \ \ \ arquivoOriginal.close();}
+\DoxyCodeLine{00554\ \ \ \ \ arquivoTemporario.close();}
+\DoxyCodeLine{00555\ }
+\DoxyCodeLine{00556\ \ \ \ \ }
+\DoxyCodeLine{00557\ \ \ \ \ remove(\textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00558\ \ \ \ \ rename(\textcolor{stringliteral}{"{}temp.txt"{}},\ \textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00559\ }
+\DoxyCodeLine{00560\ \ \ \ \ \textcolor{keywordflow}{if}\ (tecnicoEncontrado)\ \{}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Tecnico\ com\ matricula\ "{}}\ <<\ matricula\ <<\ \textcolor{stringliteral}{"{}\ foi\ deletado\ com\ sucesso."{}}\ <<\ endl;}
+\DoxyCodeLine{00562\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Tecnico\ com\ matricula\ "{}}\ <<\ matricula\ <<\ \textcolor{stringliteral}{"{}\ nao\ encontrado."{}}\ <<\ endl;}
+\DoxyCodeLine{00564\ \ \ \ \ \}}
+\DoxyCodeLine{00565\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_banco_dao_a7afd85382b42a2e92017005d16a01440}\label{class_banco_dao_a7afd85382b42a2e92017005d16a01440} 
+\index{BancoDao@{BancoDao}!lerNumero@{lerNumero}}
+\index{lerNumero@{lerNumero}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{lerNumero()}{lerNumero()}}
+{\footnotesize\ttfamily int Banco\+Dao\+::ler\+Numero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lê o número informado pelo usuário e retorna uma exceção caso não seja um valor válido. 
+
+Função que lê um número inteiro inserido pelo usuário e trata entradas inválidas.
+
+\begin{DoxyReturn}{Retorna}
+Número inteiro informado pelo usuário.
+
+Um número inteiro inserido pelo usuário. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em \doxylink{classbanco_dao_excecoes}{banco\+Dao\+Excecoes}} & se a entrada não for um número inteiro válido. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ numero;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(cin\ >>\ numero))\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.clear();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classbanco_dao_excecoes}{bancoDaoExcecoes}}(\textcolor{stringliteral}{"{}Entrada\ invalida!\ Digite\ um\ numero\ inteiro."{}});}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ numero;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{classbanco_dao_excecoes}{bancoDaoExcecoes}}\&\ erro)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}|\ ERROR:\ "{}}\ <<\ erro.\mbox{\hyperlink{classbanco_dao_excecoes_a9795eaac1b793aceb7ae903c1df450b2}{what}}()\ <<\ endl;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_banco_dao_a514121a64a90254432984f735400a48e}\label{class_banco_dao_a514121a64a90254432984f735400a48e} 
+\index{BancoDao@{BancoDao}!listarProfessores@{listarProfessores}}
+\index{listarProfessores@{listarProfessores}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{listarProfessores()}{listarProfessores()}}
+{\footnotesize\ttfamily void Banco\+Dao\+::listar\+Professores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lista todos os Professores cadastrados no sistema. 
+
+Lista todos os professores armazenados no arquivo. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ fstream\ arquivo(\textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00228\ \ \ \ \ vector<Professor>\ listaProfessores;}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordflow}{if}\ (!arquivo.is\_open())\ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Nao\ foi\ possivel\ abrir\ o\ arquivo."{}}\ <<\ endl;}
+\DoxyCodeLine{00233\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ linha;}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_professor}{Professor}}\ novoProfessor;}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(getline(arquivo,\ linha))\{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Matricula:\ T1-\/"{}})\ !=\ string::npos)\ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ novoProfessor\ =\ \mbox{\hyperlink{class_professor}{Professor}}();\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Nome:\ "{}})\ ==\ 0)\ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ novoProfessor.\mbox{\hyperlink{class_pessoa_a988c52d92e546f997ae8274793ab5be6}{setNome}}(linha.substr(6));}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Disciplina:\ "{}})\ ==\ 0)\ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ novoProfessor.\mbox{\hyperlink{class_professor_a6fee783f69188969c14a8e4c6b5d924b}{setDisciplina}}(linha.substr(12));}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listaProfessores.push\_back(novoProfessor);\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}PROFESSORES:\ \(\backslash\)n"{}};}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ professor\ :\ listaProfessores)\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ professor.getNome()\ <<\ \textcolor{stringliteral}{"{}\ |\ Disciplina:\ "{}}\ <<\ professor.getDisciplina()\ <<\ endl;}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00256\ \ \ \ \ \}}
+\DoxyCodeLine{00257\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_banco_dao_aabd64e8b5253f95ba3b60220fb3fd1d2}\label{class_banco_dao_aabd64e8b5253f95ba3b60220fb3fd1d2} 
+\index{BancoDao@{BancoDao}!listarTecnicosADM@{listarTecnicosADM}}
+\index{listarTecnicosADM@{listarTecnicosADM}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{listarTecnicosADM()}{listarTecnicosADM()}}
+{\footnotesize\ttfamily void Banco\+Dao\+::listar\+Tecnicos\+ADM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lista todos os Técnicos ADM cadastrados no sistema. 
+
+Lista todos os técnicos ADM cadastrados no sistema. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00484\ \ \ \ \ fstream\ arquivo(\textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00485\ \ \ \ \ vector<TecnicoADM>\ listaTecnicos;}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00487\ \ \ \ \ }
+\DoxyCodeLine{00488\ \ \ \ \ \textcolor{keywordflow}{if}\ (!arquivo.is\_open())\ \{}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Nao\ foi\ possivel\ abrir\ o\ arquivo."{}}\ <<\ endl;}
+\DoxyCodeLine{00490\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00491\ }
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ linha;}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tecnico_a_d_m}{TecnicoADM}}\ novoTecnico;}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(getline(arquivo,\ linha))\{}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Matricula:\ T2-\/"{}})\ !=\ string::npos)\ \{}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ novoTecnico\ =\ \mbox{\hyperlink{class_tecnico_a_d_m}{TecnicoADM}}();\ }
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Nome:\ "{}})\ ==\ 0)\ \{}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ novoTecnico.\mbox{\hyperlink{class_pessoa_a988c52d92e546f997ae8274793ab5be6}{setNome}}(linha.substr(6));}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Funcao\ Desempenhada:\ "{}})\ ==\ 0)\ \{}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ novoTecnico.\mbox{\hyperlink{class_tecnico_a_d_m_adeabfa1896d66f63500b736251ce726d}{setFuncaoDesempenhada}}(linha.substr(21));}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listaTecnicos.push\_back(novoTecnico);\ }
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{00508\ }
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}TECNICOS:\ \(\backslash\)n"{}};}
+\DoxyCodeLine{00510\ }
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ tecnicos\ :\ listaTecnicos)\ \{}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ tecnicos.getNome()\ <<\ \textcolor{stringliteral}{"{}\ |\ Funcao\ Desempenhada:\ "{}}\ <<\ tecnicos.getFuncaoDesempenhada()\ <<\ endl;}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00515\ \ \ \ \ \}}
+\DoxyCodeLine{00516\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_banco_dao_a8d559229d058408ba8d4997c702a0ac6}\label{class_banco_dao_a8d559229d058408ba8d4997c702a0ac6} 
+\index{BancoDao@{BancoDao}!operacaoFalha@{operacaoFalha}}
+\index{operacaoFalha@{operacaoFalha}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{operacaoFalha()}{operacaoFalha()}}
+{\footnotesize\ttfamily void Banco\+Dao\+::operacao\+Falha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exibe mensagem de falha após uma operação. 
+
+Exibe uma mensagem de falha para operações. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Não\ foi\ possivel\ completar\ a\ operacao!"{}}\ <<\ endl;}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_banco_dao_addbfbec5e619d2acde37bc12e1d32dfc}\label{class_banco_dao_addbfbec5e619d2acde37bc12e1d32dfc} 
+\index{BancoDao@{BancoDao}!operacaoSucesso@{operacaoSucesso}}
+\index{operacaoSucesso@{operacaoSucesso}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{operacaoSucesso()}{operacaoSucesso()}}
+{\footnotesize\ttfamily void Banco\+Dao\+::operacao\+Sucesso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exibe mensagem de sucesso após uma operação. 
+
+Exibe uma mensagem de sucesso para operações. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Operacao\ realizada\ com\ sucesso!"{}}\ <<\ endl;}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\Hypertarget{class_banco_dao_af4e609484a7f393a4951b8954fc0cba2}\label{class_banco_dao_af4e609484a7f393a4951b8954fc0cba2} 
+\index{BancoDao@{BancoDao}!professores@{professores}}
+\index{professores@{professores}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{professores}{professores}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_professor}{Professor}}$>$ Banco\+Dao\+::professores}
+
+
+
+Vetor que armazena objetos da classe \doxylink{class_professor}{Professor}. 
+
+\Hypertarget{class_banco_dao_a412eae7800d6d4e5ebb4c1298094c26d}\label{class_banco_dao_a412eae7800d6d4e5ebb4c1298094c26d} 
+\index{BancoDao@{BancoDao}!tecnicosADM@{tecnicosADM}}
+\index{tecnicosADM@{tecnicosADM}!BancoDao@{BancoDao}}
+\doxysubsubsection{\texorpdfstring{tecnicosADM}{tecnicosADM}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_tecnico_a_d_m}{Tecnico\+ADM}}$>$ Banco\+Dao\+::tecnicos\+ADM}
+
+
+
+Vetor que armazena objetos da classe \doxylink{class_tecnico_a_d_m}{Tecnico\+ADM}. 
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{banco_dao_8hpp}{banco\+Dao.\+hpp}}\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{banco_dao_8cpp}{banco\+Dao.\+cpp}}\end{DoxyCompactItemize}

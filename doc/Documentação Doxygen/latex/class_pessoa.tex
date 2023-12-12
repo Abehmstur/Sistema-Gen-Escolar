@@ -1,0 +1,293 @@
+\doxysection{Referência da Classe Pessoa}
+\hypertarget{class_pessoa}{}\label{class_pessoa}\index{Pessoa@{Pessoa}}
+
+
+Classe que representa uma pessoa com nome, CPF, data de nascimento e endereço.  
+
+
+
+
+{\ttfamily \#include $<$pessoa.\+hpp$>$}
+
+Diagrama de hierarquia da classe Pessoa\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_pessoa}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}{Pessoa}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_pessoa}{Pessoa}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pessoa_a48ec400c82c85a73431a6f5561588f0b}{Pessoa}} (const std\+::string \&\+\_\+nome, const std\+::string \&\+\_\+cpf, const std\+::string \&\+\_\+data\+Nascimento, const \mbox{\hyperlink{class_endereco}{Endereco}} \&\+\_\+endereco)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_pessoa}{Pessoa}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a309bd1dada952c5c9b6aa27c163d1e53}{get\+Nome}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da pessoa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a12aca1330d2363104224f63de266efa9}{get\+CPF}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o CPF da pessoa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a7c41bbd8f6116b88b09fd454740e019a}{get\+Data\+Nascimento}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter a data de nascimento da pessoa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_endereco}{Endereco}} \mbox{\hyperlink{class_pessoa_acff82686ca616893081c1477a0154e9f}{get\+Endereco}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o endereço da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a988c52d92e546f997ae8274793ab5be6}{set\+Nome}} (const std\+::string \&novo\+Nome)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a3657d5be035ae0a8e846149218f0c270}{set\+CPF}} (const std\+::string \&novo\+CPF)
+\begin{DoxyCompactList}\small\item\em Setter para definir o CPF da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a890a0b6a3be01532cbb40e1ff08306a2}{set\+Data\+Nascimento}} (const std\+::string \&nova\+Data)
+\begin{DoxyCompactList}\small\item\em Setter para definir a data de nascimento da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a8043b9301590a4784b4cac8f0871bdb4}{set\+Endereco}} (const \mbox{\hyperlink{class_endereco}{Endereco}} \&novo\+Endereco)
+\begin{DoxyCompactList}\small\item\em Setter para definir o endereço da pessoa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_endereco}{Endereco}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_endereco_a1bb2df2319912c102821c133485bec0a}{Endereco}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a340afa3adcd7ebb339ca8e433d6d4a91}{get\+Rua}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da rua. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_endereco_ad371ff391cc7ebfd6dd24774a287790b}{get\+Numero}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o número do endereço. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a6f64a6dbe44b0a07e0acd5715558e9a7}{get\+Bairro}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome do bairro. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a08ecbda9d910730ddc049e351cb42726}{get\+Cidade}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da cidade. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a78d6c203af45c44d157cfccd4999b243}{get\+CEP}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o CEP do endereço. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a0a42fe5445d353e738f436213f2bff8d}{set\+Rua}} (const std\+::string \&new\+Rua)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da rua. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a4fd5facf5d971527d8915b83644436ac}{set\+Numero}} (int new\+Numero)
+\begin{DoxyCompactList}\small\item\em Setter para definir o número do endereço. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a82eba609a8d13dbc194b7e3adf4ab399}{set\+Bairro}} (const std\+::string \&new\+Bairro)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome do bairro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a913d70a1a418ba52486fa497be615522}{set\+Cidade}} (const std\+::string \&new\+Cidade)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da cidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a8379da8b0248df9fe90813ba0ecce9e2}{set\+CEP}} (const std\+::string \&new\+CEP)
+\begin{DoxyCompactList}\small\item\em Setter para definir o CEP do endereço. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa uma pessoa com nome, CPF, data de nascimento e endereço. 
+
+Herda da classe \doxylink{class_endereco}{Endereco} para incluir informações de endereço. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}\label{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650} 
+\index{Pessoa@{Pessoa}!Pessoa@{Pessoa}}
+\index{Pessoa@{Pessoa}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{Pessoa()}{Pessoa()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pessoa\+::\+Pessoa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe \doxylink{class_pessoa}{Pessoa}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_pessoa_a48ec400c82c85a73431a6f5561588f0b}\label{class_pessoa_a48ec400c82c85a73431a6f5561588f0b} 
+\index{Pessoa@{Pessoa}!Pessoa@{Pessoa}}
+\index{Pessoa@{Pessoa}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{Pessoa()}{Pessoa()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pessoa\+::\+Pessoa (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+nome,  }\item[{const std\+::string \&}]{\+\_\+cpf,  }\item[{const std\+::string \&}]{\+\_\+data\+Nascimento,  }\item[{const \mbox{\hyperlink{class_endereco}{Endereco}} \&}]{\+\_\+endereco }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado da classe \doxylink{class_pessoa}{Pessoa}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+nome} & Nome da pessoa. \\
+\hline
+{\em \+\_\+cpf} & CPF da pessoa. \\
+\hline
+{\em \+\_\+data\+Nascimento} & Data de nascimento da pessoa. \\
+\hline
+{\em \+\_\+endereco} & Objeto da classe \doxylink{class_endereco}{Endereco} representando o endereço da pessoa. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ :\ nome(\_nome),\ cpf(\_cpf),\ dataNascimento(\_dataNascimento),\ endereco(\_endereco)\ \{}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_pessoa_a12aca1330d2363104224f63de266efa9}\label{class_pessoa_a12aca1330d2363104224f63de266efa9} 
+\index{Pessoa@{Pessoa}!getCPF@{getCPF}}
+\index{getCPF@{getCPF}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{getCPF()}{getCPF()}}
+{\footnotesize\ttfamily std\+::string Pessoa\+::get\+CPF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter o CPF da pessoa. 
+
+\begin{DoxyReturn}{Retorna}
+O CPF da pessoa. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{return}\ cpf;}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_pessoa_a7c41bbd8f6116b88b09fd454740e019a}\label{class_pessoa_a7c41bbd8f6116b88b09fd454740e019a} 
+\index{Pessoa@{Pessoa}!getDataNascimento@{getDataNascimento}}
+\index{getDataNascimento@{getDataNascimento}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{getDataNascimento()}{getDataNascimento()}}
+{\footnotesize\ttfamily std\+::string Pessoa\+::get\+Data\+Nascimento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter a data de nascimento da pessoa. 
+
+\begin{DoxyReturn}{Retorna}
+A data de nascimento da pessoa. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ dataNascimento;}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_pessoa_acff82686ca616893081c1477a0154e9f}\label{class_pessoa_acff82686ca616893081c1477a0154e9f} 
+\index{Pessoa@{Pessoa}!getEndereco@{getEndereco}}
+\index{getEndereco@{getEndereco}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{getEndereco()}{getEndereco()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_endereco}{Endereco}} Pessoa\+::get\+Endereco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter o endereço da pessoa. 
+
+\begin{DoxyReturn}{Retorna}
+O endereço da pessoa como um objeto da classe \doxylink{class_endereco}{Endereco}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{return}\ endereco;}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_pessoa_a309bd1dada952c5c9b6aa27c163d1e53}\label{class_pessoa_a309bd1dada952c5c9b6aa27c163d1e53} 
+\index{Pessoa@{Pessoa}!getNome@{getNome}}
+\index{getNome@{getNome}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Pessoa\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter o nome da pessoa. 
+
+\begin{DoxyReturn}{Retorna}
+O nome da pessoa. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ nome;}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_pessoa_a3657d5be035ae0a8e846149218f0c270}\label{class_pessoa_a3657d5be035ae0a8e846149218f0c270} 
+\index{Pessoa@{Pessoa}!setCPF@{setCPF}}
+\index{setCPF@{setCPF}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{setCPF()}{setCPF()}}
+{\footnotesize\ttfamily void Pessoa\+::set\+CPF (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{novo\+CPF }\end{DoxyParamCaption})}
+
+
+
+Setter para definir o CPF da pessoa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+CPF} & Novo CPF a ser definido. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ cpf\ =\ novoCPF;}
+\DoxyCodeLine{00074\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_pessoa_a890a0b6a3be01532cbb40e1ff08306a2}\label{class_pessoa_a890a0b6a3be01532cbb40e1ff08306a2} 
+\index{Pessoa@{Pessoa}!setDataNascimento@{setDataNascimento}}
+\index{setDataNascimento@{setDataNascimento}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{setDataNascimento()}{setDataNascimento()}}
+{\footnotesize\ttfamily void Pessoa\+::set\+Data\+Nascimento (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nova\+Data }\end{DoxyParamCaption})}
+
+
+
+Setter para definir a data de nascimento da pessoa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nova\+Data} & Nova data de nascimento a ser definida. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ dataNascimento\ =\ novaData;}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_pessoa_a8043b9301590a4784b4cac8f0871bdb4}\label{class_pessoa_a8043b9301590a4784b4cac8f0871bdb4} 
+\index{Pessoa@{Pessoa}!setEndereco@{setEndereco}}
+\index{setEndereco@{setEndereco}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{setEndereco()}{setEndereco()}}
+{\footnotesize\ttfamily void Pessoa\+::set\+Endereco (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_endereco}{Endereco}} \&}]{novo\+Endereco }\end{DoxyParamCaption})}
+
+
+
+Setter para definir o endereço da pessoa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Endereco} & Novo endereço a ser definido, representado por um objeto da classe \doxylink{class_endereco}{Endereco}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ endereco\ =\ novoEndereco;}
+\DoxyCodeLine{00090\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_pessoa_a988c52d92e546f997ae8274793ab5be6}\label{class_pessoa_a988c52d92e546f997ae8274793ab5be6} 
+\index{Pessoa@{Pessoa}!setNome@{setNome}}
+\index{setNome@{setNome}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily void Pessoa\+::set\+Nome (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{novo\+Nome }\end{DoxyParamCaption})}
+
+
+
+Setter para definir o nome da pessoa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Nome} & Novo nome a ser definido. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ nome\ =\ novoNome;}
+\DoxyCodeLine{00066\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{pessoa_8hpp}{pessoa.\+hpp}}\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{pessoa_8cpp}{pessoa.\+cpp}}\end{DoxyCompactItemize}

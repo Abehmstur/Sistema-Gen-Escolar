@@ -1,0 +1,387 @@
+\doxysection{Referência da Classe Funcionario}
+\hypertarget{class_funcionario}{}\label{class_funcionario}\index{Funcionario@{Funcionario}}
+
+
+Representa um funcionário que é uma pessoa e possui atributos específicos.  
+
+
+
+
+{\ttfamily \#include $<$funcionario.\+hpp$>$}
+
+Diagrama de hierarquia da classe Funcionario\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_funcionario}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_funcionario_a7cd39b2c6cd2449162481a8c0e7a2429}{Funcionario}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_funcionario}{Funcionario}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_funcionario_ae9820777b7644b343ae75426b8835b71}{Funcionario}} (const std\+::string \&\+\_\+nome, const std\+::string \&\+\_\+cpf, const std\+::string \&\+\_\+data\+Nascimento, const \mbox{\hyperlink{class_endereco}{Endereco}} \&\+\_\+endereco, const std\+::string \&\+\_\+matricula, float \+\_\+salario, const std\+::string \&\+\_\+departamento, int \+\_\+carga\+Horaria, const std\+::string \&\+\_\+data\+Ingresso)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_funcionario}{Funcionario}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_funcionario_a9e9086d32e43b908999a37ee11f8b561}{imprimir\+Salario\+Do\+Funcionario\+By\+Matricula}} (int \+\_\+matricula)=0
+\begin{DoxyCompactList}\small\item\em Função pura virtual para imprimir o salário do funcionário por matrícula. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_funcionario_a5c64c3a4c6cf6176c045149cfe4bbcdd}{get\+Matricula}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a matrícula do funcionário. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_funcionario_ac792f67b8e489080321a426a9e06a5f9}{get\+Salario}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o salário do funcionário. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_funcionario_acbf6d151b05c358d451a142ab9baa290}{get\+Departamento}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o departamento do funcionário. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_funcionario_a70fdf79709d6021a10930a556bb40b84}{get\+Carga\+Horaria}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a carga horária do funcionário. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_funcionario_aa850618fcccc64531b9b2b92f0888ff9}{get\+Data\+Ingresso}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a data de ingresso do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_adccc7656c53313092a9f4c79044b5992}{set\+Matricula}} (const std\+::string \&nova\+Matricula)
+\begin{DoxyCompactList}\small\item\em Define a matrícula do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_a21bb5d3db2bdb965f80c7167f272ec7c}{set\+Salario}} (float novo\+Salario)
+\begin{DoxyCompactList}\small\item\em Define o salário do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_a71f56a70e80eb0cb1672fe3d1f5b5d38}{set\+Departamento}} (const std\+::string \&novo\+Departamento)
+\begin{DoxyCompactList}\small\item\em Define o departamento do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_aa7a05273be2858076f4584d922b113bb}{set\+Carga\+Horaria}} (int nova\+Carga\+Horaria)
+\begin{DoxyCompactList}\small\item\em Define a carga horária do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_aae63fd9989f98d03880951949d6c1b8f}{set\+Data\+Ingresso}} (const std\+::string \&nova\+Data\+Ingresso)
+\begin{DoxyCompactList}\small\item\em Define a data de ingresso do funcionário. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_pessoa}{Pessoa}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}{Pessoa}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_pessoa}{Pessoa}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pessoa_a48ec400c82c85a73431a6f5561588f0b}{Pessoa}} (const std\+::string \&\+\_\+nome, const std\+::string \&\+\_\+cpf, const std\+::string \&\+\_\+data\+Nascimento, const \mbox{\hyperlink{class_endereco}{Endereco}} \&\+\_\+endereco)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_pessoa}{Pessoa}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a309bd1dada952c5c9b6aa27c163d1e53}{get\+Nome}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da pessoa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a12aca1330d2363104224f63de266efa9}{get\+CPF}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o CPF da pessoa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a7c41bbd8f6116b88b09fd454740e019a}{get\+Data\+Nascimento}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter a data de nascimento da pessoa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_endereco}{Endereco}} \mbox{\hyperlink{class_pessoa_acff82686ca616893081c1477a0154e9f}{get\+Endereco}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o endereço da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a988c52d92e546f997ae8274793ab5be6}{set\+Nome}} (const std\+::string \&novo\+Nome)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a3657d5be035ae0a8e846149218f0c270}{set\+CPF}} (const std\+::string \&novo\+CPF)
+\begin{DoxyCompactList}\small\item\em Setter para definir o CPF da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a890a0b6a3be01532cbb40e1ff08306a2}{set\+Data\+Nascimento}} (const std\+::string \&nova\+Data)
+\begin{DoxyCompactList}\small\item\em Setter para definir a data de nascimento da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a8043b9301590a4784b4cac8f0871bdb4}{set\+Endereco}} (const \mbox{\hyperlink{class_endereco}{Endereco}} \&novo\+Endereco)
+\begin{DoxyCompactList}\small\item\em Setter para definir o endereço da pessoa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_endereco}{Endereco}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_endereco_a1bb2df2319912c102821c133485bec0a}{Endereco}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a340afa3adcd7ebb339ca8e433d6d4a91}{get\+Rua}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da rua. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_endereco_ad371ff391cc7ebfd6dd24774a287790b}{get\+Numero}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o número do endereço. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a6f64a6dbe44b0a07e0acd5715558e9a7}{get\+Bairro}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome do bairro. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a08ecbda9d910730ddc049e351cb42726}{get\+Cidade}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da cidade. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a78d6c203af45c44d157cfccd4999b243}{get\+CEP}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o CEP do endereço. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a0a42fe5445d353e738f436213f2bff8d}{set\+Rua}} (const std\+::string \&new\+Rua)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da rua. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a4fd5facf5d971527d8915b83644436ac}{set\+Numero}} (int new\+Numero)
+\begin{DoxyCompactList}\small\item\em Setter para definir o número do endereço. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a82eba609a8d13dbc194b7e3adf4ab399}{set\+Bairro}} (const std\+::string \&new\+Bairro)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome do bairro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a913d70a1a418ba52486fa497be615522}{set\+Cidade}} (const std\+::string \&new\+Cidade)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da cidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a8379da8b0248df9fe90813ba0ecce9e2}{set\+CEP}} (const std\+::string \&new\+CEP)
+\begin{DoxyCompactList}\small\item\em Setter para definir o CEP do endereço. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representa um funcionário que é uma pessoa e possui atributos específicos. 
+
+A classe possui membros como matrícula, salário, departamento, carga horária e data de ingresso. Além disso, herda atributos e métodos da classe \doxylink{class_pessoa}{Pessoa}. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_funcionario_a7cd39b2c6cd2449162481a8c0e7a2429}\label{class_funcionario_a7cd39b2c6cd2449162481a8c0e7a2429} 
+\index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
+\index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{Funcionario()}{Funcionario()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Funcionario\+::\+Funcionario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe \doxylink{class_funcionario}{Funcionario}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_funcionario_ae9820777b7644b343ae75426b8835b71}\label{class_funcionario_ae9820777b7644b343ae75426b8835b71} 
+\index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
+\index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{Funcionario()}{Funcionario()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Funcionario\+::\+Funcionario (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+nome,  }\item[{const std\+::string \&}]{\+\_\+cpf,  }\item[{const std\+::string \&}]{\+\_\+data\+Nascimento,  }\item[{const \mbox{\hyperlink{class_endereco}{Endereco}} \&}]{\+\_\+endereco,  }\item[{const std\+::string \&}]{\+\_\+matricula,  }\item[{float}]{\+\_\+salario,  }\item[{const std\+::string \&}]{\+\_\+departamento,  }\item[{int}]{\+\_\+carga\+Horaria,  }\item[{const std\+::string \&}]{\+\_\+data\+Ingresso }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado da classe \doxylink{class_funcionario}{Funcionario}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+nome} & Nome do funcionário. \\
+\hline
+{\em \+\_\+cpf} & CPF do funcionário. \\
+\hline
+{\em \+\_\+data\+Nascimento} & Data de nascimento do funcionário. \\
+\hline
+{\em \+\_\+endereco} & Endereço do funcionário. \\
+\hline
+{\em \+\_\+matricula} & Matrícula do funcionário. \\
+\hline
+{\em \+\_\+salario} & Salário do funcionário. \\
+\hline
+{\em \+\_\+departamento} & Departamento do funcionário. \\
+\hline
+{\em \+\_\+carga\+Horaria} & Carga horária do funcionário. \\
+\hline
+{\em \+\_\+data\+Ingresso} & Data de ingresso do funcionário. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_funcionario_a70fdf79709d6021a10930a556bb40b84}\label{class_funcionario_a70fdf79709d6021a10930a556bb40b84} 
+\index{Funcionario@{Funcionario}!getCargaHoraria@{getCargaHoraria}}
+\index{getCargaHoraria@{getCargaHoraria}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{getCargaHoraria()}{getCargaHoraria()}}
+{\footnotesize\ttfamily int Funcionario\+::get\+Carga\+Horaria (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém a carga horária do funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+A carga horária do funcionário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{return}\ cargaHoraria;}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_funcionario_aa850618fcccc64531b9b2b92f0888ff9}\label{class_funcionario_aa850618fcccc64531b9b2b92f0888ff9} 
+\index{Funcionario@{Funcionario}!getDataIngresso@{getDataIngresso}}
+\index{getDataIngresso@{getDataIngresso}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{getDataIngresso()}{getDataIngresso()}}
+{\footnotesize\ttfamily std\+::string Funcionario\+::get\+Data\+Ingresso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém a data de ingresso do funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+A data de ingresso do funcionário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{return}\ dataIngresso;}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_funcionario_acbf6d151b05c358d451a142ab9baa290}\label{class_funcionario_acbf6d151b05c358d451a142ab9baa290} 
+\index{Funcionario@{Funcionario}!getDepartamento@{getDepartamento}}
+\index{getDepartamento@{getDepartamento}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{getDepartamento()}{getDepartamento()}}
+{\footnotesize\ttfamily std\+::string Funcionario\+::get\+Departamento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém o departamento do funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+O departamento do funcionário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{return}\ departamento;}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_funcionario_a5c64c3a4c6cf6176c045149cfe4bbcdd}\label{class_funcionario_a5c64c3a4c6cf6176c045149cfe4bbcdd} 
+\index{Funcionario@{Funcionario}!getMatricula@{getMatricula}}
+\index{getMatricula@{getMatricula}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{getMatricula()}{getMatricula()}}
+{\footnotesize\ttfamily std\+::string Funcionario\+::get\+Matricula (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém a matrícula do funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+A matrícula do funcionário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{return}\ matricula;}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_funcionario_ac792f67b8e489080321a426a9e06a5f9}\label{class_funcionario_ac792f67b8e489080321a426a9e06a5f9} 
+\index{Funcionario@{Funcionario}!getSalario@{getSalario}}
+\index{getSalario@{getSalario}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{getSalario()}{getSalario()}}
+{\footnotesize\ttfamily float Funcionario\+::get\+Salario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém o salário do funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+O salário do funcionário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ salario;}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_funcionario_a9e9086d32e43b908999a37ee11f8b561}\label{class_funcionario_a9e9086d32e43b908999a37ee11f8b561} 
+\index{Funcionario@{Funcionario}!imprimirSalarioDoFuncionarioByMatricula@{imprimirSalarioDoFuncionarioByMatricula}}
+\index{imprimirSalarioDoFuncionarioByMatricula@{imprimirSalarioDoFuncionarioByMatricula}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{imprimirSalarioDoFuncionarioByMatricula()}{imprimirSalarioDoFuncionarioByMatricula()}}
+{\footnotesize\ttfamily virtual void Funcionario\+::imprimir\+Salario\+Do\+Funcionario\+By\+Matricula (\begin{DoxyParamCaption}\item[{int}]{\+\_\+matricula }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Função pura virtual para imprimir o salário do funcionário por matrícula. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+matricula} & Matrícula do funcionário. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \mbox{\hyperlink{class_professor_ae526d454ef032bf9ee7077428843a1ac}{Professor}} e \mbox{\hyperlink{class_tecnico_a_d_m_a65ecfd5ac49cfd630b1429404addda4c}{Tecnico\+ADM}}.
+
+\Hypertarget{class_funcionario_aa7a05273be2858076f4584d922b113bb}\label{class_funcionario_aa7a05273be2858076f4584d922b113bb} 
+\index{Funcionario@{Funcionario}!setCargaHoraria@{setCargaHoraria}}
+\index{setCargaHoraria@{setCargaHoraria}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{setCargaHoraria()}{setCargaHoraria()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Carga\+Horaria (\begin{DoxyParamCaption}\item[{int}]{nova\+Carga\+Horaria }\end{DoxyParamCaption})}
+
+
+
+Define a carga horária do funcionário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nova\+Carga\+Horaria} & Nova carga horária do funcionário. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ cargaHoraria\ =\ novaCargaHoraria;}
+\DoxyCodeLine{00087\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_funcionario_aae63fd9989f98d03880951949d6c1b8f}\label{class_funcionario_aae63fd9989f98d03880951949d6c1b8f} 
+\index{Funcionario@{Funcionario}!setDataIngresso@{setDataIngresso}}
+\index{setDataIngresso@{setDataIngresso}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{setDataIngresso()}{setDataIngresso()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Data\+Ingresso (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nova\+Data\+Ingresso }\end{DoxyParamCaption})}
+
+
+
+Define a data de ingresso do funcionário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nova\+Data\+Ingresso} & Nova data de ingresso do funcionário. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ dataIngresso\ =\ novaDataIngresso;}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_funcionario_a71f56a70e80eb0cb1672fe3d1f5b5d38}\label{class_funcionario_a71f56a70e80eb0cb1672fe3d1f5b5d38} 
+\index{Funcionario@{Funcionario}!setDepartamento@{setDepartamento}}
+\index{setDepartamento@{setDepartamento}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{setDepartamento()}{setDepartamento()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Departamento (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{novo\+Departamento }\end{DoxyParamCaption})}
+
+
+
+Define o departamento do funcionário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Departamento} & Novo departamento do funcionário. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ departamento\ =\ novoDepartamento;}
+\DoxyCodeLine{00079\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_funcionario_adccc7656c53313092a9f4c79044b5992}\label{class_funcionario_adccc7656c53313092a9f4c79044b5992} 
+\index{Funcionario@{Funcionario}!setMatricula@{setMatricula}}
+\index{setMatricula@{setMatricula}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{setMatricula()}{setMatricula()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Matricula (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nova\+Matricula }\end{DoxyParamCaption})}
+
+
+
+Define a matrícula do funcionário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nova\+Matricula} & Nova matrícula do funcionário. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ matricula\ =\ novaMatricula;}
+\DoxyCodeLine{00063\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_funcionario_a21bb5d3db2bdb965f80c7167f272ec7c}\label{class_funcionario_a21bb5d3db2bdb965f80c7167f272ec7c} 
+\index{Funcionario@{Funcionario}!setSalario@{setSalario}}
+\index{setSalario@{setSalario}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{setSalario()}{setSalario()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Salario (\begin{DoxyParamCaption}\item[{float}]{novo\+Salario }\end{DoxyParamCaption})}
+
+
+
+Define o salário do funcionário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Salario} & Novo salário do funcionário. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ salario\ =\ novoSalario;}
+\DoxyCodeLine{00071\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{funcionario_8hpp}{funcionario.\+hpp}}\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{funcionario_8cpp}{funcionario.\+cpp}}\end{DoxyCompactItemize}

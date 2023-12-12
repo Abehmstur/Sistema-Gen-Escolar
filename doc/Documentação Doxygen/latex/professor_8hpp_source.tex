@@ -1,0 +1,58 @@
+\doxysection{professor.\+hpp}
+\hypertarget{professor_8hpp_source}{}\label{professor_8hpp_source}\index{LP1 PROVA 3/LP1-\/Projeto-\/3/src/professor.hpp@{LP1 PROVA 3/LP1-\/Projeto-\/3/src/professor.hpp}}
+\mbox{\hyperlink{professor_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PROFESSOR\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PROFESSOR\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{funcionario_8hpp}{funcionario.hpp}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_professor}{Professor}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_funcionario}{Funcionario}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//Enumerações}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}}\ \{\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da5091caf14ebf2fa440bc831d7e83fd8a}{I}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da6b6185a18d67430b632237c9daf3b399}{II}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925daf4c71b536e53e63954e843dcdc377064}{III}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da9ce994fe83e1e1d1eb931a49cefa807a}{IV}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da19c98d5587b7e3b62cf9c283e21193fd}{V}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925dae305016a9d29e223ee56c158551450fb}{VI}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da236252dcccb31db3e73353478587be8a}{VII}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925dad397b3a337885538325794ad6bb1753c}{VIII}}\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}}\ \{\ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1a8622115e382e2a2cdef22f5e480be709}{ESPECIALIZACAO}},\ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1a527ab35ed51152b129aa6116cdd52e6a}{MESTRADO}},\ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1ab702fb036da8cb379ac1ad7c917e8963}{DOUTORADO}}\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}}\ nivelProfessor;\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}}\ formacaoProfessor;\ }
+\DoxyCodeLine{00036\ \ \ \ \ std::string\ disciplina;\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//Construtor\ padrao}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_professor_ac6d4e54caf399a841888e60b54eed4c3}{Professor}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_professor_a70152647bcc3d93dd9dfa97907c6bd4e}{Professor}}(\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}}\ \_nivel,\ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}}\ \_formacao,\ \textcolor{keyword}{const}\ std::string\&\ \_disciplina);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_professor_a3fba319cea15aa2d4f5cf1c34c682ed2}{Professor}}(\textcolor{keyword}{const}\ std::string\&\ \_nome,\ \textcolor{keyword}{const}\ std::string\&\ \_cpf,\ \textcolor{keyword}{const}\ std::string\&\ \_dataNascimento,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_endereco}{Endereco}}\&\ \_endereco,\ \textcolor{keyword}{const}\ std::string\&\ \_matricula,\ \textcolor{keywordtype}{float}\ \_salario,\ \textcolor{keyword}{const}\ std::string\&\ \_departamento,\ \textcolor{keywordtype}{int}\ \_cargaHoraria,\ \textcolor{keyword}{const}\ std::string\&\ \_dataIngresso,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}}\&\ \_nivel,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}}\&\ \_formacao,\ \textcolor{keyword}{const}\ std::string\&\ \_disciplina);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_professor_ae526d454ef032bf9ee7077428843a1ac}{imprimirSalarioDoFuncionarioByMatricula}}(\textcolor{keywordtype}{int}\ \_matricula);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}}\ \mbox{\hyperlink{class_professor_ae874dfb163e2234a13c638320e981fe5}{getNivelProfessor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}}\ \mbox{\hyperlink{class_professor_a1179c89f60cab1f3c156a974cf7a3077}{getFormacaoProfessor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ std::string\ \mbox{\hyperlink{class_professor_a4e534579282664c4f43cf4724c41d025}{getDisciplina}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_professor_ac35e2980bd32c568e1397217e90bb703}{setNivelProfessor}}(\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}}\ novoNivel);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_professor_a207485f7592ec5ca271fb4dc29712cd7}{setFormacaoProfessor}}(\mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}}\ novaFormacao);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_professor_a6fee783f69188969c14a8e4c6b5d924b}{setDisciplina}}(\textcolor{keyword}{const}\ std::string\&\ novaDisciplina);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}}\ \mbox{\hyperlink{class_professor_ae5487e89741616962c15615b6e9da5c3}{obterNivelPeloNumero}}(\textcolor{keywordtype}{int}\ numero);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}}\ \mbox{\hyperlink{class_professor_a899407da00ae3f81f6d44f4053c0a4d0}{obterFormacaoPeloNumero}}(\textcolor{keywordtype}{int}\ numero);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_professor_a0ccc67325b9870fa11220158f46ae1e3}{obterNomeDoNivel}}(\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}}\ nivel);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_professor_aa1233c5b04a0b3d2493dedbe33ffbb26}{obterNomeDaFormacao}}(\mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}}\ formacao);}
+\DoxyCodeLine{00141\ \};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

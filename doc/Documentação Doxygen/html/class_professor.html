@@ -1,0 +1,899 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentação Sistema-Gen-Escolar: Referência da Classe Professor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Documentação Sistema-Gen-Escolar<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Tipos Públicos</a> &#124;
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pub-static-methods">Membros públicos estáticos</a> &#124;
+<a href="class_professor-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle"><div class="title">Referência da Classe Professor</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Classe que representa um professor.  
+ <a href="class_professor.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="professor_8hpp_source.html">professor.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de hierarquia da classe Professor:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_professor.png" usemap="#Professor_map" alt=""/>
+  <map id="Professor_map" name="Professor_map">
+<area href="class_funcionario.html" title="Representa um funcionário que é uma pessoa e possui atributos específicos." alt="Funcionario" shape="rect" coords="0,112,80,136"/>
+<area href="class_pessoa.html" title="Classe que representa uma pessoa com nome, CPF, data de nascimento e endereço." alt="Pessoa" shape="rect" coords="0,56,80,80"/>
+<area href="class_endereco.html" title="Representa um endereço com rua, número, bairro, cidade e CEP." alt="Endereco" shape="rect" coords="0,0,80,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Tipos Públicos</h2></td></tr>
+<tr class="memitem:ad7071bb14b88d90d573463a0bbf9925d" id="r_ad7071bb14b88d90d573463a0bbf9925d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a> { <br />
+&#160;&#160;<a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da5091caf14ebf2fa440bc831d7e83fd8a">I</a>
+, <a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da6b6185a18d67430b632237c9daf3b399">II</a>
+, <a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925daf4c71b536e53e63954e843dcdc377064">III</a>
+, <a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da9ce994fe83e1e1d1eb931a49cefa807a">IV</a>
+, <br />
+&#160;&#160;<a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da19c98d5587b7e3b62cf9c283e21193fd">V</a>
+, <a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925dae305016a9d29e223ee56c158551450fb">VI</a>
+, <a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da236252dcccb31db3e73353478587be8a">VII</a>
+, <a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925dad397b3a337885538325794ad6bb1753c">VIII</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ad7071bb14b88d90d573463a0bbf9925d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeração para representar o nível do professor.  <a href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Mais...</a><br /></td></tr>
+<tr class="separator:ad7071bb14b88d90d573463a0bbf9925d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b9b406bcbfb81b111ed05dff9d03a1" id="r_a27b9b406bcbfb81b111ed05dff9d03a1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a> { <a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1a8622115e382e2a2cdef22f5e480be709">ESPECIALIZACAO</a>
+, <a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1a527ab35ed51152b129aa6116cdd52e6a">MESTRADO</a>
+, <a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1ab702fb036da8cb379ac1ad7c917e8963">DOUTORADO</a>
+ }</td></tr>
+<tr class="memdesc:a27b9b406bcbfb81b111ed05dff9d03a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeração para representar a formação do professor.  <a href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Mais...</a><br /></td></tr>
+<tr class="separator:a27b9b406bcbfb81b111ed05dff9d03a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:ac6d4e54caf399a841888e60b54eed4c3" id="r_ac6d4e54caf399a841888e60b54eed4c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#ac6d4e54caf399a841888e60b54eed4c3">Professor</a> ()</td></tr>
+<tr class="memdesc:ac6d4e54caf399a841888e60b54eed4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão da classe <a class="el" href="class_professor.html" title="Classe que representa um professor.">Professor</a>.  <br /></td></tr>
+<tr class="separator:ac6d4e54caf399a841888e60b54eed4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70152647bcc3d93dd9dfa97907c6bd4e" id="r_a70152647bcc3d93dd9dfa97907c6bd4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#a70152647bcc3d93dd9dfa97907c6bd4e">Professor</a> (<a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a> _nivel, <a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a> _formacao, const std::string &amp;_disciplina)</td></tr>
+<tr class="memdesc:a70152647bcc3d93dd9dfa97907c6bd4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor parametrizado da classe <a class="el" href="class_professor.html" title="Classe que representa um professor.">Professor</a>.  <br /></td></tr>
+<tr class="separator:a70152647bcc3d93dd9dfa97907c6bd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fba319cea15aa2d4f5cf1c34c682ed2" id="r_a3fba319cea15aa2d4f5cf1c34c682ed2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#a3fba319cea15aa2d4f5cf1c34c682ed2">Professor</a> (const std::string &amp;_nome, const std::string &amp;_cpf, const std::string &amp;_dataNascimento, const <a class="el" href="class_endereco.html">Endereco</a> &amp;_endereco, const std::string &amp;_matricula, float _salario, const std::string &amp;_departamento, int _cargaHoraria, const std::string &amp;_dataIngresso, const <a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a> &amp;_nivel, const <a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a> &amp;_formacao, const std::string &amp;_disciplina)</td></tr>
+<tr class="memdesc:a3fba319cea15aa2d4f5cf1c34c682ed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor parametrizado da classe <a class="el" href="class_professor.html" title="Classe que representa um professor.">Professor</a>.  <br /></td></tr>
+<tr class="separator:a3fba319cea15aa2d4f5cf1c34c682ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae526d454ef032bf9ee7077428843a1ac" id="r_ae526d454ef032bf9ee7077428843a1ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#ae526d454ef032bf9ee7077428843a1ac">imprimirSalarioDoFuncionarioByMatricula</a> (int _matricula)</td></tr>
+<tr class="memdesc:ae526d454ef032bf9ee7077428843a1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método abstrato para imprimir o salário do professor com base na matrícula.  <br /></td></tr>
+<tr class="separator:ae526d454ef032bf9ee7077428843a1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae874dfb163e2234a13c638320e981fe5" id="r_ae874dfb163e2234a13c638320e981fe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#ae874dfb163e2234a13c638320e981fe5">getNivelProfessor</a> () const</td></tr>
+<tr class="memdesc:ae874dfb163e2234a13c638320e981fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter o nível do professor.  <br /></td></tr>
+<tr class="separator:ae874dfb163e2234a13c638320e981fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1179c89f60cab1f3c156a974cf7a3077" id="r_a1179c89f60cab1f3c156a974cf7a3077"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#a1179c89f60cab1f3c156a974cf7a3077">getFormacaoProfessor</a> () const</td></tr>
+<tr class="memdesc:a1179c89f60cab1f3c156a974cf7a3077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter a formação do professor.  <br /></td></tr>
+<tr class="separator:a1179c89f60cab1f3c156a974cf7a3077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e534579282664c4f43cf4724c41d025" id="r_a4e534579282664c4f43cf4724c41d025"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#a4e534579282664c4f43cf4724c41d025">getDisciplina</a> () const</td></tr>
+<tr class="memdesc:a4e534579282664c4f43cf4724c41d025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter a disciplina do professor.  <br /></td></tr>
+<tr class="separator:a4e534579282664c4f43cf4724c41d025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac35e2980bd32c568e1397217e90bb703" id="r_ac35e2980bd32c568e1397217e90bb703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#ac35e2980bd32c568e1397217e90bb703">setNivelProfessor</a> (<a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a> novoNivel)</td></tr>
+<tr class="memdesc:ac35e2980bd32c568e1397217e90bb703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir o nível do professor.  <br /></td></tr>
+<tr class="separator:ac35e2980bd32c568e1397217e90bb703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207485f7592ec5ca271fb4dc29712cd7" id="r_a207485f7592ec5ca271fb4dc29712cd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#a207485f7592ec5ca271fb4dc29712cd7">setFormacaoProfessor</a> (<a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a> novaFormacao)</td></tr>
+<tr class="memdesc:a207485f7592ec5ca271fb4dc29712cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir a formação do professor.  <br /></td></tr>
+<tr class="separator:a207485f7592ec5ca271fb4dc29712cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fee783f69188969c14a8e4c6b5d924b" id="r_a6fee783f69188969c14a8e4c6b5d924b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#a6fee783f69188969c14a8e4c6b5d924b">setDisciplina</a> (const std::string &amp;novaDisciplina)</td></tr>
+<tr class="memdesc:a6fee783f69188969c14a8e4c6b5d924b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir a disciplina do professor.  <br /></td></tr>
+<tr class="separator:a6fee783f69188969c14a8e4c6b5d924b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_funcionario"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_funcionario')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="class_funcionario.html">Funcionario</a></td></tr>
+<tr class="memitem:a7cd39b2c6cd2449162481a8c0e7a2429 inherit pub_methods_class_funcionario" id="r_a7cd39b2c6cd2449162481a8c0e7a2429"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#a7cd39b2c6cd2449162481a8c0e7a2429">Funcionario</a> ()</td></tr>
+<tr class="memdesc:a7cd39b2c6cd2449162481a8c0e7a2429 inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão da classe <a class="el" href="class_funcionario.html" title="Representa um funcionário que é uma pessoa e possui atributos específicos.">Funcionario</a>.  <br /></td></tr>
+<tr class="separator:a7cd39b2c6cd2449162481a8c0e7a2429 inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9820777b7644b343ae75426b8835b71 inherit pub_methods_class_funcionario" id="r_ae9820777b7644b343ae75426b8835b71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#ae9820777b7644b343ae75426b8835b71">Funcionario</a> (const std::string &amp;_nome, const std::string &amp;_cpf, const std::string &amp;_dataNascimento, const <a class="el" href="class_endereco.html">Endereco</a> &amp;_endereco, const std::string &amp;_matricula, float _salario, const std::string &amp;_departamento, int _cargaHoraria, const std::string &amp;_dataIngresso)</td></tr>
+<tr class="memdesc:ae9820777b7644b343ae75426b8835b71 inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor parametrizado da classe <a class="el" href="class_funcionario.html" title="Representa um funcionário que é uma pessoa e possui atributos específicos.">Funcionario</a>.  <br /></td></tr>
+<tr class="separator:ae9820777b7644b343ae75426b8835b71 inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c64c3a4c6cf6176c045149cfe4bbcdd inherit pub_methods_class_funcionario" id="r_a5c64c3a4c6cf6176c045149cfe4bbcdd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#a5c64c3a4c6cf6176c045149cfe4bbcdd">getMatricula</a> () const</td></tr>
+<tr class="memdesc:a5c64c3a4c6cf6176c045149cfe4bbcdd inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém a matrícula do funcionário.  <br /></td></tr>
+<tr class="separator:a5c64c3a4c6cf6176c045149cfe4bbcdd inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac792f67b8e489080321a426a9e06a5f9 inherit pub_methods_class_funcionario" id="r_ac792f67b8e489080321a426a9e06a5f9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#ac792f67b8e489080321a426a9e06a5f9">getSalario</a> () const</td></tr>
+<tr class="memdesc:ac792f67b8e489080321a426a9e06a5f9 inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o salário do funcionário.  <br /></td></tr>
+<tr class="separator:ac792f67b8e489080321a426a9e06a5f9 inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf6d151b05c358d451a142ab9baa290 inherit pub_methods_class_funcionario" id="r_acbf6d151b05c358d451a142ab9baa290"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#acbf6d151b05c358d451a142ab9baa290">getDepartamento</a> () const</td></tr>
+<tr class="memdesc:acbf6d151b05c358d451a142ab9baa290 inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o departamento do funcionário.  <br /></td></tr>
+<tr class="separator:acbf6d151b05c358d451a142ab9baa290 inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70fdf79709d6021a10930a556bb40b84 inherit pub_methods_class_funcionario" id="r_a70fdf79709d6021a10930a556bb40b84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#a70fdf79709d6021a10930a556bb40b84">getCargaHoraria</a> () const</td></tr>
+<tr class="memdesc:a70fdf79709d6021a10930a556bb40b84 inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém a carga horária do funcionário.  <br /></td></tr>
+<tr class="separator:a70fdf79709d6021a10930a556bb40b84 inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa850618fcccc64531b9b2b92f0888ff9 inherit pub_methods_class_funcionario" id="r_aa850618fcccc64531b9b2b92f0888ff9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#aa850618fcccc64531b9b2b92f0888ff9">getDataIngresso</a> () const</td></tr>
+<tr class="memdesc:aa850618fcccc64531b9b2b92f0888ff9 inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém a data de ingresso do funcionário.  <br /></td></tr>
+<tr class="separator:aa850618fcccc64531b9b2b92f0888ff9 inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adccc7656c53313092a9f4c79044b5992 inherit pub_methods_class_funcionario" id="r_adccc7656c53313092a9f4c79044b5992"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#adccc7656c53313092a9f4c79044b5992">setMatricula</a> (const std::string &amp;novaMatricula)</td></tr>
+<tr class="memdesc:adccc7656c53313092a9f4c79044b5992 inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a matrícula do funcionário.  <br /></td></tr>
+<tr class="separator:adccc7656c53313092a9f4c79044b5992 inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21bb5d3db2bdb965f80c7167f272ec7c inherit pub_methods_class_funcionario" id="r_a21bb5d3db2bdb965f80c7167f272ec7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#a21bb5d3db2bdb965f80c7167f272ec7c">setSalario</a> (float novoSalario)</td></tr>
+<tr class="memdesc:a21bb5d3db2bdb965f80c7167f272ec7c inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o salário do funcionário.  <br /></td></tr>
+<tr class="separator:a21bb5d3db2bdb965f80c7167f272ec7c inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f56a70e80eb0cb1672fe3d1f5b5d38 inherit pub_methods_class_funcionario" id="r_a71f56a70e80eb0cb1672fe3d1f5b5d38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#a71f56a70e80eb0cb1672fe3d1f5b5d38">setDepartamento</a> (const std::string &amp;novoDepartamento)</td></tr>
+<tr class="memdesc:a71f56a70e80eb0cb1672fe3d1f5b5d38 inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o departamento do funcionário.  <br /></td></tr>
+<tr class="separator:a71f56a70e80eb0cb1672fe3d1f5b5d38 inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a05273be2858076f4584d922b113bb inherit pub_methods_class_funcionario" id="r_aa7a05273be2858076f4584d922b113bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#aa7a05273be2858076f4584d922b113bb">setCargaHoraria</a> (int novaCargaHoraria)</td></tr>
+<tr class="memdesc:aa7a05273be2858076f4584d922b113bb inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a carga horária do funcionário.  <br /></td></tr>
+<tr class="separator:aa7a05273be2858076f4584d922b113bb inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae63fd9989f98d03880951949d6c1b8f inherit pub_methods_class_funcionario" id="r_aae63fd9989f98d03880951949d6c1b8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_funcionario.html#aae63fd9989f98d03880951949d6c1b8f">setDataIngresso</a> (const std::string &amp;novaDataIngresso)</td></tr>
+<tr class="memdesc:aae63fd9989f98d03880951949d6c1b8f inherit pub_methods_class_funcionario"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a data de ingresso do funcionário.  <br /></td></tr>
+<tr class="separator:aae63fd9989f98d03880951949d6c1b8f inherit pub_methods_class_funcionario"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_pessoa"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_pessoa')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="class_pessoa.html">Pessoa</a></td></tr>
+<tr class="memitem:a22563fe1f53faa9b1d8d10d28ae0c650 inherit pub_methods_class_pessoa" id="r_a22563fe1f53faa9b1d8d10d28ae0c650"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a22563fe1f53faa9b1d8d10d28ae0c650">Pessoa</a> ()</td></tr>
+<tr class="memdesc:a22563fe1f53faa9b1d8d10d28ae0c650 inherit pub_methods_class_pessoa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão da classe <a class="el" href="class_pessoa.html" title="Classe que representa uma pessoa com nome, CPF, data de nascimento e endereço.">Pessoa</a>.  <br /></td></tr>
+<tr class="separator:a22563fe1f53faa9b1d8d10d28ae0c650 inherit pub_methods_class_pessoa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ec400c82c85a73431a6f5561588f0b inherit pub_methods_class_pessoa" id="r_a48ec400c82c85a73431a6f5561588f0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a48ec400c82c85a73431a6f5561588f0b">Pessoa</a> (const std::string &amp;_nome, const std::string &amp;_cpf, const std::string &amp;_dataNascimento, const <a class="el" href="class_endereco.html">Endereco</a> &amp;_endereco)</td></tr>
+<tr class="memdesc:a48ec400c82c85a73431a6f5561588f0b inherit pub_methods_class_pessoa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor parametrizado da classe <a class="el" href="class_pessoa.html" title="Classe que representa uma pessoa com nome, CPF, data de nascimento e endereço.">Pessoa</a>.  <br /></td></tr>
+<tr class="separator:a48ec400c82c85a73431a6f5561588f0b inherit pub_methods_class_pessoa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a309bd1dada952c5c9b6aa27c163d1e53 inherit pub_methods_class_pessoa" id="r_a309bd1dada952c5c9b6aa27c163d1e53"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a309bd1dada952c5c9b6aa27c163d1e53">getNome</a> () const</td></tr>
+<tr class="memdesc:a309bd1dada952c5c9b6aa27c163d1e53 inherit pub_methods_class_pessoa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter o nome da pessoa.  <br /></td></tr>
+<tr class="separator:a309bd1dada952c5c9b6aa27c163d1e53 inherit pub_methods_class_pessoa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12aca1330d2363104224f63de266efa9 inherit pub_methods_class_pessoa" id="r_a12aca1330d2363104224f63de266efa9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a12aca1330d2363104224f63de266efa9">getCPF</a> () const</td></tr>
+<tr class="memdesc:a12aca1330d2363104224f63de266efa9 inherit pub_methods_class_pessoa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter o CPF da pessoa.  <br /></td></tr>
+<tr class="separator:a12aca1330d2363104224f63de266efa9 inherit pub_methods_class_pessoa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c41bbd8f6116b88b09fd454740e019a inherit pub_methods_class_pessoa" id="r_a7c41bbd8f6116b88b09fd454740e019a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a7c41bbd8f6116b88b09fd454740e019a">getDataNascimento</a> () const</td></tr>
+<tr class="memdesc:a7c41bbd8f6116b88b09fd454740e019a inherit pub_methods_class_pessoa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter a data de nascimento da pessoa.  <br /></td></tr>
+<tr class="separator:a7c41bbd8f6116b88b09fd454740e019a inherit pub_methods_class_pessoa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff82686ca616893081c1477a0154e9f inherit pub_methods_class_pessoa" id="r_acff82686ca616893081c1477a0154e9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_endereco.html">Endereco</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#acff82686ca616893081c1477a0154e9f">getEndereco</a> () const</td></tr>
+<tr class="memdesc:acff82686ca616893081c1477a0154e9f inherit pub_methods_class_pessoa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter o endereço da pessoa.  <br /></td></tr>
+<tr class="separator:acff82686ca616893081c1477a0154e9f inherit pub_methods_class_pessoa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a988c52d92e546f997ae8274793ab5be6 inherit pub_methods_class_pessoa" id="r_a988c52d92e546f997ae8274793ab5be6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a988c52d92e546f997ae8274793ab5be6">setNome</a> (const std::string &amp;novoNome)</td></tr>
+<tr class="memdesc:a988c52d92e546f997ae8274793ab5be6 inherit pub_methods_class_pessoa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir o nome da pessoa.  <br /></td></tr>
+<tr class="separator:a988c52d92e546f997ae8274793ab5be6 inherit pub_methods_class_pessoa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3657d5be035ae0a8e846149218f0c270 inherit pub_methods_class_pessoa" id="r_a3657d5be035ae0a8e846149218f0c270"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a3657d5be035ae0a8e846149218f0c270">setCPF</a> (const std::string &amp;novoCPF)</td></tr>
+<tr class="memdesc:a3657d5be035ae0a8e846149218f0c270 inherit pub_methods_class_pessoa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir o CPF da pessoa.  <br /></td></tr>
+<tr class="separator:a3657d5be035ae0a8e846149218f0c270 inherit pub_methods_class_pessoa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890a0b6a3be01532cbb40e1ff08306a2 inherit pub_methods_class_pessoa" id="r_a890a0b6a3be01532cbb40e1ff08306a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a890a0b6a3be01532cbb40e1ff08306a2">setDataNascimento</a> (const std::string &amp;novaData)</td></tr>
+<tr class="memdesc:a890a0b6a3be01532cbb40e1ff08306a2 inherit pub_methods_class_pessoa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir a data de nascimento da pessoa.  <br /></td></tr>
+<tr class="separator:a890a0b6a3be01532cbb40e1ff08306a2 inherit pub_methods_class_pessoa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8043b9301590a4784b4cac8f0871bdb4 inherit pub_methods_class_pessoa" id="r_a8043b9301590a4784b4cac8f0871bdb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a8043b9301590a4784b4cac8f0871bdb4">setEndereco</a> (const <a class="el" href="class_endereco.html">Endereco</a> &amp;novoEndereco)</td></tr>
+<tr class="memdesc:a8043b9301590a4784b4cac8f0871bdb4 inherit pub_methods_class_pessoa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir o endereço da pessoa.  <br /></td></tr>
+<tr class="separator:a8043b9301590a4784b4cac8f0871bdb4 inherit pub_methods_class_pessoa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_endereco"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_endereco')"><img src="closed.png" alt="-"/>&#160;Membros Públicos herdados de <a class="el" href="class_endereco.html">Endereco</a></td></tr>
+<tr class="memitem:a1bb2df2319912c102821c133485bec0a inherit pub_methods_class_endereco" id="r_a1bb2df2319912c102821c133485bec0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_endereco.html#a1bb2df2319912c102821c133485bec0a">Endereco</a> ()</td></tr>
+<tr class="memdesc:a1bb2df2319912c102821c133485bec0a inherit pub_methods_class_endereco"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão.  <br /></td></tr>
+<tr class="separator:a1bb2df2319912c102821c133485bec0a inherit pub_methods_class_endereco"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340afa3adcd7ebb339ca8e433d6d4a91 inherit pub_methods_class_endereco" id="r_a340afa3adcd7ebb339ca8e433d6d4a91"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_endereco.html#a340afa3adcd7ebb339ca8e433d6d4a91">getRua</a> () const</td></tr>
+<tr class="memdesc:a340afa3adcd7ebb339ca8e433d6d4a91 inherit pub_methods_class_endereco"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter o nome da rua.  <br /></td></tr>
+<tr class="separator:a340afa3adcd7ebb339ca8e433d6d4a91 inherit pub_methods_class_endereco"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad371ff391cc7ebfd6dd24774a287790b inherit pub_methods_class_endereco" id="r_ad371ff391cc7ebfd6dd24774a287790b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_endereco.html#ad371ff391cc7ebfd6dd24774a287790b">getNumero</a> () const</td></tr>
+<tr class="memdesc:ad371ff391cc7ebfd6dd24774a287790b inherit pub_methods_class_endereco"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter o número do endereço.  <br /></td></tr>
+<tr class="separator:ad371ff391cc7ebfd6dd24774a287790b inherit pub_methods_class_endereco"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f64a6dbe44b0a07e0acd5715558e9a7 inherit pub_methods_class_endereco" id="r_a6f64a6dbe44b0a07e0acd5715558e9a7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_endereco.html#a6f64a6dbe44b0a07e0acd5715558e9a7">getBairro</a> () const</td></tr>
+<tr class="memdesc:a6f64a6dbe44b0a07e0acd5715558e9a7 inherit pub_methods_class_endereco"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter o nome do bairro.  <br /></td></tr>
+<tr class="separator:a6f64a6dbe44b0a07e0acd5715558e9a7 inherit pub_methods_class_endereco"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08ecbda9d910730ddc049e351cb42726 inherit pub_methods_class_endereco" id="r_a08ecbda9d910730ddc049e351cb42726"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_endereco.html#a08ecbda9d910730ddc049e351cb42726">getCidade</a> () const</td></tr>
+<tr class="memdesc:a08ecbda9d910730ddc049e351cb42726 inherit pub_methods_class_endereco"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter o nome da cidade.  <br /></td></tr>
+<tr class="separator:a08ecbda9d910730ddc049e351cb42726 inherit pub_methods_class_endereco"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d6c203af45c44d157cfccd4999b243 inherit pub_methods_class_endereco" id="r_a78d6c203af45c44d157cfccd4999b243"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_endereco.html#a78d6c203af45c44d157cfccd4999b243">getCEP</a> () const</td></tr>
+<tr class="memdesc:a78d6c203af45c44d157cfccd4999b243 inherit pub_methods_class_endereco"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obter o CEP do endereço.  <br /></td></tr>
+<tr class="separator:a78d6c203af45c44d157cfccd4999b243 inherit pub_methods_class_endereco"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a42fe5445d353e738f436213f2bff8d inherit pub_methods_class_endereco" id="r_a0a42fe5445d353e738f436213f2bff8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_endereco.html#a0a42fe5445d353e738f436213f2bff8d">setRua</a> (const std::string &amp;newRua)</td></tr>
+<tr class="memdesc:a0a42fe5445d353e738f436213f2bff8d inherit pub_methods_class_endereco"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir o nome da rua.  <br /></td></tr>
+<tr class="separator:a0a42fe5445d353e738f436213f2bff8d inherit pub_methods_class_endereco"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fd5facf5d971527d8915b83644436ac inherit pub_methods_class_endereco" id="r_a4fd5facf5d971527d8915b83644436ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_endereco.html#a4fd5facf5d971527d8915b83644436ac">setNumero</a> (int newNumero)</td></tr>
+<tr class="memdesc:a4fd5facf5d971527d8915b83644436ac inherit pub_methods_class_endereco"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir o número do endereço.  <br /></td></tr>
+<tr class="separator:a4fd5facf5d971527d8915b83644436ac inherit pub_methods_class_endereco"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82eba609a8d13dbc194b7e3adf4ab399 inherit pub_methods_class_endereco" id="r_a82eba609a8d13dbc194b7e3adf4ab399"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_endereco.html#a82eba609a8d13dbc194b7e3adf4ab399">setBairro</a> (const std::string &amp;newBairro)</td></tr>
+<tr class="memdesc:a82eba609a8d13dbc194b7e3adf4ab399 inherit pub_methods_class_endereco"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir o nome do bairro.  <br /></td></tr>
+<tr class="separator:a82eba609a8d13dbc194b7e3adf4ab399 inherit pub_methods_class_endereco"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a913d70a1a418ba52486fa497be615522 inherit pub_methods_class_endereco" id="r_a913d70a1a418ba52486fa497be615522"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_endereco.html#a913d70a1a418ba52486fa497be615522">setCidade</a> (const std::string &amp;newCidade)</td></tr>
+<tr class="memdesc:a913d70a1a418ba52486fa497be615522 inherit pub_methods_class_endereco"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir o nome da cidade.  <br /></td></tr>
+<tr class="separator:a913d70a1a418ba52486fa497be615522 inherit pub_methods_class_endereco"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8379da8b0248df9fe90813ba0ecce9e2 inherit pub_methods_class_endereco" id="r_a8379da8b0248df9fe90813ba0ecce9e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_endereco.html#a8379da8b0248df9fe90813ba0ecce9e2">setCEP</a> (const std::string &amp;newCEP)</td></tr>
+<tr class="memdesc:a8379da8b0248df9fe90813ba0ecce9e2 inherit pub_methods_class_endereco"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para definir o CEP do endereço.  <br /></td></tr>
+<tr class="separator:a8379da8b0248df9fe90813ba0ecce9e2 inherit pub_methods_class_endereco"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Membros públicos estáticos</h2></td></tr>
+<tr class="memitem:ae5487e89741616962c15615b6e9da5c3" id="r_ae5487e89741616962c15615b6e9da5c3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#ae5487e89741616962c15615b6e9da5c3">obterNivelPeloNumero</a> (int numero)</td></tr>
+<tr class="memdesc:ae5487e89741616962c15615b6e9da5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método estático para converter inteiro para enum Nivel.  <br /></td></tr>
+<tr class="separator:ae5487e89741616962c15615b6e9da5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899407da00ae3f81f6d44f4053c0a4d0" id="r_a899407da00ae3f81f6d44f4053c0a4d0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#a899407da00ae3f81f6d44f4053c0a4d0">obterFormacaoPeloNumero</a> (int numero)</td></tr>
+<tr class="memdesc:a899407da00ae3f81f6d44f4053c0a4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método estático para converter inteiro para enum Formacao.  <br /></td></tr>
+<tr class="separator:a899407da00ae3f81f6d44f4053c0a4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ccc67325b9870fa11220158f46ae1e3" id="r_a0ccc67325b9870fa11220158f46ae1e3"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#a0ccc67325b9870fa11220158f46ae1e3">obterNomeDoNivel</a> (<a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a> nivel)</td></tr>
+<tr class="memdesc:a0ccc67325b9870fa11220158f46ae1e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter o nome do enum Nivel.  <br /></td></tr>
+<tr class="separator:a0ccc67325b9870fa11220158f46ae1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1233c5b04a0b3d2493dedbe33ffbb26" id="r_aa1233c5b04a0b3d2493dedbe33ffbb26"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_professor.html#aa1233c5b04a0b3d2493dedbe33ffbb26">obterNomeDaFormacao</a> (<a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a> formacao)</td></tr>
+<tr class="memdesc:aa1233c5b04a0b3d2493dedbe33ffbb26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para obter o nome do enum Formacao.  <br /></td></tr>
+<tr class="separator:aa1233c5b04a0b3d2493dedbe33ffbb26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe que representa um professor. </p>
+<p>Herda da classe <a class="el" href="class_funcionario.html" title="Representa um funcionário que é uma pessoa e possui atributos específicos.">Funcionario</a> e implementa funcionalidades específicas para professores. </p>
+</div><h2 class="groupheader">Documentação das enumerações</h2>
+<a id="a27b9b406bcbfb81b111ed05dff9d03a1" name="a27b9b406bcbfb81b111ed05dff9d03a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27b9b406bcbfb81b111ed05dff9d03a1">&#9670;&#160;</a></span>Formacao</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Professor::Formacao</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeração para representar a formação do professor. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumeradores</th></tr><tr><td class="fieldname"><a id="a27b9b406bcbfb81b111ed05dff9d03a1a8622115e382e2a2cdef22f5e480be709" name="a27b9b406bcbfb81b111ed05dff9d03a1a8622115e382e2a2cdef22f5e480be709"></a>ESPECIALIZACAO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a27b9b406bcbfb81b111ed05dff9d03a1a527ab35ed51152b129aa6116cdd52e6a" name="a27b9b406bcbfb81b111ed05dff9d03a1a527ab35ed51152b129aa6116cdd52e6a"></a>MESTRADO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a27b9b406bcbfb81b111ed05dff9d03a1ab702fb036da8cb379ac1ad7c917e8963" name="a27b9b406bcbfb81b111ed05dff9d03a1ab702fb036da8cb379ac1ad7c917e8963"></a>DOUTORADO&#160;</td><td class="fielddoc"></td></tr>
+</table>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>{ <a class="code hl_enumvalue" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1a8622115e382e2a2cdef22f5e480be709">ESPECIALIZACAO</a>, <a class="code hl_enumvalue" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1a527ab35ed51152b129aa6116cdd52e6a">MESTRADO</a>, <a class="code hl_enumvalue" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1ab702fb036da8cb379ac1ad7c917e8963">DOUTORADO</a> };</div>
+<div class="ttc" id="aclass_professor_html_a27b9b406bcbfb81b111ed05dff9d03a1a527ab35ed51152b129aa6116cdd52e6a"><div class="ttname"><a href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1a527ab35ed51152b129aa6116cdd52e6a">Professor::MESTRADO</a></div><div class="ttdeci">@ MESTRADO</div><div class="ttdef"><b>Definição</b> professor.hpp:31</div></div>
+<div class="ttc" id="aclass_professor_html_a27b9b406bcbfb81b111ed05dff9d03a1a8622115e382e2a2cdef22f5e480be709"><div class="ttname"><a href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1a8622115e382e2a2cdef22f5e480be709">Professor::ESPECIALIZACAO</a></div><div class="ttdeci">@ ESPECIALIZACAO</div><div class="ttdef"><b>Definição</b> professor.hpp:31</div></div>
+<div class="ttc" id="aclass_professor_html_a27b9b406bcbfb81b111ed05dff9d03a1ab702fb036da8cb379ac1ad7c917e8963"><div class="ttname"><a href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1ab702fb036da8cb379ac1ad7c917e8963">Professor::DOUTORADO</a></div><div class="ttdeci">@ DOUTORADO</div><div class="ttdef"><b>Definição</b> professor.hpp:31</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad7071bb14b88d90d573463a0bbf9925d" name="ad7071bb14b88d90d573463a0bbf9925d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7071bb14b88d90d573463a0bbf9925d">&#9670;&#160;</a></span>Nivel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Professor::Nivel</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeração para representar o nível do professor. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumeradores</th></tr><tr><td class="fieldname"><a id="ad7071bb14b88d90d573463a0bbf9925da5091caf14ebf2fa440bc831d7e83fd8a" name="ad7071bb14b88d90d573463a0bbf9925da5091caf14ebf2fa440bc831d7e83fd8a"></a>I&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad7071bb14b88d90d573463a0bbf9925da6b6185a18d67430b632237c9daf3b399" name="ad7071bb14b88d90d573463a0bbf9925da6b6185a18d67430b632237c9daf3b399"></a>II&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad7071bb14b88d90d573463a0bbf9925daf4c71b536e53e63954e843dcdc377064" name="ad7071bb14b88d90d573463a0bbf9925daf4c71b536e53e63954e843dcdc377064"></a>III&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad7071bb14b88d90d573463a0bbf9925da9ce994fe83e1e1d1eb931a49cefa807a" name="ad7071bb14b88d90d573463a0bbf9925da9ce994fe83e1e1d1eb931a49cefa807a"></a>IV&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad7071bb14b88d90d573463a0bbf9925da19c98d5587b7e3b62cf9c283e21193fd" name="ad7071bb14b88d90d573463a0bbf9925da19c98d5587b7e3b62cf9c283e21193fd"></a>V&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad7071bb14b88d90d573463a0bbf9925dae305016a9d29e223ee56c158551450fb" name="ad7071bb14b88d90d573463a0bbf9925dae305016a9d29e223ee56c158551450fb"></a>VI&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad7071bb14b88d90d573463a0bbf9925da236252dcccb31db3e73353478587be8a" name="ad7071bb14b88d90d573463a0bbf9925da236252dcccb31db3e73353478587be8a"></a>VII&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad7071bb14b88d90d573463a0bbf9925dad397b3a337885538325794ad6bb1753c" name="ad7071bb14b88d90d573463a0bbf9925dad397b3a337885538325794ad6bb1753c"></a>VIII&#160;</td><td class="fielddoc"></td></tr>
+</table>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>{ <a class="code hl_enumvalue" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da5091caf14ebf2fa440bc831d7e83fd8a">I</a>, <a class="code hl_enumvalue" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da6b6185a18d67430b632237c9daf3b399">II</a>, <a class="code hl_enumvalue" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925daf4c71b536e53e63954e843dcdc377064">III</a>, <a class="code hl_enumvalue" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da9ce994fe83e1e1d1eb931a49cefa807a">IV</a>, <a class="code hl_enumvalue" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da19c98d5587b7e3b62cf9c283e21193fd">V</a>, <a class="code hl_enumvalue" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925dae305016a9d29e223ee56c158551450fb">VI</a>, <a class="code hl_enumvalue" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da236252dcccb31db3e73353478587be8a">VII</a>, <a class="code hl_enumvalue" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925dad397b3a337885538325794ad6bb1753c">VIII</a> };</div>
+<div class="ttc" id="aclass_professor_html_ad7071bb14b88d90d573463a0bbf9925da19c98d5587b7e3b62cf9c283e21193fd"><div class="ttname"><a href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da19c98d5587b7e3b62cf9c283e21193fd">Professor::V</a></div><div class="ttdeci">@ V</div><div class="ttdef"><b>Definição</b> professor.hpp:25</div></div>
+<div class="ttc" id="aclass_professor_html_ad7071bb14b88d90d573463a0bbf9925da236252dcccb31db3e73353478587be8a"><div class="ttname"><a href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da236252dcccb31db3e73353478587be8a">Professor::VII</a></div><div class="ttdeci">@ VII</div><div class="ttdef"><b>Definição</b> professor.hpp:25</div></div>
+<div class="ttc" id="aclass_professor_html_ad7071bb14b88d90d573463a0bbf9925da5091caf14ebf2fa440bc831d7e83fd8a"><div class="ttname"><a href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da5091caf14ebf2fa440bc831d7e83fd8a">Professor::I</a></div><div class="ttdeci">@ I</div><div class="ttdef"><b>Definição</b> professor.hpp:25</div></div>
+<div class="ttc" id="aclass_professor_html_ad7071bb14b88d90d573463a0bbf9925da6b6185a18d67430b632237c9daf3b399"><div class="ttname"><a href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da6b6185a18d67430b632237c9daf3b399">Professor::II</a></div><div class="ttdeci">@ II</div><div class="ttdef"><b>Definição</b> professor.hpp:25</div></div>
+<div class="ttc" id="aclass_professor_html_ad7071bb14b88d90d573463a0bbf9925da9ce994fe83e1e1d1eb931a49cefa807a"><div class="ttname"><a href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925da9ce994fe83e1e1d1eb931a49cefa807a">Professor::IV</a></div><div class="ttdeci">@ IV</div><div class="ttdef"><b>Definição</b> professor.hpp:25</div></div>
+<div class="ttc" id="aclass_professor_html_ad7071bb14b88d90d573463a0bbf9925dad397b3a337885538325794ad6bb1753c"><div class="ttname"><a href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925dad397b3a337885538325794ad6bb1753c">Professor::VIII</a></div><div class="ttdeci">@ VIII</div><div class="ttdef"><b>Definição</b> professor.hpp:25</div></div>
+<div class="ttc" id="aclass_professor_html_ad7071bb14b88d90d573463a0bbf9925dae305016a9d29e223ee56c158551450fb"><div class="ttname"><a href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925dae305016a9d29e223ee56c158551450fb">Professor::VI</a></div><div class="ttdeci">@ VI</div><div class="ttdef"><b>Definição</b> professor.hpp:25</div></div>
+<div class="ttc" id="aclass_professor_html_ad7071bb14b88d90d573463a0bbf9925daf4c71b536e53e63954e843dcdc377064"><div class="ttname"><a href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925daf4c71b536e53e63954e843dcdc377064">Professor::III</a></div><div class="ttdeci">@ III</div><div class="ttdef"><b>Definição</b> professor.hpp:25</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="ac6d4e54caf399a841888e60b54eed4c3" name="ac6d4e54caf399a841888e60b54eed4c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6d4e54caf399a841888e60b54eed4c3">&#9670;&#160;</a></span>Professor() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Professor::Professor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor padrão da classe <a class="el" href="class_professor.html" title="Classe que representa um professor.">Professor</a>. </p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                     {</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a70152647bcc3d93dd9dfa97907c6bd4e" name="a70152647bcc3d93dd9dfa97907c6bd4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70152647bcc3d93dd9dfa97907c6bd4e">&#9670;&#160;</a></span>Professor() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Professor::Professor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a>&#160;</td>
+          <td class="paramname"><em>_nivel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a>&#160;</td>
+          <td class="paramname"><em>_formacao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_disciplina</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor parametrizado da classe <a class="el" href="class_professor.html" title="Classe que representa um professor.">Professor</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_nivel</td><td>Nível do professor. </td></tr>
+    <tr><td class="paramname">_formacao</td><td>Formação do professor. </td></tr>
+    <tr><td class="paramname">_disciplina</td><td>Disciplina do professor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3fba319cea15aa2d4f5cf1c34c682ed2" name="a3fba319cea15aa2d4f5cf1c34c682ed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fba319cea15aa2d4f5cf1c34c682ed2">&#9670;&#160;</a></span>Professor() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Professor::Professor </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_cpf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_dataNascimento</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_endereco.html">Endereco</a> &amp;&#160;</td>
+          <td class="paramname"><em>_endereco</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_matricula</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>_salario</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_departamento</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_cargaHoraria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_dataIngresso</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a> &amp;&#160;</td>
+          <td class="paramname"><em>_nivel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a> &amp;&#160;</td>
+          <td class="paramname"><em>_formacao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_disciplina</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor parametrizado da classe <a class="el" href="class_professor.html" title="Classe que representa um professor.">Professor</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_nome</td><td>Nome do professor. </td></tr>
+    <tr><td class="paramname">_cpf</td><td>CPF do professor. </td></tr>
+    <tr><td class="paramname">_dataNascimento</td><td>Data de nascimento do professor. </td></tr>
+    <tr><td class="paramname">_endereco</td><td>Endereço do professor. </td></tr>
+    <tr><td class="paramname">_matricula</td><td>Matrícula do professor. </td></tr>
+    <tr><td class="paramname">_salario</td><td>Salário do professor. </td></tr>
+    <tr><td class="paramname">_departamento</td><td>Departamento do professor. </td></tr>
+    <tr><td class="paramname">_cargaHoraria</td><td>Carga horária do professor. </td></tr>
+    <tr><td class="paramname">_dataIngresso</td><td>Data de ingresso do professor. </td></tr>
+    <tr><td class="paramname">_nivel</td><td>Nível do professor. </td></tr>
+    <tr><td class="paramname">_formacao</td><td>Formação do professor. </td></tr>
+    <tr><td class="paramname">_disciplina</td><td>Disciplina do professor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="a4e534579282664c4f43cf4724c41d025" name="a4e534579282664c4f43cf4724c41d025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e534579282664c4f43cf4724c41d025">&#9670;&#160;</a></span>getDisciplina()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Professor::getDisciplina </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter para obter a disciplina do professor. </p>
+<dl class="section return"><dt>Retorna</dt><dd>A disciplina do professor. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>                                      {</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">return</span> disciplina;</div>
+<div class="line"><span class="lineno">   48</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1179c89f60cab1f3c156a974cf7a3077" name="a1179c89f60cab1f3c156a974cf7a3077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1179c89f60cab1f3c156a974cf7a3077">&#9670;&#160;</a></span>getFormacaoProfessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Professor::Formacao</a> Professor::getFormacaoProfessor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter para obter a formação do professor. </p>
+<dl class="section return"><dt>Retorna</dt><dd>A formação do professor. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                        {</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">return</span> formacaoProfessor;</div>
+<div class="line"><span class="lineno">   40</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae874dfb163e2234a13c638320e981fe5" name="ae874dfb163e2234a13c638320e981fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae874dfb163e2234a13c638320e981fe5">&#9670;&#160;</a></span>getNivelProfessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Professor::Nivel</a> Professor::getNivelProfessor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter para obter o nível do professor. </p>
+<dl class="section return"><dt>Retorna</dt><dd>O nível do professor. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                                                  {</div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">return</span> nivelProfessor;</div>
+<div class="line"><span class="lineno">   32</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae526d454ef032bf9ee7077428843a1ac" name="ae526d454ef032bf9ee7077428843a1ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae526d454ef032bf9ee7077428843a1ac">&#9670;&#160;</a></span>imprimirSalarioDoFuncionarioByMatricula()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Professor::imprimirSalarioDoFuncionarioByMatricula </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_matricula</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método abstrato para imprimir o salário do professor com base na matrícula. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_matricula</td><td>Matrícula do professor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Abstração para implementação em classes derivadas. </p>
+
+<p>Implementa <a class="el" href="class_funcionario.html#a9e9086d32e43b908999a37ee11f8b561">Funcionario</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                      {</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   81</span>        fstream arquivo(<span class="stringliteral">&quot;funcionarios.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">   82</span>        vector&lt;Professor&gt; listaProfessores;</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (!arquivo.is_open()) {</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">throw</span> runtime_error(<span class="stringliteral">&quot;Nao foi possivel abrir o arquivo.&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordtype">string</span> linha;</div>
+<div class="line"><span class="lineno">   88</span>            <a class="code hl_class" href="class_professor.html">Professor</a> encontrado;</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordtype">bool</span> encontradoFlag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">while</span> (getline(arquivo, linha)) {</div>
+<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">if</span> (linha.find(<span class="stringliteral">&quot;Matricula: T1-&quot;</span> + to_string(_matricula)) != string::npos) {</div>
+<div class="line"><span class="lineno">   93</span>                    encontrado = <a class="code hl_function" href="class_professor.html#ac6d4e54caf399a841888e60b54eed4c3">Professor</a>();</div>
+<div class="line"><span class="lineno">   94</span>                    encontradoFlag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   95</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (linha.find(<span class="stringliteral">&quot;Nome: &quot;</span>) == 0 &amp;&amp; encontradoFlag) {</div>
+<div class="line"><span class="lineno">   96</span>                    encontrado.<a class="code hl_function" href="class_pessoa.html#a988c52d92e546f997ae8274793ab5be6">setNome</a>(linha.substr(6));</div>
+<div class="line"><span class="lineno">   97</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (linha.find(<span class="stringliteral">&quot;Salario: &quot;</span>) == 0 &amp;&amp; encontradoFlag) {</div>
+<div class="line"><span class="lineno">   98</span>                    <span class="keywordtype">float</span> salario = stof(linha.substr(9));</div>
+<div class="line"><span class="lineno">   99</span>                    encontrado.<a class="code hl_function" href="class_funcionario.html#a21bb5d3db2bdb965f80c7167f272ec7c">setSalario</a>(salario);</div>
+<div class="line"><span class="lineno">  100</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  101</span>                }</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>            arquivo.close();</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">if</span> (encontradoFlag) {</div>
+<div class="line"><span class="lineno">  107</span>                cout &lt;&lt; <span class="stringliteral">&quot;Nome: &quot;</span> &lt;&lt; encontrado.<a class="code hl_function" href="class_pessoa.html#a309bd1dada952c5c9b6aa27c163d1e53">getNome</a>() &lt;&lt; <span class="stringliteral">&quot; | Salario: &quot;</span> &lt;&lt; encontrado.<a class="code hl_function" href="class_funcionario.html#ac792f67b8e489080321a426a9e06a5f9">getSalario</a>() &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  108</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  109</span>                cout &lt;&lt; <span class="stringliteral">&quot;Professor com a matricula &quot;</span> &lt;&lt; _matricula &lt;&lt; <span class="stringliteral">&quot; nao encontrado.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="classprofessor_excecoes.html">professorExcecoes</a>&amp; erro) {</div>
+<div class="line"><span class="lineno">  113</span>            cout &lt;&lt; <span class="stringliteral">&quot;================================================================================================================&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  114</span>            cout &lt;&lt; <span class="stringliteral">&quot;| ERROR: &quot;</span> &lt;&lt; erro.<a class="code hl_function" href="classprofessor_excecoes.html#a4e78711c48ae3aac0ccee514c23b4b36">what</a>() &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  115</span>            cout &lt;&lt; <span class="stringliteral">&quot;================================================================================================================&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
+<div class="line"><span class="lineno">  117</span>}</div>
+<div class="ttc" id="aclass_funcionario_html_a21bb5d3db2bdb965f80c7167f272ec7c"><div class="ttname"><a href="class_funcionario.html#a21bb5d3db2bdb965f80c7167f272ec7c">Funcionario::setSalario</a></div><div class="ttdeci">void setSalario(float novoSalario)</div><div class="ttdoc">Define o salário do funcionário.</div><div class="ttdef"><b>Definição</b> funcionario.cpp:69</div></div>
+<div class="ttc" id="aclass_funcionario_html_ac792f67b8e489080321a426a9e06a5f9"><div class="ttname"><a href="class_funcionario.html#ac792f67b8e489080321a426a9e06a5f9">Funcionario::getSalario</a></div><div class="ttdeci">float getSalario() const</div><div class="ttdoc">Obtém o salário do funcionário.</div><div class="ttdef"><b>Definição</b> funcionario.cpp:27</div></div>
+<div class="ttc" id="aclass_pessoa_html_a309bd1dada952c5c9b6aa27c163d1e53"><div class="ttname"><a href="class_pessoa.html#a309bd1dada952c5c9b6aa27c163d1e53">Pessoa::getNome</a></div><div class="ttdeci">std::string getNome() const</div><div class="ttdoc">Getter para obter o nome da pessoa.</div><div class="ttdef"><b>Definição</b> pessoa.cpp:32</div></div>
+<div class="ttc" id="aclass_pessoa_html_a988c52d92e546f997ae8274793ab5be6"><div class="ttname"><a href="class_pessoa.html#a988c52d92e546f997ae8274793ab5be6">Pessoa::setNome</a></div><div class="ttdeci">void setNome(const std::string &amp;novoNome)</div><div class="ttdoc">Setter para definir o nome da pessoa.</div><div class="ttdef"><b>Definição</b> pessoa.cpp:64</div></div>
+<div class="ttc" id="aclass_professor_html"><div class="ttname"><a href="class_professor.html">Professor</a></div><div class="ttdoc">Classe que representa um professor.</div><div class="ttdef"><b>Definição</b> professor.hpp:17</div></div>
+<div class="ttc" id="aclass_professor_html_ac6d4e54caf399a841888e60b54eed4c3"><div class="ttname"><a href="class_professor.html#ac6d4e54caf399a841888e60b54eed4c3">Professor::Professor</a></div><div class="ttdeci">Professor()</div><div class="ttdoc">Construtor padrão da classe Professor.</div><div class="ttdef"><b>Definição</b> professor.cpp:22</div></div>
+<div class="ttc" id="aclassprofessor_excecoes_html"><div class="ttname"><a href="classprofessor_excecoes.html">professorExcecoes</a></div><div class="ttdoc">Representa uma exceção relacionada à classe Professor.</div><div class="ttdef"><b>Definição</b> professorExcecoes.hpp:16</div></div>
+<div class="ttc" id="aclassprofessor_excecoes_html_a4e78711c48ae3aac0ccee514c23b4b36"><div class="ttname"><a href="classprofessor_excecoes.html#a4e78711c48ae3aac0ccee514c23b4b36">professorExcecoes::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdoc">Getter para obter a mensagem de erro.</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a899407da00ae3f81f6d44f4053c0a4d0" name="a899407da00ae3f81f6d44f4053c0a4d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899407da00ae3f81f6d44f4053c0a4d0">&#9670;&#160;</a></span>obterFormacaoPeloNumero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a> Professor::obterFormacaoPeloNumero </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numero</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método estático para converter inteiro para enum Formacao. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numero</td><td>Número a ser convertido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Enum Formacao correspondente ao número. </dd></dl>
+
+</div>
+</div>
+<a id="ae5487e89741616962c15615b6e9da5c3" name="ae5487e89741616962c15615b6e9da5c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5487e89741616962c15615b6e9da5c3">&#9670;&#160;</a></span>obterNivelPeloNumero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a> Professor::obterNivelPeloNumero </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numero</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método estático para converter inteiro para enum Nivel. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numero</td><td>Número a ser convertido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Enum Nivel correspondente ao número. </dd></dl>
+
+</div>
+</div>
+<a id="aa1233c5b04a0b3d2493dedbe33ffbb26" name="aa1233c5b04a0b3d2493dedbe33ffbb26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1233c5b04a0b3d2493dedbe33ffbb26">&#9670;&#160;</a></span>obterNomeDaFormacao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string Professor::obterNomeDaFormacao </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a>&#160;</td>
+          <td class="paramname"><em>formacao</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método para obter o nome do enum Formacao. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">formacao</td><td>Formacao a ser convertido em nome. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nome correspondente ao enum Formacao. </dd></dl>
+
+</div>
+</div>
+<a id="a0ccc67325b9870fa11220158f46ae1e3" name="a0ccc67325b9870fa11220158f46ae1e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ccc67325b9870fa11220158f46ae1e3">&#9670;&#160;</a></span>obterNomeDoNivel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string Professor::obterNomeDoNivel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a>&#160;</td>
+          <td class="paramname"><em>nivel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método para obter o nome do enum Nivel. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nivel</td><td>Nível a ser convertido em nome. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nome correspondente ao enum Nivel. </dd></dl>
+
+</div>
+</div>
+<a id="a6fee783f69188969c14a8e4c6b5d924b" name="a6fee783f69188969c14a8e4c6b5d924b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fee783f69188969c14a8e4c6b5d924b">&#9670;&#160;</a></span>setDisciplina()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Professor::setDisciplina </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>novaDisciplina</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter para definir a disciplina do professor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">novaDisciplina</td><td>Nova disciplina a ser definida. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>                                                          {</div>
+<div class="line"><span class="lineno">   71</span>    disciplina = novaDisciplina;</div>
+<div class="line"><span class="lineno">   72</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a207485f7592ec5ca271fb4dc29712cd7" name="a207485f7592ec5ca271fb4dc29712cd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a207485f7592ec5ca271fb4dc29712cd7">&#9670;&#160;</a></span>setFormacaoProfessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Professor::setFormacaoProfessor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_professor.html#a27b9b406bcbfb81b111ed05dff9d03a1">Formacao</a>&#160;</td>
+          <td class="paramname"><em>novaFormacao</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter para definir a formação do professor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">novaFormacao</td><td>Nova formação a ser definida. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                          {</div>
+<div class="line"><span class="lineno">   63</span>    formacaoProfessor = novaFormacao;</div>
+<div class="line"><span class="lineno">   64</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac35e2980bd32c568e1397217e90bb703" name="ac35e2980bd32c568e1397217e90bb703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac35e2980bd32c568e1397217e90bb703">&#9670;&#160;</a></span>setNivelProfessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Professor::setNivelProfessor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_professor.html#ad7071bb14b88d90d573463a0bbf9925d">Nivel</a>&#160;</td>
+          <td class="paramname"><em>novoNivel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter para definir o nível do professor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">novoNivel</td><td>Novo nível a ser definido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                 {</div>
+<div class="line"><span class="lineno">   55</span>    nivelProfessor = novoNivel;</div>
+<div class="line"><span class="lineno">   56</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>LP1 PROVA 3/LP1-Projeto-3/src/<a class="el" href="professor_8hpp_source.html">professor.hpp</a></li>
+<li>LP1 PROVA 3/LP1-Projeto-3/src/<a class="el" href="professor_8cpp.html">professor.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

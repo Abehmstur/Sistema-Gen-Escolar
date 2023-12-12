@@ -1,0 +1,577 @@
+\doxysection{Referência da Classe Professor}
+\hypertarget{class_professor}{}\label{class_professor}\index{Professor@{Professor}}
+
+
+Classe que representa um professor.  
+
+
+
+
+{\ttfamily \#include $<$professor.\+hpp$>$}
+
+Diagrama de hierarquia da classe Professor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_professor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}} \{ \newline
+\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da5091caf14ebf2fa440bc831d7e83fd8a}{I}}
+, \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da6b6185a18d67430b632237c9daf3b399}{II}}
+, \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925daf4c71b536e53e63954e843dcdc377064}{III}}
+, \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da9ce994fe83e1e1d1eb931a49cefa807a}{IV}}
+, \newline
+\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da19c98d5587b7e3b62cf9c283e21193fd}{V}}
+, \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925dae305016a9d29e223ee56c158551450fb}{VI}}
+, \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da236252dcccb31db3e73353478587be8a}{VII}}
+, \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925dad397b3a337885538325794ad6bb1753c}{VIII}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeração para representar o nível do professor. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}} \{ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1a8622115e382e2a2cdef22f5e480be709}{ESPECIALIZACAO}}
+, \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1a527ab35ed51152b129aa6116cdd52e6a}{MESTRADO}}
+, \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1ab702fb036da8cb379ac1ad7c917e8963}{DOUTORADO}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeração para representar a formação do professor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_professor_ac6d4e54caf399a841888e60b54eed4c3}{Professor}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_professor}{Professor}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_professor_a70152647bcc3d93dd9dfa97907c6bd4e}{Professor}} (\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}} \+\_\+nivel, \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}} \+\_\+formacao, const std\+::string \&\+\_\+disciplina)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_professor}{Professor}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_professor_a3fba319cea15aa2d4f5cf1c34c682ed2}{Professor}} (const std\+::string \&\+\_\+nome, const std\+::string \&\+\_\+cpf, const std\+::string \&\+\_\+data\+Nascimento, const \mbox{\hyperlink{class_endereco}{Endereco}} \&\+\_\+endereco, const std\+::string \&\+\_\+matricula, float \+\_\+salario, const std\+::string \&\+\_\+departamento, int \+\_\+carga\+Horaria, const std\+::string \&\+\_\+data\+Ingresso, const \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}} \&\+\_\+nivel, const \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}} \&\+\_\+formacao, const std\+::string \&\+\_\+disciplina)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_professor}{Professor}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_professor_ae526d454ef032bf9ee7077428843a1ac}{imprimir\+Salario\+Do\+Funcionario\+By\+Matricula}} (int \+\_\+matricula)
+\begin{DoxyCompactList}\small\item\em Método abstrato para imprimir o salário do professor com base na matrícula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}} \mbox{\hyperlink{class_professor_ae874dfb163e2234a13c638320e981fe5}{get\+Nivel\+Professor}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nível do professor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}} \mbox{\hyperlink{class_professor_a1179c89f60cab1f3c156a974cf7a3077}{get\+Formacao\+Professor}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter a formação do professor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_professor_a4e534579282664c4f43cf4724c41d025}{get\+Disciplina}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter a disciplina do professor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_professor_ac35e2980bd32c568e1397217e90bb703}{set\+Nivel\+Professor}} (\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}} novo\+Nivel)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nível do professor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_professor_a207485f7592ec5ca271fb4dc29712cd7}{set\+Formacao\+Professor}} (\mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}} nova\+Formacao)
+\begin{DoxyCompactList}\small\item\em Setter para definir a formação do professor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_professor_a6fee783f69188969c14a8e4c6b5d924b}{set\+Disciplina}} (const std\+::string \&nova\+Disciplina)
+\begin{DoxyCompactList}\small\item\em Setter para definir a disciplina do professor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_funcionario}{Funcionario}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_funcionario_a7cd39b2c6cd2449162481a8c0e7a2429}{Funcionario}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_funcionario}{Funcionario}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_funcionario_ae9820777b7644b343ae75426b8835b71}{Funcionario}} (const std\+::string \&\+\_\+nome, const std\+::string \&\+\_\+cpf, const std\+::string \&\+\_\+data\+Nascimento, const \mbox{\hyperlink{class_endereco}{Endereco}} \&\+\_\+endereco, const std\+::string \&\+\_\+matricula, float \+\_\+salario, const std\+::string \&\+\_\+departamento, int \+\_\+carga\+Horaria, const std\+::string \&\+\_\+data\+Ingresso)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_funcionario}{Funcionario}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_funcionario_a5c64c3a4c6cf6176c045149cfe4bbcdd}{get\+Matricula}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a matrícula do funcionário. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_funcionario_ac792f67b8e489080321a426a9e06a5f9}{get\+Salario}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o salário do funcionário. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_funcionario_acbf6d151b05c358d451a142ab9baa290}{get\+Departamento}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o departamento do funcionário. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_funcionario_a70fdf79709d6021a10930a556bb40b84}{get\+Carga\+Horaria}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a carga horária do funcionário. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_funcionario_aa850618fcccc64531b9b2b92f0888ff9}{get\+Data\+Ingresso}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a data de ingresso do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_adccc7656c53313092a9f4c79044b5992}{set\+Matricula}} (const std\+::string \&nova\+Matricula)
+\begin{DoxyCompactList}\small\item\em Define a matrícula do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_a21bb5d3db2bdb965f80c7167f272ec7c}{set\+Salario}} (float novo\+Salario)
+\begin{DoxyCompactList}\small\item\em Define o salário do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_a71f56a70e80eb0cb1672fe3d1f5b5d38}{set\+Departamento}} (const std\+::string \&novo\+Departamento)
+\begin{DoxyCompactList}\small\item\em Define o departamento do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_aa7a05273be2858076f4584d922b113bb}{set\+Carga\+Horaria}} (int nova\+Carga\+Horaria)
+\begin{DoxyCompactList}\small\item\em Define a carga horária do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_aae63fd9989f98d03880951949d6c1b8f}{set\+Data\+Ingresso}} (const std\+::string \&nova\+Data\+Ingresso)
+\begin{DoxyCompactList}\small\item\em Define a data de ingresso do funcionário. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_pessoa}{Pessoa}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}{Pessoa}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_pessoa}{Pessoa}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pessoa_a48ec400c82c85a73431a6f5561588f0b}{Pessoa}} (const std\+::string \&\+\_\+nome, const std\+::string \&\+\_\+cpf, const std\+::string \&\+\_\+data\+Nascimento, const \mbox{\hyperlink{class_endereco}{Endereco}} \&\+\_\+endereco)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_pessoa}{Pessoa}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a309bd1dada952c5c9b6aa27c163d1e53}{get\+Nome}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da pessoa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a12aca1330d2363104224f63de266efa9}{get\+CPF}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o CPF da pessoa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a7c41bbd8f6116b88b09fd454740e019a}{get\+Data\+Nascimento}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter a data de nascimento da pessoa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_endereco}{Endereco}} \mbox{\hyperlink{class_pessoa_acff82686ca616893081c1477a0154e9f}{get\+Endereco}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o endereço da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a988c52d92e546f997ae8274793ab5be6}{set\+Nome}} (const std\+::string \&novo\+Nome)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a3657d5be035ae0a8e846149218f0c270}{set\+CPF}} (const std\+::string \&novo\+CPF)
+\begin{DoxyCompactList}\small\item\em Setter para definir o CPF da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a890a0b6a3be01532cbb40e1ff08306a2}{set\+Data\+Nascimento}} (const std\+::string \&nova\+Data)
+\begin{DoxyCompactList}\small\item\em Setter para definir a data de nascimento da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a8043b9301590a4784b4cac8f0871bdb4}{set\+Endereco}} (const \mbox{\hyperlink{class_endereco}{Endereco}} \&novo\+Endereco)
+\begin{DoxyCompactList}\small\item\em Setter para definir o endereço da pessoa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_endereco}{Endereco}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_endereco_a1bb2df2319912c102821c133485bec0a}{Endereco}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a340afa3adcd7ebb339ca8e433d6d4a91}{get\+Rua}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da rua. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_endereco_ad371ff391cc7ebfd6dd24774a287790b}{get\+Numero}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o número do endereço. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a6f64a6dbe44b0a07e0acd5715558e9a7}{get\+Bairro}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome do bairro. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a08ecbda9d910730ddc049e351cb42726}{get\+Cidade}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da cidade. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a78d6c203af45c44d157cfccd4999b243}{get\+CEP}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o CEP do endereço. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a0a42fe5445d353e738f436213f2bff8d}{set\+Rua}} (const std\+::string \&new\+Rua)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da rua. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a4fd5facf5d971527d8915b83644436ac}{set\+Numero}} (int new\+Numero)
+\begin{DoxyCompactList}\small\item\em Setter para definir o número do endereço. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a82eba609a8d13dbc194b7e3adf4ab399}{set\+Bairro}} (const std\+::string \&new\+Bairro)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome do bairro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a913d70a1a418ba52486fa497be615522}{set\+Cidade}} (const std\+::string \&new\+Cidade)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da cidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a8379da8b0248df9fe90813ba0ecce9e2}{set\+CEP}} (const std\+::string \&new\+CEP)
+\begin{DoxyCompactList}\small\item\em Setter para definir o CEP do endereço. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}} \mbox{\hyperlink{class_professor_ae5487e89741616962c15615b6e9da5c3}{obter\+Nivel\+Pelo\+Numero}} (int numero)
+\begin{DoxyCompactList}\small\item\em Método estático para converter inteiro para enum Nivel. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}} \mbox{\hyperlink{class_professor_a899407da00ae3f81f6d44f4053c0a4d0}{obter\+Formacao\+Pelo\+Numero}} (int numero)
+\begin{DoxyCompactList}\small\item\em Método estático para converter inteiro para enum Formacao. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_professor_a0ccc67325b9870fa11220158f46ae1e3}{obter\+Nome\+Do\+Nivel}} (\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}} nivel)
+\begin{DoxyCompactList}\small\item\em Método para obter o nome do enum Nivel. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_professor_aa1233c5b04a0b3d2493dedbe33ffbb26}{obter\+Nome\+Da\+Formacao}} (\mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}} formacao)
+\begin{DoxyCompactList}\small\item\em Método para obter o nome do enum Formacao. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um professor. 
+
+Herda da classe \doxylink{class_funcionario}{Funcionario} e implementa funcionalidades específicas para professores. 
+
+\doxysubsection{Documentação das enumerações}
+\Hypertarget{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}\label{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1} 
+\index{Professor@{Professor}!Formacao@{Formacao}}
+\index{Formacao@{Formacao}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{Formacao}{Formacao}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Professor\+::\+Formacao}}}
+
+
+
+Enumeração para representar a formação do professor. 
+
+\begin{DoxyEnumFields}{Enumeradores}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ESPECIALIZACAO@{ESPECIALIZACAO}!Professor@{Professor}}\index{Professor@{Professor}!ESPECIALIZACAO@{ESPECIALIZACAO}}}\Hypertarget{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1a8622115e382e2a2cdef22f5e480be709}\label{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1a8622115e382e2a2cdef22f5e480be709} 
+ESPECIALIZACAO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MESTRADO@{MESTRADO}!Professor@{Professor}}\index{Professor@{Professor}!MESTRADO@{MESTRADO}}}\Hypertarget{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1a527ab35ed51152b129aa6116cdd52e6a}\label{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1a527ab35ed51152b129aa6116cdd52e6a} 
+MESTRADO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOUTORADO@{DOUTORADO}!Professor@{Professor}}\index{Professor@{Professor}!DOUTORADO@{DOUTORADO}}}\Hypertarget{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1ab702fb036da8cb379ac1ad7c917e8963}\label{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1ab702fb036da8cb379ac1ad7c917e8963} 
+DOUTORADO&\\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \{\ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1a8622115e382e2a2cdef22f5e480be709}{ESPECIALIZACAO}},\ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1a527ab35ed51152b129aa6116cdd52e6a}{MESTRADO}},\ \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1ab702fb036da8cb379ac1ad7c917e8963}{DOUTORADO}}\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_professor_ad7071bb14b88d90d573463a0bbf9925d}\label{class_professor_ad7071bb14b88d90d573463a0bbf9925d} 
+\index{Professor@{Professor}!Nivel@{Nivel}}
+\index{Nivel@{Nivel}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{Nivel}{Nivel}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Professor\+::\+Nivel}}}
+
+
+
+Enumeração para representar o nível do professor. 
+
+\begin{DoxyEnumFields}{Enumeradores}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I@{I}!Professor@{Professor}}\index{Professor@{Professor}!I@{I}}}\Hypertarget{class_professor_ad7071bb14b88d90d573463a0bbf9925da5091caf14ebf2fa440bc831d7e83fd8a}\label{class_professor_ad7071bb14b88d90d573463a0bbf9925da5091caf14ebf2fa440bc831d7e83fd8a} 
+I&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{II@{II}!Professor@{Professor}}\index{Professor@{Professor}!II@{II}}}\Hypertarget{class_professor_ad7071bb14b88d90d573463a0bbf9925da6b6185a18d67430b632237c9daf3b399}\label{class_professor_ad7071bb14b88d90d573463a0bbf9925da6b6185a18d67430b632237c9daf3b399} 
+II&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{III@{III}!Professor@{Professor}}\index{Professor@{Professor}!III@{III}}}\Hypertarget{class_professor_ad7071bb14b88d90d573463a0bbf9925daf4c71b536e53e63954e843dcdc377064}\label{class_professor_ad7071bb14b88d90d573463a0bbf9925daf4c71b536e53e63954e843dcdc377064} 
+III&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IV@{IV}!Professor@{Professor}}\index{Professor@{Professor}!IV@{IV}}}\Hypertarget{class_professor_ad7071bb14b88d90d573463a0bbf9925da9ce994fe83e1e1d1eb931a49cefa807a}\label{class_professor_ad7071bb14b88d90d573463a0bbf9925da9ce994fe83e1e1d1eb931a49cefa807a} 
+IV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V@{V}!Professor@{Professor}}\index{Professor@{Professor}!V@{V}}}\Hypertarget{class_professor_ad7071bb14b88d90d573463a0bbf9925da19c98d5587b7e3b62cf9c283e21193fd}\label{class_professor_ad7071bb14b88d90d573463a0bbf9925da19c98d5587b7e3b62cf9c283e21193fd} 
+V&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VI@{VI}!Professor@{Professor}}\index{Professor@{Professor}!VI@{VI}}}\Hypertarget{class_professor_ad7071bb14b88d90d573463a0bbf9925dae305016a9d29e223ee56c158551450fb}\label{class_professor_ad7071bb14b88d90d573463a0bbf9925dae305016a9d29e223ee56c158551450fb} 
+VI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VII@{VII}!Professor@{Professor}}\index{Professor@{Professor}!VII@{VII}}}\Hypertarget{class_professor_ad7071bb14b88d90d573463a0bbf9925da236252dcccb31db3e73353478587be8a}\label{class_professor_ad7071bb14b88d90d573463a0bbf9925da236252dcccb31db3e73353478587be8a} 
+VII&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VIII@{VIII}!Professor@{Professor}}\index{Professor@{Professor}!VIII@{VIII}}}\Hypertarget{class_professor_ad7071bb14b88d90d573463a0bbf9925dad397b3a337885538325794ad6bb1753c}\label{class_professor_ad7071bb14b88d90d573463a0bbf9925dad397b3a337885538325794ad6bb1753c} 
+VIII&\\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da5091caf14ebf2fa440bc831d7e83fd8a}{I}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da6b6185a18d67430b632237c9daf3b399}{II}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925daf4c71b536e53e63954e843dcdc377064}{III}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da9ce994fe83e1e1d1eb931a49cefa807a}{IV}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da19c98d5587b7e3b62cf9c283e21193fd}{V}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925dae305016a9d29e223ee56c158551450fb}{VI}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925da236252dcccb31db3e73353478587be8a}{VII}},\ \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925dad397b3a337885538325794ad6bb1753c}{VIII}}\ \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_professor_ac6d4e54caf399a841888e60b54eed4c3}\label{class_professor_ac6d4e54caf399a841888e60b54eed4c3} 
+\index{Professor@{Professor}!Professor@{Professor}}
+\index{Professor@{Professor}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{Professor()}{Professor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Professor\+::\+Professor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe \doxylink{class_professor}{Professor}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_professor_a70152647bcc3d93dd9dfa97907c6bd4e}\label{class_professor_a70152647bcc3d93dd9dfa97907c6bd4e} 
+\index{Professor@{Professor}!Professor@{Professor}}
+\index{Professor@{Professor}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{Professor()}{Professor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Professor\+::\+Professor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}}}]{\+\_\+nivel,  }\item[{\mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}}}]{\+\_\+formacao,  }\item[{const std\+::string \&}]{\+\_\+disciplina }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado da classe \doxylink{class_professor}{Professor}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+nivel} & Nível do professor. \\
+\hline
+{\em \+\_\+formacao} & Formação do professor. \\
+\hline
+{\em \+\_\+disciplina} & Disciplina do professor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_professor_a3fba319cea15aa2d4f5cf1c34c682ed2}\label{class_professor_a3fba319cea15aa2d4f5cf1c34c682ed2} 
+\index{Professor@{Professor}!Professor@{Professor}}
+\index{Professor@{Professor}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{Professor()}{Professor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Professor\+::\+Professor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+nome,  }\item[{const std\+::string \&}]{\+\_\+cpf,  }\item[{const std\+::string \&}]{\+\_\+data\+Nascimento,  }\item[{const \mbox{\hyperlink{class_endereco}{Endereco}} \&}]{\+\_\+endereco,  }\item[{const std\+::string \&}]{\+\_\+matricula,  }\item[{float}]{\+\_\+salario,  }\item[{const std\+::string \&}]{\+\_\+departamento,  }\item[{int}]{\+\_\+carga\+Horaria,  }\item[{const std\+::string \&}]{\+\_\+data\+Ingresso,  }\item[{const \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}} \&}]{\+\_\+nivel,  }\item[{const \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}} \&}]{\+\_\+formacao,  }\item[{const std\+::string \&}]{\+\_\+disciplina }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado da classe \doxylink{class_professor}{Professor}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+nome} & Nome do professor. \\
+\hline
+{\em \+\_\+cpf} & CPF do professor. \\
+\hline
+{\em \+\_\+data\+Nascimento} & Data de nascimento do professor. \\
+\hline
+{\em \+\_\+endereco} & Endereço do professor. \\
+\hline
+{\em \+\_\+matricula} & Matrícula do professor. \\
+\hline
+{\em \+\_\+salario} & Salário do professor. \\
+\hline
+{\em \+\_\+departamento} & Departamento do professor. \\
+\hline
+{\em \+\_\+carga\+Horaria} & Carga horária do professor. \\
+\hline
+{\em \+\_\+data\+Ingresso} & Data de ingresso do professor. \\
+\hline
+{\em \+\_\+nivel} & Nível do professor. \\
+\hline
+{\em \+\_\+formacao} & Formação do professor. \\
+\hline
+{\em \+\_\+disciplina} & Disciplina do professor. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_professor_a4e534579282664c4f43cf4724c41d025}\label{class_professor_a4e534579282664c4f43cf4724c41d025} 
+\index{Professor@{Professor}!getDisciplina@{getDisciplina}}
+\index{getDisciplina@{getDisciplina}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{getDisciplina()}{getDisciplina()}}
+{\footnotesize\ttfamily string Professor\+::get\+Disciplina (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter a disciplina do professor. 
+
+\begin{DoxyReturn}{Retorna}
+A disciplina do professor. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{return}\ disciplina;}
+\DoxyCodeLine{00048\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_professor_a1179c89f60cab1f3c156a974cf7a3077}\label{class_professor_a1179c89f60cab1f3c156a974cf7a3077} 
+\index{Professor@{Professor}!getFormacaoProfessor@{getFormacaoProfessor}}
+\index{getFormacaoProfessor@{getFormacaoProfessor}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{getFormacaoProfessor()}{getFormacaoProfessor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Professor\+::\+Formacao}} Professor\+::get\+Formacao\+Professor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter a formação do professor. 
+
+\begin{DoxyReturn}{Retorna}
+A formação do professor. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ formacaoProfessor;}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_professor_ae874dfb163e2234a13c638320e981fe5}\label{class_professor_ae874dfb163e2234a13c638320e981fe5} 
+\index{Professor@{Professor}!getNivelProfessor@{getNivelProfessor}}
+\index{getNivelProfessor@{getNivelProfessor}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{getNivelProfessor()}{getNivelProfessor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Professor\+::\+Nivel}} Professor\+::get\+Nivel\+Professor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter o nível do professor. 
+
+\begin{DoxyReturn}{Retorna}
+O nível do professor. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{return}\ nivelProfessor;}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_professor_ae526d454ef032bf9ee7077428843a1ac}\label{class_professor_ae526d454ef032bf9ee7077428843a1ac} 
+\index{Professor@{Professor}!imprimirSalarioDoFuncionarioByMatricula@{imprimirSalarioDoFuncionarioByMatricula}}
+\index{imprimirSalarioDoFuncionarioByMatricula@{imprimirSalarioDoFuncionarioByMatricula}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{imprimirSalarioDoFuncionarioByMatricula()}{imprimirSalarioDoFuncionarioByMatricula()}}
+{\footnotesize\ttfamily void Professor\+::imprimir\+Salario\+Do\+Funcionario\+By\+Matricula (\begin{DoxyParamCaption}\item[{int}]{\+\_\+matricula }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Método abstrato para imprimir o salário do professor com base na matrícula. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+matricula} & Matrícula do professor.\\
+\hline
+\end{DoxyParams}
+Abstração para implementação em classes derivadas. 
+
+Implementa \mbox{\hyperlink{class_funcionario_a9e9086d32e43b908999a37ee11f8b561}{Funcionario}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ fstream\ arquivo(\textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ vector<Professor>\ listaProfessores;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!arquivo.is\_open())\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ runtime\_error(\textcolor{stringliteral}{"{}Nao\ foi\ possivel\ abrir\ o\ arquivo."{}});}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ linha;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_professor}{Professor}}\ encontrado;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ encontradoFlag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(arquivo,\ linha))\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Matricula:\ T1-\/"{}}\ +\ to\_string(\_matricula))\ !=\ string::npos)\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado\ =\ \mbox{\hyperlink{class_professor_ac6d4e54caf399a841888e60b54eed4c3}{Professor}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontradoFlag\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Nome:\ "{}})\ ==\ 0\ \&\&\ encontradoFlag)\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado.\mbox{\hyperlink{class_pessoa_a988c52d92e546f997ae8274793ab5be6}{setNome}}(linha.substr(6));}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Salario:\ "{}})\ ==\ 0\ \&\&\ encontradoFlag)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ salario\ =\ stof(linha.substr(9));}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado.\mbox{\hyperlink{class_funcionario_a21bb5d3db2bdb965f80c7167f272ec7c}{setSalario}}(salario);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (encontradoFlag)\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ encontrado.\mbox{\hyperlink{class_pessoa_a309bd1dada952c5c9b6aa27c163d1e53}{getNome}}()\ <<\ \textcolor{stringliteral}{"{}\ |\ Salario:\ "{}}\ <<\ encontrado.\mbox{\hyperlink{class_funcionario_ac792f67b8e489080321a426a9e06a5f9}{getSalario}}()\ <<\ endl;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Professor\ com\ a\ matricula\ "{}}\ <<\ \_matricula\ <<\ \textcolor{stringliteral}{"{}\ nao\ encontrado."{}}\ <<\ endl;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{classprofessor_excecoes}{professorExcecoes}}\&\ erro)\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}|\ ERROR:\ "{}}\ <<\ erro.\mbox{\hyperlink{classprofessor_excecoes_a4e78711c48ae3aac0ccee514c23b4b36}{what}}()\ <<\ endl;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00116\ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_professor_a899407da00ae3f81f6d44f4053c0a4d0}\label{class_professor_a899407da00ae3f81f6d44f4053c0a4d0} 
+\index{Professor@{Professor}!obterFormacaoPeloNumero@{obterFormacaoPeloNumero}}
+\index{obterFormacaoPeloNumero@{obterFormacaoPeloNumero}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{obterFormacaoPeloNumero()}{obterFormacaoPeloNumero()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}} Professor\+::obter\+Formacao\+Pelo\+Numero (\begin{DoxyParamCaption}\item[{int}]{numero }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método estático para converter inteiro para enum Formacao. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em numero} & Número a ser convertido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Enum Formacao correspondente ao número. 
+\end{DoxyReturn}
+\Hypertarget{class_professor_ae5487e89741616962c15615b6e9da5c3}\label{class_professor_ae5487e89741616962c15615b6e9da5c3} 
+\index{Professor@{Professor}!obterNivelPeloNumero@{obterNivelPeloNumero}}
+\index{obterNivelPeloNumero@{obterNivelPeloNumero}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{obterNivelPeloNumero()}{obterNivelPeloNumero()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}} Professor\+::obter\+Nivel\+Pelo\+Numero (\begin{DoxyParamCaption}\item[{int}]{numero }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método estático para converter inteiro para enum Nivel. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em numero} & Número a ser convertido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Enum Nivel correspondente ao número. 
+\end{DoxyReturn}
+\Hypertarget{class_professor_aa1233c5b04a0b3d2493dedbe33ffbb26}\label{class_professor_aa1233c5b04a0b3d2493dedbe33ffbb26} 
+\index{Professor@{Professor}!obterNomeDaFormacao@{obterNomeDaFormacao}}
+\index{obterNomeDaFormacao@{obterNomeDaFormacao}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{obterNomeDaFormacao()}{obterNomeDaFormacao()}}
+{\footnotesize\ttfamily static std\+::string Professor\+::obter\+Nome\+Da\+Formacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}}}]{formacao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para obter o nome do enum Formacao. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em formacao} & Formacao a ser convertido em nome. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Nome correspondente ao enum Formacao. 
+\end{DoxyReturn}
+\Hypertarget{class_professor_a0ccc67325b9870fa11220158f46ae1e3}\label{class_professor_a0ccc67325b9870fa11220158f46ae1e3} 
+\index{Professor@{Professor}!obterNomeDoNivel@{obterNomeDoNivel}}
+\index{obterNomeDoNivel@{obterNomeDoNivel}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{obterNomeDoNivel()}{obterNomeDoNivel()}}
+{\footnotesize\ttfamily static std\+::string Professor\+::obter\+Nome\+Do\+Nivel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}}}]{nivel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para obter o nome do enum Nivel. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nivel} & Nível a ser convertido em nome. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Nome correspondente ao enum Nivel. 
+\end{DoxyReturn}
+\Hypertarget{class_professor_a6fee783f69188969c14a8e4c6b5d924b}\label{class_professor_a6fee783f69188969c14a8e4c6b5d924b} 
+\index{Professor@{Professor}!setDisciplina@{setDisciplina}}
+\index{setDisciplina@{setDisciplina}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{setDisciplina()}{setDisciplina()}}
+{\footnotesize\ttfamily void Professor\+::set\+Disciplina (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nova\+Disciplina }\end{DoxyParamCaption})}
+
+
+
+Setter para definir a disciplina do professor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nova\+Disciplina} & Nova disciplina a ser definida. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ disciplina\ =\ novaDisciplina;}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_professor_a207485f7592ec5ca271fb4dc29712cd7}\label{class_professor_a207485f7592ec5ca271fb4dc29712cd7} 
+\index{Professor@{Professor}!setFormacaoProfessor@{setFormacaoProfessor}}
+\index{setFormacaoProfessor@{setFormacaoProfessor}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{setFormacaoProfessor()}{setFormacaoProfessor()}}
+{\footnotesize\ttfamily void Professor\+::set\+Formacao\+Professor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_professor_a27b9b406bcbfb81b111ed05dff9d03a1}{Formacao}}}]{nova\+Formacao }\end{DoxyParamCaption})}
+
+
+
+Setter para definir a formação do professor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nova\+Formacao} & Nova formação a ser definida. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ formacaoProfessor\ =\ novaFormacao;}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_professor_ac35e2980bd32c568e1397217e90bb703}\label{class_professor_ac35e2980bd32c568e1397217e90bb703} 
+\index{Professor@{Professor}!setNivelProfessor@{setNivelProfessor}}
+\index{setNivelProfessor@{setNivelProfessor}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{setNivelProfessor()}{setNivelProfessor()}}
+{\footnotesize\ttfamily void Professor\+::set\+Nivel\+Professor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_professor_ad7071bb14b88d90d573463a0bbf9925d}{Nivel}}}]{novo\+Nivel }\end{DoxyParamCaption})}
+
+
+
+Setter para definir o nível do professor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Nivel} & Novo nível a ser definido. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ nivelProfessor\ =\ novoNivel;}
+\DoxyCodeLine{00056\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{professor_8hpp}{professor.\+hpp}}\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{professor_8cpp}{professor.\+cpp}}\end{DoxyCompactItemize}

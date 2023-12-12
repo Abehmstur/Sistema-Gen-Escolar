@@ -1,0 +1,156 @@
+\doxysection{Referência do Arquivo LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/main.cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{LP1 PROVA 3/LP1-\/Projeto-\/3/src/main.cpp@{LP1 PROVA 3/LP1-\/Projeto-\/3/src/main.cpp}}
+
+
+Programa principal para interação com o sistema de cadastro de professores e técnicos ADM. @authores\+: Matheus Barros Medeiros, William de Abreu Martins Oliveira, Flavio Germano Pinheiro. @\+Date Data de criação (10 de dezembro de 2023)  
+
+
+{\ttfamily \#include "{}banco\+Dao.\+hpp"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}pessoa.\+hpp"{}}\newline
+{\ttfamily \#include "{}endereco.\+hpp"{}}\newline
+{\ttfamily \#include "{}professor.\+hpp"{}}\newline
+{\ttfamily \#include "{}funcionario.\+hpp"{}}\newline
+{\ttfamily \#include "{}tecnico\+\_\+adm.\+hpp"{}}\newline
+{\ttfamily \#include "{}./excecoes/main\+Excecoes.\+hpp"{}}\newline
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e}{mostrar\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Exibe o menu principal do programa. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Função principal do programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Programa principal para interação com o sistema de cadastro de professores e técnicos ADM. @authores\+: Matheus Barros Medeiros, William de Abreu Martins Oliveira, Flavio Germano Pinheiro. @\+Date Data de criação (10 de dezembro de 2023) 
+
+
+
+\doxysubsection{Funções}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função principal do programa. 
+
+\begin{DoxyReturn}{Retorna}
+0 se o programa for concluído com sucesso. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ escolha;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ matriculaParaBuscar;}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_banco_dao}{BancoDao}}\ banco;}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_professor}{Professor}}\ prof;}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_tecnico_a_d_m}{TecnicoADM}}\ tecn;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e}{mostrarMenu}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ escolha;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tratamento\ de\ erro\ com\ o\ Throw}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(escolha\ >\ 10\ ||\ escolha\ <\ 0)\{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classmain_excecoes}{mainExcecoes}}(\textcolor{stringliteral}{"{}O\ valor\ informado\ nao\ esta\ entre\ as\ opcoes\ disponiveis,\ por\ favor\ informe\ um\ valor\ entre\ 1\ e\ 10."{}});}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (escolha)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ banco.\mbox{\hyperlink{class_banco_dao_a178a741f1bc47b706511ca783de785e2}{cadastrarProfessor}}(banco.\mbox{\hyperlink{class_banco_dao_af4e609484a7f393a4951b8954fc0cba2}{professores}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ banco.\mbox{\hyperlink{class_banco_dao_a514121a64a90254432984f735400a48e}{listarProfessores}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Digite\ a\ matricula\ do\ professor\ para\ deletar:\ "{}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriculaParaBuscar\ =\ banco.\mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ banco.\mbox{\hyperlink{class_banco_dao_a2768c047fea253fc7ea6a6f965603057}{deletarProfessor}}(matriculaParaBuscar);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Digite\ a\ matricula\ do\ professor\ para\ buscar:\ "{}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriculaParaBuscar\ =\ banco.\mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ banco.\mbox{\hyperlink{class_banco_dao_a3d10846ae3904deb4b893ac49c76a378}{buscarProfessor}}(matriculaParaBuscar);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ banco.\mbox{\hyperlink{class_banco_dao_a05d7cf74fdff49670919612f92393410}{cadastrarTecnicoADM}}(banco.\mbox{\hyperlink{class_banco_dao_a412eae7800d6d4e5ebb4c1298094c26d}{tecnicosADM}});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ banco.\mbox{\hyperlink{class_banco_dao_aabd64e8b5253f95ba3b60220fb3fd1d2}{listarTecnicosADM}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Digite\ a\ matricula\ do\ tecnico\ ADM\ para\ deletar:\ "{}};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriculaParaBuscar\ =\ banco.\mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ banco.\mbox{\hyperlink{class_banco_dao_a803dbb56a79d03ea845c158b6d6964a5}{deletarTecnicoADM}}(matriculaParaBuscar);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Digite\ a\ matricula\ do\ tccnico\ ADM\ para\ buscar:\ "{}};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriculaParaBuscar\ =\ banco.\mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ banco.\mbox{\hyperlink{class_banco_dao_a119ab037961d971f56bdf274454b691c}{buscarTecnicoADM}}(matriculaParaBuscar);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 9:}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Digite\ a\ matricula\ do\ PROFESSOR\ para\ visualizar\ o\ Salario:\ "{}};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriculaParaBuscar\ =\ banco.\mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ prof.\mbox{\hyperlink{class_professor_ae526d454ef032bf9ee7077428843a1ac}{imprimirSalarioDoFuncionarioByMatricula}}(matriculaParaBuscar);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 10:}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Digite\ a\ matricula\ do\ tccnico\ ADM\ para\ visualizar\ o\ Salario:\ "{}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriculaParaBuscar\ =\ banco.\mbox{\hyperlink{class_banco_dao_a7afd85382b42a2e92017005d16a01440}{lerNumero}}();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tecn.\mbox{\hyperlink{class_tecnico_a_d_m_a65ecfd5ac49cfd630b1429404addda4c}{imprimirSalarioDoFuncionarioByMatricula}}(matriculaParaBuscar);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Saindo\ do\ programa...\(\backslash\)n\(\backslash\)n"{}}\ <<\ endl;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmain_excecoes}{mainExcecoes}}\&\ erro)\{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}|\ ERROR:\ "{}}\ <<\ erro.\mbox{\hyperlink{classmain_excecoes_a0d963c20a4e11e1a628d9e10c2b6113b}{what}}()\ <<\ endl;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (escolha\ !=\ 0);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00122\ \}}
+
+\end{DoxyCode}
+\Hypertarget{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e}\label{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e} 
+\index{main.cpp@{main.cpp}!mostrarMenu@{mostrarMenu}}
+\index{mostrarMenu@{mostrarMenu}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mostrarMenu()}{mostrarMenu()}}
+{\footnotesize\ttfamily void mostrar\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exibe o menu principal do programa. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}==========\ MENU\ PRINCIPAL\ =========="{}}\ <<\ endl;}
+\DoxyCodeLine{00025\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}1.\ Cadastrar\ Professor"{}}\ <<\ endl;}
+\DoxyCodeLine{00026\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}2.\ Listar\ Professores"{}}\ <<\ endl;}
+\DoxyCodeLine{00027\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}3.\ Deletar\ Professor"{}}\ <<\ endl;}
+\DoxyCodeLine{00028\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}4.\ Buscar\ Professor"{}}\ <<\ endl;}
+\DoxyCodeLine{00029\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}5.\ Cadastrar\ Tecnico\ ADM"{}}\ <<\ endl;}
+\DoxyCodeLine{00030\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}6.\ Listar\ Tecnicos\ ADM"{}}\ <<\ endl;}
+\DoxyCodeLine{00031\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}7.\ Deletar\ Tecnico\ ADM"{}}\ <<\ endl;}
+\DoxyCodeLine{00032\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}8.\ Buscar\ Tecnico\ ADM"{}}\ <<\ endl;}
+\DoxyCodeLine{00033\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}9.\ Imprimir\ Salario\ Professor"{}}\ <<\ endl;}
+\DoxyCodeLine{00034\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}10.\ Imprimir\ Salario\ Tecnico"{}}\ <<\ endl;}
+\DoxyCodeLine{00035\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}0.\ Sair"{}}\ <<\ endl;}
+\DoxyCodeLine{00036\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}===================================="{}}\ <<\ endl;}
+\DoxyCodeLine{00037\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Escolha\ uma\ opcao:\ \(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}

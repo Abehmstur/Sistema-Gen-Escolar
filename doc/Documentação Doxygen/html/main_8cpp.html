@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentação Sistema-Gen-Escolar: Referência do Arquivo LP1 PROVA 3/LP1-Projeto-3/src/main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Documentação Sistema-Gen-Escolar<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7d89b057941466c0a69906e450198ffd.html">LP1 PROVA 3</a></li><li class="navelem"><a class="el" href="dir_8288aebf266558d4d2de43ca3d3beeb0.html">LP1-Projeto-3</a></li><li class="navelem"><a class="el" href="dir_5ee48ee76e948ea045f853aaec5b406b.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Programa principal para interação com o sistema de cadastro de professores e técnicos ADM. @authores: Matheus Barros Medeiros, William de Abreu Martins Oliveira, Flavio Germano Pinheiro. @Date Data de criação (10 de dezembro de 2023)  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="banco_dao_8hpp_source.html">bancoDao.hpp</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="pessoa_8hpp_source.html">pessoa.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="endereco_8hpp_source.html">endereco.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="professor_8hpp_source.html">professor.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="funcionario_8hpp_source.html">funcionario.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tecnico__adm_8hpp_source.html">tecnico_adm.hpp</a>&quot;</code><br />
+<code>#include &quot;./excecoes/mainExcecoes.hpp&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ac0aca0f34a52fbe7527a03517bc3347e" id="r_ac0aca0f34a52fbe7527a03517bc3347e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac0aca0f34a52fbe7527a03517bc3347e">mostrarMenu</a> ()</td></tr>
+<tr class="memdesc:ac0aca0f34a52fbe7527a03517bc3347e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe o menu principal do programa.  <br /></td></tr>
+<tr class="separator:ac0aca0f34a52fbe7527a03517bc3347e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função principal do programa.  <br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Programa principal para interação com o sistema de cadastro de professores e técnicos ADM. @authores: Matheus Barros Medeiros, William de Abreu Martins Oliveira, Flavio Germano Pinheiro. @Date Data de criação (10 de dezembro de 2023) </p>
+</div><h2 class="groupheader">Funções</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função principal do programa. </p>
+<dl class="section return"><dt>Retorna</dt><dd>0 se o programa for concluído com sucesso. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordtype">int</span> escolha;</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordtype">int</span> matriculaParaBuscar;</div>
+<div class="line"><span class="lineno">   48</span>    <a class="code hl_class" href="class_banco_dao.html">BancoDao</a> banco;</div>
+<div class="line"><span class="lineno">   49</span>    <a class="code hl_class" href="class_professor.html">Professor</a> prof;</div>
+<div class="line"><span class="lineno">   50</span>    <a class="code hl_class" href="class_tecnico_a_d_m.html">TecnicoADM</a> tecn;</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">try</span>{</div>
+<div class="line"><span class="lineno">   54</span>            <a class="code hl_function" href="main_8cpp.html#ac0aca0f34a52fbe7527a03517bc3347e">mostrarMenu</a>();</div>
+<div class="line"><span class="lineno">   55</span>            cin &gt;&gt; escolha;</div>
+<div class="line"><span class="lineno">   56</span>            cin.ignore();</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>            <span class="comment">// Tratamento de erro com o Throw</span></div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span>(escolha &gt; 10 || escolha &lt; 0){</div>
+<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">throw</span> <a class="code hl_class" href="classmain_excecoes.html">mainExcecoes</a>(<span class="stringliteral">&quot;O valor informado nao esta entre as opcoes disponiveis, por favor informe um valor entre 1 e 10.&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">switch</span> (escolha) {</div>
+<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">   65</span>                    banco.<a class="code hl_function" href="class_banco_dao.html#a178a741f1bc47b706511ca783de785e2">cadastrarProfessor</a>(banco.<a class="code hl_variable" href="class_banco_dao.html#af4e609484a7f393a4951b8954fc0cba2">professores</a>);</div>
+<div class="line"><span class="lineno">   66</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">   68</span>                    banco.<a class="code hl_function" href="class_banco_dao.html#a514121a64a90254432984f735400a48e">listarProfessores</a>();</div>
+<div class="line"><span class="lineno">   69</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   70</span>                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">   71</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Digite a matricula do professor para deletar: &quot;</span>;</div>
+<div class="line"><span class="lineno">   72</span>                    matriculaParaBuscar = banco.<a class="code hl_function" href="class_banco_dao.html#a7afd85382b42a2e92017005d16a01440">lerNumero</a>();</div>
+<div class="line"><span class="lineno">   73</span>                    banco.<a class="code hl_function" href="class_banco_dao.html#a2768c047fea253fc7ea6a6f965603057">deletarProfessor</a>(matriculaParaBuscar);</div>
+<div class="line"><span class="lineno">   74</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">   76</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Digite a matricula do professor para buscar: &quot;</span>;</div>
+<div class="line"><span class="lineno">   77</span>                    matriculaParaBuscar = banco.<a class="code hl_function" href="class_banco_dao.html#a7afd85382b42a2e92017005d16a01440">lerNumero</a>();</div>
+<div class="line"><span class="lineno">   78</span>                    banco.<a class="code hl_function" href="class_banco_dao.html#a3d10846ae3904deb4b893ac49c76a378">buscarProfessor</a>(matriculaParaBuscar);</div>
+<div class="line"><span class="lineno">   79</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">   81</span>                    banco.<a class="code hl_function" href="class_banco_dao.html#a05d7cf74fdff49670919612f92393410">cadastrarTecnicoADM</a>(banco.<a class="code hl_variable" href="class_banco_dao.html#a412eae7800d6d4e5ebb4c1298094c26d">tecnicosADM</a>);</div>
+<div class="line"><span class="lineno">   82</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno">   84</span>                    banco.<a class="code hl_function" href="class_banco_dao.html#aabd64e8b5253f95ba3b60220fb3fd1d2">listarTecnicosADM</a>();</div>
+<div class="line"><span class="lineno">   85</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">case</span> 7:</div>
+<div class="line"><span class="lineno">   87</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Digite a matricula do tecnico ADM para deletar: &quot;</span>;</div>
+<div class="line"><span class="lineno">   88</span>                    matriculaParaBuscar = banco.<a class="code hl_function" href="class_banco_dao.html#a7afd85382b42a2e92017005d16a01440">lerNumero</a>();</div>
+<div class="line"><span class="lineno">   89</span>                    banco.<a class="code hl_function" href="class_banco_dao.html#a803dbb56a79d03ea845c158b6d6964a5">deletarTecnicoADM</a>(matriculaParaBuscar);</div>
+<div class="line"><span class="lineno">   90</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   91</span>                <span class="keywordflow">case</span> 8:</div>
+<div class="line"><span class="lineno">   92</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Digite a matricula do tccnico ADM para buscar: &quot;</span>;</div>
+<div class="line"><span class="lineno">   93</span>                    matriculaParaBuscar = banco.<a class="code hl_function" href="class_banco_dao.html#a7afd85382b42a2e92017005d16a01440">lerNumero</a>();</div>
+<div class="line"><span class="lineno">   94</span>                    banco.<a class="code hl_function" href="class_banco_dao.html#a119ab037961d971f56bdf274454b691c">buscarTecnicoADM</a>(matriculaParaBuscar);</div>
+<div class="line"><span class="lineno">   95</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">case</span> 9:</div>
+<div class="line"><span class="lineno">   97</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Digite a matricula do PROFESSOR para visualizar o Salario: &quot;</span>;</div>
+<div class="line"><span class="lineno">   98</span>                    matriculaParaBuscar = banco.<a class="code hl_function" href="class_banco_dao.html#a7afd85382b42a2e92017005d16a01440">lerNumero</a>();</div>
+<div class="line"><span class="lineno">   99</span>                    prof.<a class="code hl_function" href="class_professor.html#ae526d454ef032bf9ee7077428843a1ac">imprimirSalarioDoFuncionarioByMatricula</a>(matriculaParaBuscar);</div>
+<div class="line"><span class="lineno">  100</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">case</span> 10:</div>
+<div class="line"><span class="lineno">  102</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Digite a matricula do tccnico ADM para visualizar o Salario: &quot;</span>;</div>
+<div class="line"><span class="lineno">  103</span>                    matriculaParaBuscar = banco.<a class="code hl_function" href="class_banco_dao.html#a7afd85382b42a2e92017005d16a01440">lerNumero</a>();</div>
+<div class="line"><span class="lineno">  104</span>                    tecn.<a class="code hl_function" href="class_tecnico_a_d_m.html#a65ecfd5ac49cfd630b1429404addda4c">imprimirSalarioDoFuncionarioByMatricula</a>(matriculaParaBuscar);</div>
+<div class="line"><span class="lineno">  105</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  107</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Saindo do programa...\n\n&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  108</span>                    <span class="keywordflow">break</span>; </div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  110</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  111</span>            }</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">catch</span>(<span class="keyword">const</span> <a class="code hl_class" href="classmain_excecoes.html">mainExcecoes</a>&amp; erro){</div>
+<div class="line"><span class="lineno">  114</span>            cout &lt;&lt; <span class="stringliteral">&quot;================================================================================================================&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  115</span>            cout &lt;&lt; <span class="stringliteral">&quot;| ERROR: &quot;</span> &lt;&lt; erro.<a class="code hl_function" href="classmain_excecoes.html#a0d963c20a4e11e1a628d9e10c2b6113b">what</a>() &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  116</span>            cout &lt;&lt; <span class="stringliteral">&quot;================================================================================================================&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    } <span class="keywordflow">while</span> (escolha != 0);</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  122</span>}</div>
+<div class="ttc" id="aclass_banco_dao_html"><div class="ttname"><a href="class_banco_dao.html">BancoDao</a></div><div class="ttdoc">Classe responsável por realizar operações de cadastro, listagem e remoção de Professores e Técnicos A...</div><div class="ttdef"><b>Definição</b> bancoDao.hpp:20</div></div>
+<div class="ttc" id="aclass_banco_dao_html_a05d7cf74fdff49670919612f92393410"><div class="ttname"><a href="class_banco_dao.html#a05d7cf74fdff49670919612f92393410">BancoDao::cadastrarTecnicoADM</a></div><div class="ttdeci">void cadastrarTecnicoADM(std::vector&lt; TecnicoADM &gt; &amp;tecnicosADM)</div><div class="ttdoc">Cadastra um novo Técnico ADM no sistema.</div><div class="ttdef"><b>Definição</b> bancoDao.cpp:351</div></div>
+<div class="ttc" id="aclass_banco_dao_html_a119ab037961d971f56bdf274454b691c"><div class="ttname"><a href="class_banco_dao.html#a119ab037961d971f56bdf274454b691c">BancoDao::buscarTecnicoADM</a></div><div class="ttdeci">void buscarTecnicoADM(int matricula)</div><div class="ttdoc">Busca e exibe os dados de um Técnico ADM com base na matrícula.</div><div class="ttdef"><b>Definição</b> bancoDao.cpp:571</div></div>
+<div class="ttc" id="aclass_banco_dao_html_a178a741f1bc47b706511ca783de785e2"><div class="ttname"><a href="class_banco_dao.html#a178a741f1bc47b706511ca783de785e2">BancoDao::cadastrarProfessor</a></div><div class="ttdeci">void cadastrarProfessor(std::vector&lt; Professor &gt; &amp;professores)</div><div class="ttdoc">Cadastra um novo Professor no sistema.</div><div class="ttdef"><b>Definição</b> bancoDao.cpp:56</div></div>
+<div class="ttc" id="aclass_banco_dao_html_a2768c047fea253fc7ea6a6f965603057"><div class="ttname"><a href="class_banco_dao.html#a2768c047fea253fc7ea6a6f965603057">BancoDao::deletarProfessor</a></div><div class="ttdeci">void deletarProfessor(int matricula)</div><div class="ttdoc">Deleta um Professor do sistema com base na matrícula.</div><div class="ttdef"><b>Definição</b> bancoDao.cpp:263</div></div>
+<div class="ttc" id="aclass_banco_dao_html_a3d10846ae3904deb4b893ac49c76a378"><div class="ttname"><a href="class_banco_dao.html#a3d10846ae3904deb4b893ac49c76a378">BancoDao::buscarProfessor</a></div><div class="ttdeci">void buscarProfessor(int matricula)</div><div class="ttdoc">Busca e exibe os dados de um Professor com base na matrícula.</div><div class="ttdef"><b>Definição</b> bancoDao.cpp:313</div></div>
+<div class="ttc" id="aclass_banco_dao_html_a412eae7800d6d4e5ebb4c1298094c26d"><div class="ttname"><a href="class_banco_dao.html#a412eae7800d6d4e5ebb4c1298094c26d">BancoDao::tecnicosADM</a></div><div class="ttdeci">std::vector&lt; TecnicoADM &gt; tecnicosADM</div><div class="ttdoc">Vetor que armazena objetos da classe TecnicoADM.</div><div class="ttdef"><b>Definição</b> bancoDao.hpp:33</div></div>
+<div class="ttc" id="aclass_banco_dao_html_a514121a64a90254432984f735400a48e"><div class="ttname"><a href="class_banco_dao.html#a514121a64a90254432984f735400a48e">BancoDao::listarProfessores</a></div><div class="ttdeci">void listarProfessores()</div><div class="ttdoc">Lista todos os Professores cadastrados no sistema.</div><div class="ttdef"><b>Definição</b> bancoDao.cpp:226</div></div>
+<div class="ttc" id="aclass_banco_dao_html_a7afd85382b42a2e92017005d16a01440"><div class="ttname"><a href="class_banco_dao.html#a7afd85382b42a2e92017005d16a01440">BancoDao::lerNumero</a></div><div class="ttdeci">int lerNumero()</div><div class="ttdoc">Lê o número informado pelo usuário e retorna uma exceção caso não seja um valor válido.</div><div class="ttdef"><b>Definição</b> bancoDao.cpp:19</div></div>
+<div class="ttc" id="aclass_banco_dao_html_a803dbb56a79d03ea845c158b6d6964a5"><div class="ttname"><a href="class_banco_dao.html#a803dbb56a79d03ea845c158b6d6964a5">BancoDao::deletarTecnicoADM</a></div><div class="ttdeci">void deletarTecnicoADM(int matricula)</div><div class="ttdoc">Deleta um Técnico ADM do sistema com base na matrícula.</div><div class="ttdef"><b>Definição</b> bancoDao.cpp:522</div></div>
+<div class="ttc" id="aclass_banco_dao_html_aabd64e8b5253f95ba3b60220fb3fd1d2"><div class="ttname"><a href="class_banco_dao.html#aabd64e8b5253f95ba3b60220fb3fd1d2">BancoDao::listarTecnicosADM</a></div><div class="ttdeci">void listarTecnicosADM()</div><div class="ttdoc">Lista todos os Técnicos ADM cadastrados no sistema.</div><div class="ttdef"><b>Definição</b> bancoDao.cpp:483</div></div>
+<div class="ttc" id="aclass_banco_dao_html_af4e609484a7f393a4951b8954fc0cba2"><div class="ttname"><a href="class_banco_dao.html#af4e609484a7f393a4951b8954fc0cba2">BancoDao::professores</a></div><div class="ttdeci">std::vector&lt; Professor &gt; professores</div><div class="ttdoc">Vetor que armazena objetos da classe Professor.</div><div class="ttdef"><b>Definição</b> bancoDao.hpp:28</div></div>
+<div class="ttc" id="aclass_professor_html"><div class="ttname"><a href="class_professor.html">Professor</a></div><div class="ttdoc">Classe que representa um professor.</div><div class="ttdef"><b>Definição</b> professor.hpp:17</div></div>
+<div class="ttc" id="aclass_professor_html_ae526d454ef032bf9ee7077428843a1ac"><div class="ttname"><a href="class_professor.html#ae526d454ef032bf9ee7077428843a1ac">Professor::imprimirSalarioDoFuncionarioByMatricula</a></div><div class="ttdeci">void imprimirSalarioDoFuncionarioByMatricula(int _matricula)</div><div class="ttdoc">Método abstrato para imprimir o salário do professor com base na matrícula.</div><div class="ttdef"><b>Definição</b> professor.cpp:79</div></div>
+<div class="ttc" id="aclass_tecnico_a_d_m_html"><div class="ttname"><a href="class_tecnico_a_d_m.html">TecnicoADM</a></div><div class="ttdoc">Classe que representa um técnico administrativo.</div><div class="ttdef"><b>Definição</b> tecnico_adm.hpp:17</div></div>
+<div class="ttc" id="aclass_tecnico_a_d_m_html_a65ecfd5ac49cfd630b1429404addda4c"><div class="ttname"><a href="class_tecnico_a_d_m.html#a65ecfd5ac49cfd630b1429404addda4c">TecnicoADM::imprimirSalarioDoFuncionarioByMatricula</a></div><div class="ttdeci">void imprimirSalarioDoFuncionarioByMatricula(int _matricula)</div><div class="ttdoc">Método para imprimir o salário do funcionário com base na matrícula.</div><div class="ttdef"><b>Definição</b> tecnico_adm.cpp:61</div></div>
+<div class="ttc" id="aclassmain_excecoes_html"><div class="ttname"><a href="classmain_excecoes.html">mainExcecoes</a></div><div class="ttdoc">Representa uma exceção relacionada ao código principal (main).</div><div class="ttdef"><b>Definição</b> mainExcecoes.hpp:16</div></div>
+<div class="ttc" id="aclassmain_excecoes_html_a0d963c20a4e11e1a628d9e10c2b6113b"><div class="ttname"><a href="classmain_excecoes.html#a0d963c20a4e11e1a628d9e10c2b6113b">mainExcecoes::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdoc">Getter para obter a mensagem de erro.</div></div>
+<div class="ttc" id="amain_8cpp_html_ac0aca0f34a52fbe7527a03517bc3347e"><div class="ttname"><a href="main_8cpp.html#ac0aca0f34a52fbe7527a03517bc3347e">mostrarMenu</a></div><div class="ttdeci">void mostrarMenu()</div><div class="ttdoc">Exibe o menu principal do programa.</div><div class="ttdef"><b>Definição</b> main.cpp:23</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac0aca0f34a52fbe7527a03517bc3347e" name="ac0aca0f34a52fbe7527a03517bc3347e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0aca0f34a52fbe7527a03517bc3347e">&#9670;&#160;</a></span>mostrarMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exibe o menu principal do programa. </p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>                   {</div>
+<div class="line"><span class="lineno">   24</span>    cout &lt;&lt; <span class="stringliteral">&quot;========== MENU PRINCIPAL ==========&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   25</span>    cout &lt;&lt; <span class="stringliteral">&quot;1. Cadastrar Professor&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   26</span>    cout &lt;&lt; <span class="stringliteral">&quot;2. Listar Professores&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   27</span>    cout &lt;&lt; <span class="stringliteral">&quot;3. Deletar Professor&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   28</span>    cout &lt;&lt; <span class="stringliteral">&quot;4. Buscar Professor&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   29</span>    cout &lt;&lt; <span class="stringliteral">&quot;5. Cadastrar Tecnico ADM&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   30</span>    cout &lt;&lt; <span class="stringliteral">&quot;6. Listar Tecnicos ADM&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   31</span>    cout &lt;&lt; <span class="stringliteral">&quot;7. Deletar Tecnico ADM&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   32</span>    cout &lt;&lt; <span class="stringliteral">&quot;8. Buscar Tecnico ADM&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   33</span>    cout &lt;&lt; <span class="stringliteral">&quot;9. Imprimir Salario Professor&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   34</span>    cout &lt;&lt; <span class="stringliteral">&quot;10. Imprimir Salario Tecnico&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   35</span>    cout &lt;&lt; <span class="stringliteral">&quot;0. Sair&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   36</span>    cout &lt;&lt; <span class="stringliteral">&quot;====================================&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   37</span>    cout &lt;&lt; <span class="stringliteral">&quot;Escolha uma opcao: \n\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   38</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

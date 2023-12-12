@@ -1,0 +1,305 @@
+\doxysection{Referência da Classe Tecnico\+ADM}
+\hypertarget{class_tecnico_a_d_m}{}\label{class_tecnico_a_d_m}\index{TecnicoADM@{TecnicoADM}}
+
+
+Classe que representa um técnico administrativo.  
+
+
+
+
+{\ttfamily \#include $<$tecnico\+\_\+adm.\+hpp$>$}
+
+Diagrama de hierarquia da classe Tecnico\+ADM\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_tecnico_a_d_m}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tecnico_a_d_m_a9a49c1a1bc3d90d8c4ecbafb41415453}{Tecnico\+ADM}} (float \+\_\+adicional\+Produtividade, const std\+::string \&\+\_\+funcao\+Desempenhada)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_tecnico_a_d_m}{Tecnico\+ADM}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_tecnico_a_d_m_ac4c8d8955b666d8282c3cfb614baada6}{get\+Adicional\+Produtividade}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o adicional de produtividade do técnico administrativo. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_tecnico_a_d_m_a6775727ecb106ce498f2e01302ace11c}{get\+Funcao\+Desempenhada}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter a função desempenhada pelo técnico administrativo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tecnico_a_d_m_aca91831f24a8438bb479312c2d323c46}{set\+Adicional\+Produtividade}} (float novo\+Adicional\+Produtividade)
+\begin{DoxyCompactList}\small\item\em Setter para definir o adicional de produtividade do técnico administrativo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tecnico_a_d_m_adeabfa1896d66f63500b736251ce726d}{set\+Funcao\+Desempenhada}} (const std\+::string \&nova\+Funcao\+Desempenhada)
+\begin{DoxyCompactList}\small\item\em Setter para definir a função desempenhada pelo técnico administrativo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tecnico_a_d_m_a65ecfd5ac49cfd630b1429404addda4c}{imprimir\+Salario\+Do\+Funcionario\+By\+Matricula}} (int \+\_\+matricula)
+\begin{DoxyCompactList}\small\item\em Método para imprimir o salário do funcionário com base na matrícula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_funcionario}{Funcionario}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_funcionario_a7cd39b2c6cd2449162481a8c0e7a2429}{Funcionario}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_funcionario}{Funcionario}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_funcionario_ae9820777b7644b343ae75426b8835b71}{Funcionario}} (const std\+::string \&\+\_\+nome, const std\+::string \&\+\_\+cpf, const std\+::string \&\+\_\+data\+Nascimento, const \mbox{\hyperlink{class_endereco}{Endereco}} \&\+\_\+endereco, const std\+::string \&\+\_\+matricula, float \+\_\+salario, const std\+::string \&\+\_\+departamento, int \+\_\+carga\+Horaria, const std\+::string \&\+\_\+data\+Ingresso)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_funcionario}{Funcionario}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_funcionario_a5c64c3a4c6cf6176c045149cfe4bbcdd}{get\+Matricula}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a matrícula do funcionário. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_funcionario_ac792f67b8e489080321a426a9e06a5f9}{get\+Salario}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o salário do funcionário. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_funcionario_acbf6d151b05c358d451a142ab9baa290}{get\+Departamento}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o departamento do funcionário. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_funcionario_a70fdf79709d6021a10930a556bb40b84}{get\+Carga\+Horaria}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a carga horária do funcionário. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_funcionario_aa850618fcccc64531b9b2b92f0888ff9}{get\+Data\+Ingresso}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a data de ingresso do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_adccc7656c53313092a9f4c79044b5992}{set\+Matricula}} (const std\+::string \&nova\+Matricula)
+\begin{DoxyCompactList}\small\item\em Define a matrícula do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_a21bb5d3db2bdb965f80c7167f272ec7c}{set\+Salario}} (float novo\+Salario)
+\begin{DoxyCompactList}\small\item\em Define o salário do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_a71f56a70e80eb0cb1672fe3d1f5b5d38}{set\+Departamento}} (const std\+::string \&novo\+Departamento)
+\begin{DoxyCompactList}\small\item\em Define o departamento do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_aa7a05273be2858076f4584d922b113bb}{set\+Carga\+Horaria}} (int nova\+Carga\+Horaria)
+\begin{DoxyCompactList}\small\item\em Define a carga horária do funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_funcionario_aae63fd9989f98d03880951949d6c1b8f}{set\+Data\+Ingresso}} (const std\+::string \&nova\+Data\+Ingresso)
+\begin{DoxyCompactList}\small\item\em Define a data de ingresso do funcionário. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_pessoa}{Pessoa}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}{Pessoa}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_pessoa}{Pessoa}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pessoa_a48ec400c82c85a73431a6f5561588f0b}{Pessoa}} (const std\+::string \&\+\_\+nome, const std\+::string \&\+\_\+cpf, const std\+::string \&\+\_\+data\+Nascimento, const \mbox{\hyperlink{class_endereco}{Endereco}} \&\+\_\+endereco)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_pessoa}{Pessoa}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a309bd1dada952c5c9b6aa27c163d1e53}{get\+Nome}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da pessoa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a12aca1330d2363104224f63de266efa9}{get\+CPF}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o CPF da pessoa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a7c41bbd8f6116b88b09fd454740e019a}{get\+Data\+Nascimento}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter a data de nascimento da pessoa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_endereco}{Endereco}} \mbox{\hyperlink{class_pessoa_acff82686ca616893081c1477a0154e9f}{get\+Endereco}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o endereço da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a988c52d92e546f997ae8274793ab5be6}{set\+Nome}} (const std\+::string \&novo\+Nome)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a3657d5be035ae0a8e846149218f0c270}{set\+CPF}} (const std\+::string \&novo\+CPF)
+\begin{DoxyCompactList}\small\item\em Setter para definir o CPF da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a890a0b6a3be01532cbb40e1ff08306a2}{set\+Data\+Nascimento}} (const std\+::string \&nova\+Data)
+\begin{DoxyCompactList}\small\item\em Setter para definir a data de nascimento da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a8043b9301590a4784b4cac8f0871bdb4}{set\+Endereco}} (const \mbox{\hyperlink{class_endereco}{Endereco}} \&novo\+Endereco)
+\begin{DoxyCompactList}\small\item\em Setter para definir o endereço da pessoa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_endereco}{Endereco}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_endereco_a1bb2df2319912c102821c133485bec0a}{Endereco}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a340afa3adcd7ebb339ca8e433d6d4a91}{get\+Rua}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da rua. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_endereco_ad371ff391cc7ebfd6dd24774a287790b}{get\+Numero}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o número do endereço. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a6f64a6dbe44b0a07e0acd5715558e9a7}{get\+Bairro}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome do bairro. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a08ecbda9d910730ddc049e351cb42726}{get\+Cidade}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o nome da cidade. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_endereco_a78d6c203af45c44d157cfccd4999b243}{get\+CEP}} () const
+\begin{DoxyCompactList}\small\item\em Getter para obter o CEP do endereço. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a0a42fe5445d353e738f436213f2bff8d}{set\+Rua}} (const std\+::string \&new\+Rua)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da rua. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a4fd5facf5d971527d8915b83644436ac}{set\+Numero}} (int new\+Numero)
+\begin{DoxyCompactList}\small\item\em Setter para definir o número do endereço. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a82eba609a8d13dbc194b7e3adf4ab399}{set\+Bairro}} (const std\+::string \&new\+Bairro)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome do bairro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a913d70a1a418ba52486fa497be615522}{set\+Cidade}} (const std\+::string \&new\+Cidade)
+\begin{DoxyCompactList}\small\item\em Setter para definir o nome da cidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_endereco_a8379da8b0248df9fe90813ba0ecce9e2}{set\+CEP}} (const std\+::string \&new\+CEP)
+\begin{DoxyCompactList}\small\item\em Setter para definir o CEP do endereço. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um técnico administrativo. 
+
+Herda da classe \doxylink{class_funcionario}{Funcionario} e implementa funcionalidades específicas para técnicos administrativos. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_tecnico_a_d_m_a9a49c1a1bc3d90d8c4ecbafb41415453}\label{class_tecnico_a_d_m_a9a49c1a1bc3d90d8c4ecbafb41415453} 
+\index{TecnicoADM@{TecnicoADM}!TecnicoADM@{TecnicoADM}}
+\index{TecnicoADM@{TecnicoADM}!TecnicoADM@{TecnicoADM}}
+\doxysubsubsection{\texorpdfstring{TecnicoADM()}{TecnicoADM()}}
+{\footnotesize\ttfamily Tecnico\+ADM\+::\+Tecnico\+ADM (\begin{DoxyParamCaption}\item[{float}]{\+\_\+adicional\+Produtividade,  }\item[{const std\+::string \&}]{\+\_\+funcao\+Desempenhada }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado da classe \doxylink{class_tecnico_a_d_m}{Tecnico\+ADM}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+adicional\+Produtividade} & Adicional de produtividade do técnico administrativo. \\
+\hline
+{\em \+\_\+funcao\+Desempenhada} & Função desempenhada pelo técnico administrativo. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ :\ adicionalProdutividade(\_adicionalProdutividade),\ funcaoDesempenhada(\_funcaoDesempenhada)\ \{}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_tecnico_a_d_m_ac4c8d8955b666d8282c3cfb614baada6}\label{class_tecnico_a_d_m_ac4c8d8955b666d8282c3cfb614baada6} 
+\index{TecnicoADM@{TecnicoADM}!getAdicionalProdutividade@{getAdicionalProdutividade}}
+\index{getAdicionalProdutividade@{getAdicionalProdutividade}!TecnicoADM@{TecnicoADM}}
+\doxysubsubsection{\texorpdfstring{getAdicionalProdutividade()}{getAdicionalProdutividade()}}
+{\footnotesize\ttfamily float Tecnico\+ADM\+::get\+Adicional\+Produtividade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter o adicional de produtividade do técnico administrativo. 
+
+\begin{DoxyReturn}{Retorna}
+O adicional de produtividade. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ adicionalProdutividade;}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_tecnico_a_d_m_a6775727ecb106ce498f2e01302ace11c}\label{class_tecnico_a_d_m_a6775727ecb106ce498f2e01302ace11c} 
+\index{TecnicoADM@{TecnicoADM}!getFuncaoDesempenhada@{getFuncaoDesempenhada}}
+\index{getFuncaoDesempenhada@{getFuncaoDesempenhada}!TecnicoADM@{TecnicoADM}}
+\doxysubsubsection{\texorpdfstring{getFuncaoDesempenhada()}{getFuncaoDesempenhada()}}
+{\footnotesize\ttfamily std\+::string Tecnico\+ADM\+::get\+Funcao\+Desempenhada (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter para obter a função desempenhada pelo técnico administrativo. 
+
+\begin{DoxyReturn}{Retorna}
+A função desempenhada. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{return}\ funcaoDesempenhada;}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_tecnico_a_d_m_a65ecfd5ac49cfd630b1429404addda4c}\label{class_tecnico_a_d_m_a65ecfd5ac49cfd630b1429404addda4c} 
+\index{TecnicoADM@{TecnicoADM}!imprimirSalarioDoFuncionarioByMatricula@{imprimirSalarioDoFuncionarioByMatricula}}
+\index{imprimirSalarioDoFuncionarioByMatricula@{imprimirSalarioDoFuncionarioByMatricula}!TecnicoADM@{TecnicoADM}}
+\doxysubsubsection{\texorpdfstring{imprimirSalarioDoFuncionarioByMatricula()}{imprimirSalarioDoFuncionarioByMatricula()}}
+{\footnotesize\ttfamily void Tecnico\+ADM\+::imprimir\+Salario\+Do\+Funcionario\+By\+Matricula (\begin{DoxyParamCaption}\item[{int}]{\+\_\+matricula }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Método para imprimir o salário do funcionário com base na matrícula. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+matricula} & Matrícula do funcionário.\\
+\hline
+\end{DoxyParams}
+O método lê o arquivo "{}funcionarios.\+txt"{} em busca do funcionário com a matrícula informada e imprime seu salário.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \+\_\+matricula} & Matrícula do funcionário.\\
+\hline
+\end{DoxyParams}
+O método lê o arquivo "{}funcionarios.\+txt"{} em busca do funcionário com a matrícula informada e imprime seu salário. 
+\begin{DoxyExceptions}{Exceções}
+{\em \doxylink{classtecnico_excecoes}{tecnico\+Excecoes}} & Lança exceções específicas para erros relacionados aos técnicos administrativos. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{class_funcionario_a9e9086d32e43b908999a37ee11f8b561}{Funcionario}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::fstream\ arquivo(\textcolor{stringliteral}{"{}funcionarios.txt"{}});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::vector<TecnicoADM>\ listaTecnicosADM;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!arquivo.is\_open())\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Não\ foi\ possível\ abrir\ o\ arquivo."{}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ linha;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tecnico_a_d_m}{TecnicoADM}}\ encontrado;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ encontradoFlag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(arquivo,\ linha))\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Matricula:\ T2-\/"{}}\ +\ std::to\_string(\_matricula))\ !=\ std::string::npos)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado\ =\ \mbox{\hyperlink{class_tecnico_a_d_m}{TecnicoADM}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontradoFlag\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Nome:\ "{}})\ ==\ 0\ \&\&\ encontradoFlag)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado.\mbox{\hyperlink{class_pessoa_a988c52d92e546f997ae8274793ab5be6}{setNome}}(linha.substr(6));}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (linha.find(\textcolor{stringliteral}{"{}Salario:\ "{}})\ ==\ 0\ \&\&\ encontradoFlag)\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ salario\ =\ std::stof(linha.substr(9));}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encontrado.\mbox{\hyperlink{class_funcionario_a21bb5d3db2bdb965f80c7167f272ec7c}{setSalario}}(salario);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (encontradoFlag)\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Nome:\ "{}}\ <<\ encontrado.\mbox{\hyperlink{class_pessoa_a309bd1dada952c5c9b6aa27c163d1e53}{getNome}}()\ <<\ \textcolor{stringliteral}{"{}\ |\ Salario:\ "{}}\ <<\ encontrado.\mbox{\hyperlink{class_funcionario_ac792f67b8e489080321a426a9e06a5f9}{getSalario}}()\ <<\ std::endl;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Professor\ com\ a\ matrícula\ "{}}\ <<\ \_matricula\ <<\ \textcolor{stringliteral}{"{}\ não\ encontrado."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{classtecnico_excecoes}{tecnicoExcecoes}}\&\ erro)\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}|\ ERROR:\ "{}}\ <<\ erro.\mbox{\hyperlink{classtecnico_excecoes_ad8a9f0fa5b28e2d8a49a72f0a944af21}{what}}()\ <<\ std::endl;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}================================================================================================================"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_tecnico_a_d_m_aca91831f24a8438bb479312c2d323c46}\label{class_tecnico_a_d_m_aca91831f24a8438bb479312c2d323c46} 
+\index{TecnicoADM@{TecnicoADM}!setAdicionalProdutividade@{setAdicionalProdutividade}}
+\index{setAdicionalProdutividade@{setAdicionalProdutividade}!TecnicoADM@{TecnicoADM}}
+\doxysubsubsection{\texorpdfstring{setAdicionalProdutividade()}{setAdicionalProdutividade()}}
+{\footnotesize\ttfamily void Tecnico\+ADM\+::set\+Adicional\+Produtividade (\begin{DoxyParamCaption}\item[{float}]{novo\+Adicional\+Produtividade }\end{DoxyParamCaption})}
+
+
+
+Setter para definir o adicional de produtividade do técnico administrativo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Adicional\+Produtividade} & Novo adicional de produtividade a ser definido. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ adicionalProdutividade\ =\ novoAdicionalProdutividade;}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_tecnico_a_d_m_adeabfa1896d66f63500b736251ce726d}\label{class_tecnico_a_d_m_adeabfa1896d66f63500b736251ce726d} 
+\index{TecnicoADM@{TecnicoADM}!setFuncaoDesempenhada@{setFuncaoDesempenhada}}
+\index{setFuncaoDesempenhada@{setFuncaoDesempenhada}!TecnicoADM@{TecnicoADM}}
+\doxysubsubsection{\texorpdfstring{setFuncaoDesempenhada()}{setFuncaoDesempenhada()}}
+{\footnotesize\ttfamily void Tecnico\+ADM\+::set\+Funcao\+Desempenhada (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nova\+Funcao\+Desempenhada }\end{DoxyParamCaption})}
+
+
+
+Setter para definir a função desempenhada pelo técnico administrativo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nova\+Funcao\+Desempenhada} & Nova função desempenhada a ser definida. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ funcaoDesempenhada\ =\ novaFuncaoDesempenhada;}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{tecnico__adm_8hpp}{tecnico\+\_\+adm.\+hpp}}\item 
+LP1 PROVA 3/\+LP1-\/\+Projeto-\/3/src/\mbox{\hyperlink{tecnico__adm_8cpp}{tecnico\+\_\+adm.\+cpp}}\end{DoxyCompactItemize}
